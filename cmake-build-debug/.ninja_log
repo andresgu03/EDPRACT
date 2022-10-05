@@ -1,0 +1,13 @@
+# ninja log v5
+177	239	1664840607533157084	subimagen	6a328d95a9b88af8
+0	157	0	CMakeFiles/doc_doxygen	cbf842b891c34230
+1	207	1664787057203276314	CMakeFiles/image.dir/estudiante/src/imageop.cpp.o	9098dd89c39b038a
+1	172	1664844067515231451	CMakeFiles/zoom.dir/estudiante/src/zoom.cpp.o	e54a03b5f255deb9
+1	202	1664787057199276294	CMakeFiles/negativo.dir/estudiante/src/negativo.cpp.o	b7bdac13a3fb4785
+1	184	1664844267311012899	CMakeFiles/image.dir/estudiante/src/image.cpp.o	8cb4eb078e0d044d
+0	157	0	/home/andres/Escritorio/ANDRÉS/ej01_imagenes/cmake-build-debug/CMakeFiles/doc_doxygen	cbf842b891c34230
+1	170	1664840607465157445	CMakeFiles/subimagen.dir/estudiante/src/subimagen.cpp.o	284095ab0d807675
+213	281	1664787057279276685	negativo	52ba28992fc1c783
+189	261	1664844267387012816	zoom	8dc3d7f43beb67da
+1	206	1664787057203276314	CMakeFiles/image.dir/estudiante/src/imageIO.cpp.o	40f2a9a1951d4418
+184	189	1664844267315012895	libimage.a	15754f4216f745b9
