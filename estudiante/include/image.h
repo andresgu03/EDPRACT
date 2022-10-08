@@ -252,6 +252,17 @@ void set_pixel (int i, int j, byte value);
     void Invert();
 
     // Modifica el contraste de una Imagen .
+    /**
+      * @brief Modifica el contraste de una Imagen.
+      * @param in1 Umbral inferior de la imagen de entrada.
+      * @param in2 Umbral superior de la imagen de entrada.
+      * @param out1 Umbral inferior de la imagen de salida.
+      * @param out2 Umbral superior de la imagen de salida.
+      * @pre 0 <= (in1, in2, out1, out2) <= 255.
+      * @pre in1 < in2.
+      * @pre out1 < out2.
+      * @post La imagen se modifica.
+      */
     void AdjustContrast (byte in1, byte in2, byte out1, byte out2);
 
     // Calcula la media de los píxeles de una imagen entera o de un fragmento de ésta.

@@ -7,6 +7,7 @@
 #include <cstring>
 #include <cassert>
 #include <iostream>
+#include <cmath>
 
 #include <image.h>
 #include <imageIO.h>
@@ -166,6 +167,25 @@ void Image::Invert() {
 }
 
 void Image::AdjustContrast(byte in1, byte in2, byte out1, byte out2) {
+
+    assert(in1 < in2 && out1 < out2);
+    assert(0 <= in1 && in1 <= 255);
+    assert(0 <= in2 && in2 <= 255);
+    assert(0 <= out1 && out1 <= 255);
+    assert(0 <= out2 && out2 <= 255);
+
+    // Pendiente del ajuste
+    double k = ((double)out2 - out1) / (in2 - in1);
+
+    for(int i=0; i<this->size(); i++){
+
+        double old_pixel = this->get_pixel(i);
+
+        if(old_pixel >= in1 && old_pixel <= in2) {
+            byte new_pixel = round(out1 + k * (old_pixel - in1));
+            this->set_pixel(i, new_pixel);
+        }
+    }
 
 }
 
