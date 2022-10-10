@@ -1,5 +1,5 @@
-// Fichero: icono.cpp
-// Calcula un icono de una imagen PGM
+// Fichero: barajar.cpp
+// Baraja las filas de una imagen PGM
 //
 
 #include <iostream>
@@ -13,11 +13,10 @@ using namespace std;
 int main (int argc, char *argv[]){
 
     char *origen, *destino; // nombres de los ficheros
-    int factor ;
-    Image image, result ;
+    Image image ;
 
     // Comprobar validez de la llamada
-    if (argc != 4){
+    if (argc != 3){
         cerr << "Error: Numero incorrecto de parametros.\n";
         cerr << "Uso: subimagen <fichero_origen> <fichero_resultado> <fila> <columna> <filas_subimagen> <columnas_subimagen>\n";
         exit (1);
@@ -26,13 +25,11 @@ int main (int argc, char *argv[]){
     // Obtener argumentos
     origen  = argv[1];
     destino = argv[2];
-    factor = atoi(argv[3]) ;
 
     // Mostramos argumentos
     cout << endl;
     cout << "Fichero origen: " << origen << endl;
     cout << "Fichero resultado: " << destino << endl;
-    cout << "Factor: " << factor << endl ;
 
     // Leer la imagen del fichero de entrada
     if (!image.Load(origen)){
@@ -46,11 +43,11 @@ int main (int argc, char *argv[]){
     cout << "Dimensiones de " << origen << ":" << endl;
     cout << "   Imagen   = " << image.get_rows()  << " filas x " << image.get_cols() << " columnas " << endl;
 
-    // Calcular la subimagen.
-    result = image.Subsample(factor) ;
+    // Barajamos las filas de la imagen.
+    image.ShuffleRows();
 
     // Guardar la imagen resultado en el fichero
-    if (result.Save(destino))
+    if (image.Save(destino))
         cout  << "La imagen se guardo en " << destino << endl;
     else{
         cerr << "Error: No pudo guardarse la imagen." << endl;

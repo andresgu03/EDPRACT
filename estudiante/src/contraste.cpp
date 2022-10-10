@@ -1,5 +1,5 @@
-// Fichero: negativo.cpp
-// Calcula el negativo de una imagen PGM
+// Fichero: contraste.cpp
+// Ajusta el contraste de una imagen PGM
 //
 
 #include <iostream>

@@ -1,5 +1,5 @@
-// Fichero: negativo.cpp
-// Calcula el negativo de una imagen PGM
+// Fichero: subimagen.cpp
+// Calcula una subimagen de una imagen PGM
 //
 
 #include <iostream>

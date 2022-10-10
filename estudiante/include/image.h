@@ -266,15 +266,49 @@ void set_pixel (int i, int j, byte value);
     void AdjustContrast (byte in1, byte in2, byte out1, byte out2);
 
     // Calcula la media de los píxeles de una imagen entera o de un fragmento de ésta.
+    /**
+      * @brief Calcula la media de los píxeles de una imagen entera o de un fragmento de ésta.
+      * @param i Fila inicial.
+      * @param j Columna inicial.
+      * @param height Número de filas que tomamos.
+      * @param width Número de columnas que tomamos
+      * @pre i + height < num_rows
+      * @pre j + width < num_cols
+      * @return valor double con el resultado de la media.
+      * @post La imagen no se modifica.
+      */
     double Mean (int i, int j, int height, int width) const;
 
     // Genera un icono como reducción de una imagen.
+    /**
+      * @brief Genera un icono como reducción de una imagen.
+      * @param factor factor de reducción de la imagen.
+      * @pre factor > 0
+      * @return Imagen reducida.
+      * @post La imagen no se modifica.
+      */
     Image Subsample(int factor) const;
 
     // Genera una subimagen.
+    /**
+      * @brief Genera una subimagen.
+      * @param nrow Fila inicial.
+      * @param nfil Columna inicial.
+      * @param height Número de filas que tomamos.
+      * @param width Número de columnas que tomamos
+      * @pre nrow + height < num_rows
+      * @pre ncol + width < num_cols
+      * @return Imagen subimagen de la principal.
+      * @post La imagen no se modifica.
+      */
     Image Crop(int nrow, int ncol, int height, int width) const;
 
     // Genera una imagen aumentada 2x.
+    /**
+      * @brief Genera una imagen aumentada 2x. Utiliza una interpolación lineal.
+      * @return Imagen aumentada al doble.
+      * @post La imagen no se modifica.
+      */
     Image Zoom2X() const;
 
 

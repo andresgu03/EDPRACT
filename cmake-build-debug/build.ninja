@@ -251,6 +251,39 @@ build contraste: CXX_EXECUTABLE_LINKER__contraste_Debug CMakeFiles/contraste.dir
   TARGET_FILE = contraste
   TARGET_PDB = contraste.dbg
 
+# =============================================================================
+# Object build statements for EXECUTABLE target barajar
+
+
+#############################################
+# Order-only phony target for barajar
+
+build cmake_object_order_depends_target_barajar: phony || cmake_object_order_depends_target_image
+
+build CMakeFiles/barajar.dir/estudiante/src/barajar.cpp.o: CXX_COMPILER__barajar_Debug /home/andres/Escritorio/ANDRÉS/ej01_imagenes/estudiante/src/barajar.cpp || cmake_object_order_depends_target_barajar
+  DEP_FILE = CMakeFiles/barajar.dir/estudiante/src/barajar.cpp.o.d
+  FLAGS = -g -std=gnu++14
+  INCLUDES = -I/home/andres/Escritorio/ANDRÉS/ej01_imagenes/estudiante/include
+  OBJECT_DIR = CMakeFiles/barajar.dir
+  OBJECT_FILE_DIR = CMakeFiles/barajar.dir/estudiante/src
+
+
+# =============================================================================
+# Link build statements for EXECUTABLE target barajar
+
+
+#############################################
+# Link the executable barajar
+
+build barajar: CXX_EXECUTABLE_LINKER__barajar_Debug CMakeFiles/barajar.dir/estudiante/src/barajar.cpp.o | libimage.a || libimage.a
+  FLAGS = -g
+  LINK_LIBRARIES = libimage.a
+  OBJECT_DIR = CMakeFiles/barajar.dir
+  POST_BUILD = :
+  PRE_LINK = :
+  TARGET_FILE = barajar
+  TARGET_PDB = barajar.dbg
+
 
 #############################################
 # Utility command for doc_doxygen
@@ -302,7 +335,7 @@ build image: phony libimage.a
 #############################################
 # Folder: /home/andres/Escritorio/ANDRÉS/ej01_imagenes/cmake-build-debug
 
-build all: phony libimage.a negativo subimagen zoom icono contraste doc_doxygen
+build all: phony libimage.a negativo subimagen zoom icono contraste barajar doc_doxygen
 
 # =============================================================================
 # Built-in targets

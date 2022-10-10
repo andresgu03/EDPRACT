@@ -1,5 +1,5 @@
-// Fichero: negativo.cpp
-// Calcula el negativo de una imagen PGM
+// Fichero: zoom.cpp
+// Hace zoom en una imagen PGM
 //
 
 #include <iostream>
