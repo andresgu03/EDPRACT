@@ -208,7 +208,7 @@ Image Image::Zoom2X() const {
                     zoomed_img.set_pixel(i, j, this->get_pixel(i / 2, j / 2));
                 }
                 else {
-                    zoomed_img.set_pixel(i, j, (this->Mean((i-1)/2,(j)/2,1,2)));//(this->get_pixel(i/2 , (j-1)/ 2))+(this->get_pixel(i/ 2, (j+1)/ 2))/2));
+                    zoomed_img.set_pixel(i, j, (this->Mean(i/2,(j-1)/2,1,2)));//(this->get_pixel(i/2 , (j-1)/ 2))+(this->get_pixel(i/ 2, (j+1)/ 2))/2));
                 }
             }
         }
@@ -244,6 +244,6 @@ double Image::Mean(int i, int j, int height, int width) const {
             sum+=this->get_pixel(i+a,j+b) ;
         }
     }
-    double mean = (sum/(height*width)) ;
+    double mean = round((double)sum/(height*width)) ;
     return mean ;
 }

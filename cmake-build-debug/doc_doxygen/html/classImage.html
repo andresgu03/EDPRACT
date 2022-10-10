@@ -124,8 +124,8 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a6c9c1b3fef7795378f8a56fdd491ffa0"><td class="memItemLeft" align="right" valign="top"><a id="a6c9c1b3fef7795378f8a56fdd491ffa0"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>Invert</b> ()</td></tr>
 <tr class="separator:a6c9c1b3fef7795378f8a56fdd491ffa0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4884f3eb51efdecc005092534ba7e4ea"><td class="memItemLeft" align="right" valign="top"><a id="a4884f3eb51efdecc005092534ba7e4ea"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>AdjustContrast</b> (byte in1, byte in2, byte out1, byte out2)</td></tr>
+<tr class="memitem:a4884f3eb51efdecc005092534ba7e4ea"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classImage.html#a4884f3eb51efdecc005092534ba7e4ea">AdjustContrast</a> (byte in1, byte in2, byte out1, byte out2)</td></tr>
+<tr class="memdesc:a4884f3eb51efdecc005092534ba7e4ea"><td class="mdescLeft">&#160;</td><td class="mdescRight">Modifica el contraste de una Imagen.  <a href="classImage.html#a4884f3eb51efdecc005092534ba7e4ea">More...</a><br /></td></tr>
 <tr class="separator:a4884f3eb51efdecc005092534ba7e4ea"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a08ac7df75c7bc99da2b3abdc35719203"><td class="memItemLeft" align="right" valign="top"><a id="a08ac7df75c7bc99da2b3abdc35719203"></a>
 double&#160;</td><td class="memItemRight" valign="bottom"><b>Mean</b> (int i, int j, int height, int width) const</td></tr>
@@ -271,6 +271,63 @@ Guillermo Gómez </dd></dl>
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
+<a id="a4884f3eb51efdecc005092534ba7e4ea"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4884f3eb51efdecc005092534ba7e4ea">&#9670;&nbsp;</a></span>AdjustContrast()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Image::AdjustContrast </td>
+          <td>(</td>
+          <td class="paramtype">byte&#160;</td>
+          <td class="paramname"><em>in1</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">byte&#160;</td>
+          <td class="paramname"><em>in2</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">byte&#160;</td>
+          <td class="paramname"><em>out1</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">byte&#160;</td>
+          <td class="paramname"><em>out2</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Modifica el contraste de una Imagen. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">in1</td><td>Umbral inferior de la imagen de entrada. </td></tr>
+    <tr><td class="paramname">in2</td><td>Umbral superior de la imagen de entrada. </td></tr>
+    <tr><td class="paramname">out1</td><td>Umbral inferior de la imagen de salida. </td></tr>
+    <tr><td class="paramname">out2</td><td>Umbral superior de la imagen de salida. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section pre"><dt>Precondition</dt><dd>0 &lt;= (in1, in2, out1, out2) &lt;= 255. </dd>
+<dd>
+in1 &lt; in2. </dd>
+<dd>
+out1 &lt; out2. </dd></dl>
+<dl class="section post"><dt>Postcondition</dt><dd>La imagen se modifica. </dd></dl>
+
+</div>
+</div>
 <a id="a0866c8c2e288fd753168a9c691ae17d2"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a0866c8c2e288fd753168a9c691ae17d2">&#9670;&nbsp;</a></span>Empty()</h2>
 

@@ -185,6 +185,72 @@ build zoom: CXX_EXECUTABLE_LINKER__zoom_Debug CMakeFiles/zoom.dir/estudiante/src
   TARGET_FILE = zoom
   TARGET_PDB = zoom.dbg
 
+# =============================================================================
+# Object build statements for EXECUTABLE target icono
+
+
+#############################################
+# Order-only phony target for icono
+
+build cmake_object_order_depends_target_icono: phony || cmake_object_order_depends_target_image
+
+build CMakeFiles/icono.dir/estudiante/src/icono.cpp.o: CXX_COMPILER__icono_Debug /home/andres/Escritorio/ANDRÉS/ej01_imagenes/estudiante/src/icono.cpp || cmake_object_order_depends_target_icono
+  DEP_FILE = CMakeFiles/icono.dir/estudiante/src/icono.cpp.o.d
+  FLAGS = -g -std=gnu++14
+  INCLUDES = -I/home/andres/Escritorio/ANDRÉS/ej01_imagenes/estudiante/include
+  OBJECT_DIR = CMakeFiles/icono.dir
+  OBJECT_FILE_DIR = CMakeFiles/icono.dir/estudiante/src
+
+
+# =============================================================================
+# Link build statements for EXECUTABLE target icono
+
+
+#############################################
+# Link the executable icono
+
+build icono: CXX_EXECUTABLE_LINKER__icono_Debug CMakeFiles/icono.dir/estudiante/src/icono.cpp.o | libimage.a || libimage.a
+  FLAGS = -g
+  LINK_LIBRARIES = libimage.a
+  OBJECT_DIR = CMakeFiles/icono.dir
+  POST_BUILD = :
+  PRE_LINK = :
+  TARGET_FILE = icono
+  TARGET_PDB = icono.dbg
+
+# =============================================================================
+# Object build statements for EXECUTABLE target contraste
+
+
+#############################################
+# Order-only phony target for contraste
+
+build cmake_object_order_depends_target_contraste: phony || cmake_object_order_depends_target_image
+
+build CMakeFiles/contraste.dir/estudiante/src/contraste.cpp.o: CXX_COMPILER__contraste_Debug /home/andres/Escritorio/ANDRÉS/ej01_imagenes/estudiante/src/contraste.cpp || cmake_object_order_depends_target_contraste
+  DEP_FILE = CMakeFiles/contraste.dir/estudiante/src/contraste.cpp.o.d
+  FLAGS = -g -std=gnu++14
+  INCLUDES = -I/home/andres/Escritorio/ANDRÉS/ej01_imagenes/estudiante/include
+  OBJECT_DIR = CMakeFiles/contraste.dir
+  OBJECT_FILE_DIR = CMakeFiles/contraste.dir/estudiante/src
+
+
+# =============================================================================
+# Link build statements for EXECUTABLE target contraste
+
+
+#############################################
+# Link the executable contraste
+
+build contraste: CXX_EXECUTABLE_LINKER__contraste_Debug CMakeFiles/contraste.dir/estudiante/src/contraste.cpp.o | libimage.a || libimage.a
+  FLAGS = -g
+  LINK_LIBRARIES = libimage.a
+  OBJECT_DIR = CMakeFiles/contraste.dir
+  POST_BUILD = :
+  PRE_LINK = :
+  TARGET_FILE = contraste
+  TARGET_PDB = contraste.dbg
+
 
 #############################################
 # Utility command for doc_doxygen
@@ -236,7 +302,7 @@ build image: phony libimage.a
 #############################################
 # Folder: /home/andres/Escritorio/ANDRÉS/ej01_imagenes/cmake-build-debug
 
-build all: phony libimage.a negativo subimagen zoom doc_doxygen
+build all: phony libimage.a negativo subimagen zoom icono contraste doc_doxygen
 
 # =============================================================================
 # Built-in targets
