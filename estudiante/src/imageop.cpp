@@ -13,29 +13,6 @@ void Image::Invert() {
         this->set_pixel(i,255-this->get_pixel(i));
 }
 
-void Image::AdjustContrast(byte in1, byte in2, byte out1, byte out2) {
-
-    assert(in1 < in2 && out1 < out2);
-    assert(0 <= in1 && in1 <= 255);
-    assert(0 <= in2 && in2 <= 255);
-    assert(0 <= out1 && out1 <= 255);
-    assert(0 <= out2 && out2 <= 255);
-
-    // Pendiente del ajuste
-    double k = ((double)out2 - out1) / (in2 - in1);
-
-    for(int i=0; i<this->size(); i++){
-
-        double old_pixel = this->get_pixel(i);
-
-        if(old_pixel >= in1 && old_pixel <= in2) {
-            byte new_pixel = round(out1 + k * (old_pixel - in1));
-            this->set_pixel(i, new_pixel);
-        }
-    }
-
-}
-
 Image Image::Crop(int nrow, int ncol, int height, int width) const {
     Image exit_img(height, width, 0) ;
     for(int i = 0 ; i < height ; i++){
@@ -95,4 +72,53 @@ double Image::Mean(int i, int j, int height, int width) const {
     return mean ;
 }
 
-void Image::ShuffleRows() {}
+void Image::AdjustContrast(byte in1, byte in2, byte out1, byte out2) {
+
+    assert(in1 < in2 && out1 < out2);
+    assert(0 <= in1 && in1 <= 255);
+    assert(0 <= in2 && in2 <= 255);
+    assert(0 <= out1 && out1 <= 255);
+    assert(0 <= out2 && out2 <= 255);
+
+    // Pendientes del ajuste
+    double k1 = (double)out1 / in1;
+    double k2 = ((double)out2 - out1) / (in2 - in1);
+    double k3 = ((double)255 - out2) / (255 - in2);
+
+    for(int i=0; i<this->size(); i++){
+
+        byte new_pixel;
+        byte old_pixel = this->get_pixel(i);
+
+        if (old_pixel < in1)
+            new_pixel = round(k1*old_pixel);
+        else if (old_pixel == in1)
+            new_pixel = out1;
+        else if (old_pixel > in1 && old_pixel < in2)
+            new_pixel = round(out1 + k2 * (old_pixel - in1));
+        else if (old_pixel == in2)
+            new_pixel = out2;
+        else
+            new_pixel = round(out2 + k3 * (old_pixel - in2));
+
+        this->set_pixel(i, new_pixel);
+    }
+}
+
+void Image::ShuffleRows() {
+
+    const int p = 9973;
+    Image temp(rows,cols);
+    int newr;
+
+    for (int r=0; r<rows; r++){
+
+        newr = r*p % rows;
+
+        // Reordenar las filas
+        temp.img[r] = this->img[newr];
+
+    }
+
+    Copy(temp);
+}

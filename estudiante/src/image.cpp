@@ -142,19 +142,27 @@ byte Image::get_pixel (int i, int j) const {
 void Image::set_pixel (int k, byte value) {
     // TODO this makes assumptions about the internal representation
     // TODO Can you reuse set_pixel(i,j,value)?
-    img[0][k] = value;
+    set_pixel(k / get_cols(), k % get_cols(), value);
+    //img[0][k] = value;
 }
 
 // This doesn't work if representation changes
 byte Image::get_pixel (int k) const {
     // TODO this makes assumptions about the internal representation
     // TODO Can you reuse get_pixel(i,j)?
-    return img[0][k];
+    return get_pixel(k / get_cols(), k % get_cols());
+    //return img[0][k];
 }
 
 // Métodos para almacenar y cargar imagenes en disco
 bool Image::Save (const char * file_path) const {
     // TODO this makes assumptions about the internal representation
-    byte * p = img[0];
+    //byte * p = img[0];
+    byte * p;
+    p = new byte [get_rows() * get_cols()];
+
+    for(int i=0; i<this->size(); i++)
+        p[i] = get_pixel(i);
+
     return WritePGMImage(file_path, p, rows, cols);
 }
