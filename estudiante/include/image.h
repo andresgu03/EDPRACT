@@ -253,7 +253,7 @@ void set_pixel (int i, int j, byte value);
 
     // Modifica el contraste de una Imagen .
     /**
-      * @brief Modifica el contraste de una Imagen.
+      * @brief Modifica el contraste de una Imagen. Utiliza una interpolación lineal.
       * @param in1 Umbral inferior de la imagen de entrada.
       * @param in2 Umbral superior de la imagen de entrada.
       * @param out1 Umbral inferior de la imagen de salida.
@@ -311,9 +311,11 @@ void set_pixel (int i, int j, byte value);
       */
     Image Zoom2X() const;
 
-
-
     // Baraja pseudoaleatoriamente las filas de una imagen.
+    /**
+      * @brief Baraja pseudoaleatoriamente las filas de una imagen. Utiliza el concepto de anillo cíclico.
+      * @post La imagen se modifica.
+      */
     void ShuffleRows();
 } ;
 
