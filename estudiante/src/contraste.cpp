@@ -1,6 +1,7 @@
-// Fichero: contraste.cpp
-// Ajusta el contraste de una imagen PGM
-//
+/**
+ * @file contraste.cpp
+ * @brief Fichero que permite ejecutar el método AdjustContrast sobre una imagen, es decir, ajustar su contraste partiendo de unos valores umbrales de entrada y salida.
+ */
 
 #include <iostream>
 #include <cstring>

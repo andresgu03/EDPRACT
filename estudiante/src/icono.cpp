@@ -1,6 +1,7 @@
-// Fichero: icono.cpp
-// Calcula un icono de una imagen PGM
-//
+/**
+ * @file icono.cpp
+ * @brief Fichero que permite ejecutar el método Subsample sobre una imagen, es decir, generar un icono de la imagen usando un factor de reducción.
+ */
 
 #include <iostream>
 #include <cstring>

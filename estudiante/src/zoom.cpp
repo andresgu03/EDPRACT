@@ -1,6 +1,7 @@
-// Fichero: zoom.cpp
-// Hace zoom en una imagen PGM
-//
+/**
+ * @file zoom.cpp
+ * @brief Fichero que permite ejecutar el método Zoom sobre una imagen
+ */
 
 #include <iostream>
 #include <cstring>

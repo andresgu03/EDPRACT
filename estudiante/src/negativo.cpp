@@ -1,6 +1,7 @@
-// Fichero: negativo.cpp
-// Calcula el negativo de una imagen PGM
-//
+/**
+ * @file negativo.cpp
+ * @brief Fichero que permite ejecutar el método Invert sobre una imagen, es decir, invertir la imagen (hacer su negativo).
+ */
 
 #include <iostream>
 #include <cstring>

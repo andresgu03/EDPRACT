@@ -32,9 +32,9 @@ enum LoadResult: unsigned char {
 
   \#include <Imagen.h>
 
-  @author Javier Abad
-  @author Guillermo Gómez
-  @date Septiembre 2021
+  @author Andrés Gutiérrez
+  @author Pablo García
+  @date Octubre 2022
 
 **/
 
@@ -43,16 +43,17 @@ class Image{
     /**
          @page page_repImagen Representación del TDA Imagen
 
-         @section sec_Image_A Título A
+
+         @section sec_Image_A TDA Imagen
+
+         El **TDA Imagen** se corresponde con una matriz bidimensional de _bytes_ donde cada byte representa un valor de luminosidad, siendo 0 la ausencia de luminosidad (correspondiente al color _negro_) y el 255 la luminosidad total (correspondiente al color _blanco_). Los demás valores se corresponden de manera proporcional con una escala de grises.
+
+         @section sec_Image_B Tipo de dato Byte
 
 
-         Contenido de la sección A.
+         La representación del tipo **byte** se basa en renombrar el tipo de dato _unsigned char_, que contiene valores numéricos en el rango [0,255] (que se corresponden a elementos de la tabla ASCII) que se corresponden a un **byte** (8 bits).
 
-         @section sec_Image_B Título  B
 
-         Contenido de la sección B.
-
-         Referencia a la \ref sec_Image_A
        **/
 private :
 
@@ -293,7 +294,7 @@ void set_pixel (int i, int j, byte value);
     /**
       * @brief Genera una subimagen.
       * @param nrow Fila inicial.
-      * @param nfil Columna inicial.
+      * @param ncol Columna inicial.
       * @param height Número de filas que tomamos.
       * @param width Número de columnas que tomamos
       * @pre nrow + height < num_rows

@@ -284,6 +284,39 @@ build barajar: CXX_EXECUTABLE_LINKER__barajar_Debug CMakeFiles/barajar.dir/estud
   TARGET_FILE = barajar
   TARGET_PDB = barajar.dbg
 
+# =============================================================================
+# Object build statements for EXECUTABLE target eficiencia
+
+
+#############################################
+# Order-only phony target for eficiencia
+
+build cmake_object_order_depends_target_eficiencia: phony || cmake_object_order_depends_target_image
+
+build CMakeFiles/eficiencia.dir/estudiante/src/eficiencia.cpp.o: CXX_COMPILER__eficiencia_Debug /home/andres/Escritorio/ANDRÉS/ej01_imagenes/estudiante/src/eficiencia.cpp || cmake_object_order_depends_target_eficiencia
+  DEP_FILE = CMakeFiles/eficiencia.dir/estudiante/src/eficiencia.cpp.o.d
+  FLAGS = -g -std=gnu++14
+  INCLUDES = -I/home/andres/Escritorio/ANDRÉS/ej01_imagenes/estudiante/include
+  OBJECT_DIR = CMakeFiles/eficiencia.dir
+  OBJECT_FILE_DIR = CMakeFiles/eficiencia.dir/estudiante/src
+
+
+# =============================================================================
+# Link build statements for EXECUTABLE target eficiencia
+
+
+#############################################
+# Link the executable eficiencia
+
+build eficiencia: CXX_EXECUTABLE_LINKER__eficiencia_Debug CMakeFiles/eficiencia.dir/estudiante/src/eficiencia.cpp.o | libimage.a || libimage.a
+  FLAGS = -g
+  LINK_LIBRARIES = libimage.a
+  OBJECT_DIR = CMakeFiles/eficiencia.dir
+  POST_BUILD = :
+  PRE_LINK = :
+  TARGET_FILE = eficiencia
+  TARGET_PDB = eficiencia.dbg
+
 
 #############################################
 # Utility command for doc_doxygen
@@ -335,7 +368,7 @@ build image: phony libimage.a
 #############################################
 # Folder: /home/andres/Escritorio/ANDRÉS/ej01_imagenes/cmake-build-debug
 
-build all: phony libimage.a negativo subimagen zoom icono contraste barajar doc_doxygen
+build all: phony libimage.a negativo subimagen zoom icono contraste barajar eficiencia doc_doxygen
 
 # =============================================================================
 # Built-in targets

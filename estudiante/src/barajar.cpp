@@ -1,6 +1,7 @@
-// Fichero: barajar.cpp
-// Baraja las filas de una imagen PGM
-//
+/**
+ * @file barajar.cpp
+ * @brief Fichero que permite ejecutar el método ShuffleRows sobre una imagen, es decir, barajar aleatoriamente sus filas.
+ */
 
 #include <iostream>
 #include <cstring>

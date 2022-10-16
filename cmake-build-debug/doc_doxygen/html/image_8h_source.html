@@ -90,102 +90,101 @@ $(function() {
 <div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160; </div>
 <div class="line"><a name="l00041"></a><span class="lineno"><a class="line" href="classImage.html">   41</a></span>&#160;<span class="keyword">class </span><a class="code" href="classImage.html">Image</a>{</div>
 <div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160; </div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;private :</div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160; </div>
-<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;    <span class="keywordtype">byte</span> **img;</div>
-<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160; </div>
-<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;    <span class="keywordtype">int</span> rows;</div>
-<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160; </div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;private :</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160; </div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;    <span class="keywordtype">byte</span> **img;</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160; </div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;    <span class="keywordtype">int</span> rows;</div>
 <div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160; </div>
-<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;    <span class="keywordtype">int</span> cols;</div>
-<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160; </div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160; </div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;    <span class="keywordtype">int</span> cols;</div>
 <div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160; </div>
-<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;    <span class="keywordtype">void</span> Initialize (<span class="keywordtype">int</span> nrows= 0, <span class="keywordtype">int</span> ncols= 0, <span class="keywordtype">byte</span> *buffer= 0);</div>
-<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160; </div>
-<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;    LoadResult LoadFromPGM(<span class="keyword">const</span> <span class="keywordtype">char</span> * file_path);</div>
-<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160; </div>
-<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;    <span class="keywordtype">void</span> Copy(<span class="keyword">const</span> <a class="code" href="classImage.html">Image</a> &amp;orig);</div>
-<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160; </div>
-<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;    <span class="keywordtype">void</span> Allocate(<span class="keywordtype">int</span> nrows, <span class="keywordtype">int</span> ncols, <span class="keywordtype">byte</span> * buffer = 0);</div>
-<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160; </div>
-<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;    <span class="keywordtype">void</span> Destroy();</div>
-<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160; </div>
-<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;public :</div>
-<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160; </div>
-<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;    <a class="code" href="classImage.html#a58edd1c45b4faeb5f789b0d036d02313">Image</a>();</div>
-<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160; </div>
-<div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160;    <a class="code" href="classImage.html#a58edd1c45b4faeb5f789b0d036d02313">Image</a>(<span class="keywordtype">int</span> nrows, <span class="keywordtype">int</span> ncols, <span class="keywordtype">byte</span> value=0);</div>
-<div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160; </div>
-<div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;    <a class="code" href="classImage.html#a58edd1c45b4faeb5f789b0d036d02313">Image</a> (<span class="keyword">const</span> <a class="code" href="classImage.html">Image</a> &amp; orig);</div>
-<div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160; </div>
-<div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;    <a class="code" href="classImage.html#a0294f63700543e11c0f0da85601c7ae5">~Image</a>() ;</div>
-<div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160; </div>
-<div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160;    <a class="code" href="classImage.html">Image</a> &amp; <a class="code" href="classImage.html#aeaa2d687caf48e3c72fc773c70a0e9fa">operator= </a>(<span class="keyword">const</span> <a class="code" href="classImage.html">Image</a> &amp; orig);</div>
-<div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160; </div>
-<div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="classImage.html#a0866c8c2e288fd753168a9c691ae17d2">Empty</a>() <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160; </div>
-<div class="line"><a name="l00176"></a><span class="lineno">  176</span>&#160;    <span class="keywordtype">int</span> <a class="code" href="classImage.html#a19fc606085e6e76dedf57b7de391dfdb">get_rows</a>() <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160; </div>
-<div class="line"><a name="l00183"></a><span class="lineno">  183</span>&#160;    <span class="keywordtype">int</span> <a class="code" href="classImage.html#ac52444a5ffbbc50d6dde8375ca5f45ea">get_cols</a>() <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00184"></a><span class="lineno">  184</span>&#160; </div>
-<div class="line"><a name="l00190"></a><span class="lineno">  190</span>&#160;    <span class="keywordtype">int</span> <a class="code" href="classImage.html#a78068ea10fef9954ea0e91705997652d">size</a>() <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00191"></a><span class="lineno">  191</span>&#160; </div>
-<div class="line"><a name="l00203"></a><span class="lineno">  203</span>&#160;<span class="keywordtype">void</span> <a class="code" href="classImage.html#a6e316f867fd3b67a75d78ca66bc12195">set_pixel</a> (<span class="keywordtype">int</span> i, <span class="keywordtype">int</span> j, <span class="keywordtype">byte</span> value);</div>
-<div class="line"><a name="l00204"></a><span class="lineno">  204</span>&#160; </div>
-<div class="line"><a name="l00213"></a><span class="lineno">  213</span>&#160;    <span class="keywordtype">byte</span> <a class="code" href="classImage.html#aca8a815018d91548953cf571d778020e">get_pixel</a> (<span class="keywordtype">int</span> i, <span class="keywordtype">int</span> j) <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00214"></a><span class="lineno">  214</span>&#160; </div>
-<div class="line"><a name="l00222"></a><span class="lineno">  222</span>&#160;    <span class="keywordtype">byte</span> <a class="code" href="classImage.html#aca8a815018d91548953cf571d778020e">get_pixel</a> (<span class="keywordtype">int</span> k) <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00223"></a><span class="lineno">  223</span>&#160; </div>
-<div class="line"><a name="l00231"></a><span class="lineno">  231</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classImage.html#a6e316f867fd3b67a75d78ca66bc12195">set_pixel</a> (<span class="keywordtype">int</span> k, <span class="keywordtype">byte</span> value);</div>
-<div class="line"><a name="l00232"></a><span class="lineno">  232</span>&#160; </div>
-<div class="line"><a name="l00240"></a><span class="lineno">  240</span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="classImage.html#adde1007dc6359087dae65fa8cae26448">Save</a> (<span class="keyword">const</span> <span class="keywordtype">char</span> * file_path) <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00241"></a><span class="lineno">  241</span>&#160; </div>
-<div class="line"><a name="l00249"></a><span class="lineno">  249</span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="classImage.html#a997e2d58be54bca2cf8f4da5818bf771">Load</a> (<span class="keyword">const</span> <span class="keywordtype">char</span> * file_path);</div>
-<div class="line"><a name="l00250"></a><span class="lineno">  250</span>&#160; </div>
-<div class="line"><a name="l00251"></a><span class="lineno">  251</span>&#160;    <span class="comment">// Invierte</span></div>
-<div class="line"><a name="l00252"></a><span class="lineno">  252</span>&#160;    <span class="keywordtype">void</span> Invert();</div>
-<div class="line"><a name="l00253"></a><span class="lineno">  253</span>&#160; </div>
-<div class="line"><a name="l00254"></a><span class="lineno">  254</span>&#160;    <span class="comment">// Modifica el contraste de una Imagen .</span></div>
-<div class="line"><a name="l00266"></a><span class="lineno">  266</span>&#160;<span class="comment"></span>    <span class="keywordtype">void</span> <a class="code" href="classImage.html#a4884f3eb51efdecc005092534ba7e4ea">AdjustContrast</a> (<span class="keywordtype">byte</span> in1, <span class="keywordtype">byte</span> in2, <span class="keywordtype">byte</span> out1, <span class="keywordtype">byte</span> out2);</div>
-<div class="line"><a name="l00267"></a><span class="lineno">  267</span>&#160; </div>
-<div class="line"><a name="l00268"></a><span class="lineno">  268</span>&#160;    <span class="comment">// Calcula la media de los píxeles de una imagen entera o de un fragmento de ésta.</span></div>
-<div class="line"><a name="l00280"></a><span class="lineno">  280</span>&#160;<span class="comment"></span>    <span class="keywordtype">double</span> <a class="code" href="classImage.html#a08ac7df75c7bc99da2b3abdc35719203">Mean</a> (<span class="keywordtype">int</span> i, <span class="keywordtype">int</span> j, <span class="keywordtype">int</span> height, <span class="keywordtype">int</span> width) <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00281"></a><span class="lineno">  281</span>&#160; </div>
-<div class="line"><a name="l00282"></a><span class="lineno">  282</span>&#160;    <span class="comment">// Genera un icono como reducción de una imagen.</span></div>
-<div class="line"><a name="l00290"></a><span class="lineno">  290</span>&#160;<span class="comment"></span>    <a class="code" href="classImage.html">Image</a> <a class="code" href="classImage.html#aa00e596a67ec6130922c560049457985">Subsample</a>(<span class="keywordtype">int</span> factor) <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00291"></a><span class="lineno">  291</span>&#160; </div>
-<div class="line"><a name="l00292"></a><span class="lineno">  292</span>&#160;    <span class="comment">// Genera una subimagen.</span></div>
-<div class="line"><a name="l00304"></a><span class="lineno">  304</span>&#160;<span class="comment"></span>    <a class="code" href="classImage.html">Image</a> <a class="code" href="classImage.html#aad309b582d08dfd826c5106eaf80eb1e">Crop</a>(<span class="keywordtype">int</span> nrow, <span class="keywordtype">int</span> ncol, <span class="keywordtype">int</span> height, <span class="keywordtype">int</span> width) <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00305"></a><span class="lineno">  305</span>&#160; </div>
-<div class="line"><a name="l00306"></a><span class="lineno">  306</span>&#160;    <span class="comment">// Genera una imagen aumentada 2x.</span></div>
-<div class="line"><a name="l00312"></a><span class="lineno">  312</span>&#160;<span class="comment"></span>    <a class="code" href="classImage.html">Image</a> <a class="code" href="classImage.html#af7c220a99f8b90c6e9f243ee22943305">Zoom2X</a>() <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00313"></a><span class="lineno">  313</span>&#160; </div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160; </div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;    <span class="keywordtype">void</span> Initialize (<span class="keywordtype">int</span> nrows= 0, <span class="keywordtype">int</span> ncols= 0, <span class="keywordtype">byte</span> *buffer= 0);</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160; </div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;    LoadResult LoadFromPGM(<span class="keyword">const</span> <span class="keywordtype">char</span> * file_path);</div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160; </div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;    <span class="keywordtype">void</span> Copy(<span class="keyword">const</span> <a class="code" href="classImage.html">Image</a> &amp;orig);</div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160; </div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;    <span class="keywordtype">void</span> Allocate(<span class="keywordtype">int</span> nrows, <span class="keywordtype">int</span> ncols, <span class="keywordtype">byte</span> * buffer = 0);</div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160; </div>
+<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;    <span class="keywordtype">void</span> Destroy();</div>
+<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160; </div>
+<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;public :</div>
+<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160; </div>
+<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;    <a class="code" href="classImage.html#a58edd1c45b4faeb5f789b0d036d02313">Image</a>();</div>
+<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160; </div>
+<div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160;    <a class="code" href="classImage.html#a58edd1c45b4faeb5f789b0d036d02313">Image</a>(<span class="keywordtype">int</span> nrows, <span class="keywordtype">int</span> ncols, <span class="keywordtype">byte</span> value=0);</div>
+<div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160; </div>
+<div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;    <a class="code" href="classImage.html#a58edd1c45b4faeb5f789b0d036d02313">Image</a> (<span class="keyword">const</span> <a class="code" href="classImage.html">Image</a> &amp; orig);</div>
+<div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160; </div>
+<div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;    <a class="code" href="classImage.html#a0294f63700543e11c0f0da85601c7ae5">~Image</a>() ;</div>
+<div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160; </div>
+<div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;    <a class="code" href="classImage.html">Image</a> &amp; <a class="code" href="classImage.html#aeaa2d687caf48e3c72fc773c70a0e9fa">operator= </a>(<span class="keyword">const</span> <a class="code" href="classImage.html">Image</a> &amp; orig);</div>
+<div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160; </div>
+<div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="classImage.html#a0866c8c2e288fd753168a9c691ae17d2">Empty</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160; </div>
+<div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160;    <span class="keywordtype">int</span> <a class="code" href="classImage.html#a19fc606085e6e76dedf57b7de391dfdb">get_rows</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160; </div>
+<div class="line"><a name="l00184"></a><span class="lineno">  184</span>&#160;    <span class="keywordtype">int</span> <a class="code" href="classImage.html#ac52444a5ffbbc50d6dde8375ca5f45ea">get_cols</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00185"></a><span class="lineno">  185</span>&#160; </div>
+<div class="line"><a name="l00191"></a><span class="lineno">  191</span>&#160;    <span class="keywordtype">int</span> <a class="code" href="classImage.html#a78068ea10fef9954ea0e91705997652d">size</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00192"></a><span class="lineno">  192</span>&#160; </div>
+<div class="line"><a name="l00204"></a><span class="lineno">  204</span>&#160;<span class="keywordtype">void</span> <a class="code" href="classImage.html#a6e316f867fd3b67a75d78ca66bc12195">set_pixel</a> (<span class="keywordtype">int</span> i, <span class="keywordtype">int</span> j, <span class="keywordtype">byte</span> value);</div>
+<div class="line"><a name="l00205"></a><span class="lineno">  205</span>&#160; </div>
+<div class="line"><a name="l00214"></a><span class="lineno">  214</span>&#160;    <span class="keywordtype">byte</span> <a class="code" href="classImage.html#aca8a815018d91548953cf571d778020e">get_pixel</a> (<span class="keywordtype">int</span> i, <span class="keywordtype">int</span> j) <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00215"></a><span class="lineno">  215</span>&#160; </div>
+<div class="line"><a name="l00223"></a><span class="lineno">  223</span>&#160;    <span class="keywordtype">byte</span> <a class="code" href="classImage.html#aca8a815018d91548953cf571d778020e">get_pixel</a> (<span class="keywordtype">int</span> k) <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00224"></a><span class="lineno">  224</span>&#160; </div>
+<div class="line"><a name="l00232"></a><span class="lineno">  232</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classImage.html#a6e316f867fd3b67a75d78ca66bc12195">set_pixel</a> (<span class="keywordtype">int</span> k, <span class="keywordtype">byte</span> value);</div>
+<div class="line"><a name="l00233"></a><span class="lineno">  233</span>&#160; </div>
+<div class="line"><a name="l00241"></a><span class="lineno">  241</span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="classImage.html#adde1007dc6359087dae65fa8cae26448">Save</a> (<span class="keyword">const</span> <span class="keywordtype">char</span> * file_path) <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00242"></a><span class="lineno">  242</span>&#160; </div>
+<div class="line"><a name="l00250"></a><span class="lineno">  250</span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="classImage.html#a997e2d58be54bca2cf8f4da5818bf771">Load</a> (<span class="keyword">const</span> <span class="keywordtype">char</span> * file_path);</div>
+<div class="line"><a name="l00251"></a><span class="lineno">  251</span>&#160; </div>
+<div class="line"><a name="l00252"></a><span class="lineno">  252</span>&#160;    <span class="comment">// Invierte</span></div>
+<div class="line"><a name="l00253"></a><span class="lineno">  253</span>&#160;    <span class="keywordtype">void</span> Invert();</div>
+<div class="line"><a name="l00254"></a><span class="lineno">  254</span>&#160; </div>
+<div class="line"><a name="l00255"></a><span class="lineno">  255</span>&#160;    <span class="comment">// Modifica el contraste de una Imagen .</span></div>
+<div class="line"><a name="l00267"></a><span class="lineno">  267</span>&#160;<span class="comment"></span>    <span class="keywordtype">void</span> <a class="code" href="classImage.html#a4884f3eb51efdecc005092534ba7e4ea">AdjustContrast</a> (<span class="keywordtype">byte</span> in1, <span class="keywordtype">byte</span> in2, <span class="keywordtype">byte</span> out1, <span class="keywordtype">byte</span> out2);</div>
+<div class="line"><a name="l00268"></a><span class="lineno">  268</span>&#160; </div>
+<div class="line"><a name="l00269"></a><span class="lineno">  269</span>&#160;    <span class="comment">// Calcula la media de los píxeles de una imagen entera o de un fragmento de ésta.</span></div>
+<div class="line"><a name="l00281"></a><span class="lineno">  281</span>&#160;<span class="comment"></span>    <span class="keywordtype">double</span> <a class="code" href="classImage.html#a08ac7df75c7bc99da2b3abdc35719203">Mean</a> (<span class="keywordtype">int</span> i, <span class="keywordtype">int</span> j, <span class="keywordtype">int</span> height, <span class="keywordtype">int</span> width) <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00282"></a><span class="lineno">  282</span>&#160; </div>
+<div class="line"><a name="l00283"></a><span class="lineno">  283</span>&#160;    <span class="comment">// Genera un icono como reducción de una imagen.</span></div>
+<div class="line"><a name="l00291"></a><span class="lineno">  291</span>&#160;<span class="comment"></span>    <a class="code" href="classImage.html">Image</a> <a class="code" href="classImage.html#aa00e596a67ec6130922c560049457985">Subsample</a>(<span class="keywordtype">int</span> factor) <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00292"></a><span class="lineno">  292</span>&#160; </div>
+<div class="line"><a name="l00293"></a><span class="lineno">  293</span>&#160;    <span class="comment">// Genera una subimagen.</span></div>
+<div class="line"><a name="l00305"></a><span class="lineno">  305</span>&#160;<span class="comment"></span>    <a class="code" href="classImage.html">Image</a> <a class="code" href="classImage.html#aad309b582d08dfd826c5106eaf80eb1e">Crop</a>(<span class="keywordtype">int</span> nrow, <span class="keywordtype">int</span> ncol, <span class="keywordtype">int</span> height, <span class="keywordtype">int</span> width) <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00306"></a><span class="lineno">  306</span>&#160; </div>
+<div class="line"><a name="l00307"></a><span class="lineno">  307</span>&#160;    <span class="comment">// Genera una imagen aumentada 2x.</span></div>
+<div class="line"><a name="l00313"></a><span class="lineno">  313</span>&#160;<span class="comment"></span>    <a class="code" href="classImage.html">Image</a> <a class="code" href="classImage.html#af7c220a99f8b90c6e9f243ee22943305">Zoom2X</a>() <span class="keyword">const</span>;</div>
 <div class="line"><a name="l00314"></a><span class="lineno">  314</span>&#160; </div>
-<div class="line"><a name="l00315"></a><span class="lineno">  315</span>&#160; </div>
-<div class="line"><a name="l00316"></a><span class="lineno">  316</span>&#160;    <span class="comment">// Baraja pseudoaleatoriamente las filas de una imagen.</span></div>
-<div class="line"><a name="l00317"></a><span class="lineno">  317</span>&#160;    <span class="keywordtype">void</span> ShuffleRows();</div>
-<div class="line"><a name="l00318"></a><span class="lineno">  318</span>&#160;} ;</div>
-<div class="line"><a name="l00319"></a><span class="lineno">  319</span>&#160; </div>
-<div class="line"><a name="l00320"></a><span class="lineno">  320</span>&#160; </div>
-<div class="line"><a name="l00321"></a><span class="lineno">  321</span>&#160;<span class="preprocessor">#endif </span><span class="comment">// _IMAGEN_H_</span></div>
+<div class="line"><a name="l00315"></a><span class="lineno">  315</span>&#160;    <span class="comment">// Baraja pseudoaleatoriamente las filas de una imagen.</span></div>
+<div class="line"><a name="l00320"></a><span class="lineno">  320</span>&#160;<span class="comment"></span>    <span class="keywordtype">void</span> <a class="code" href="classImage.html#a27d5bab7af11a729048b82af06f2d0c0">ShuffleRows</a>();</div>
+<div class="line"><a name="l00321"></a><span class="lineno">  321</span>&#160;} ;</div>
 <div class="line"><a name="l00322"></a><span class="lineno">  322</span>&#160; </div>
+<div class="line"><a name="l00323"></a><span class="lineno">  323</span>&#160; </div>
+<div class="line"><a name="l00324"></a><span class="lineno">  324</span>&#160;<span class="preprocessor">#endif </span><span class="comment">// _IMAGEN_H_</span></div>
+<div class="line"><a name="l00325"></a><span class="lineno">  325</span>&#160; </div>
 <div class="ttc" id="aclassImage_html"><div class="ttname"><a href="classImage.html">Image</a></div><div class="ttdoc">T.D.A. Imagen.</div><div class="ttdef"><b>Definition:</b> image.h:41</div></div>
-<div class="ttc" id="aclassImage_html_a0294f63700543e11c0f0da85601c7ae5"><div class="ttname"><a href="classImage.html#a0294f63700543e11c0f0da85601c7ae5">Image::~Image</a></div><div class="ttdeci">~Image()</div><div class="ttdoc">Oper ador de tipo destructor.</div><div class="ttdef"><b>Definition:</b> image.cpp:105</div></div>
-<div class="ttc" id="aclassImage_html_a0866c8c2e288fd753168a9c691ae17d2"><div class="ttname"><a href="classImage.html#a0866c8c2e288fd753168a9c691ae17d2">Image::Empty</a></div><div class="ttdeci">bool Empty() const</div><div class="ttdoc">Funcion para conocer si una imagen está vacía.</div><div class="ttdef"><b>Definition:</b> image.cpp:52</div></div>
-<div class="ttc" id="aclassImage_html_a08ac7df75c7bc99da2b3abdc35719203"><div class="ttname"><a href="classImage.html#a08ac7df75c7bc99da2b3abdc35719203">Image::Mean</a></div><div class="ttdeci">double Mean(int i, int j, int height, int width) const</div><div class="ttdoc">Calcula la media de los píxeles de una imagen entera o de un fragmento de ésta.</div><div class="ttdef"><b>Definition:</b> imageop.cpp:87</div></div>
-<div class="ttc" id="aclassImage_html_a19fc606085e6e76dedf57b7de391dfdb"><div class="ttname"><a href="classImage.html#a19fc606085e6e76dedf57b7de391dfdb">Image::get_rows</a></div><div class="ttdeci">int get_rows() const</div><div class="ttdoc">Filas de la imagen .</div><div class="ttdef"><b>Definition:</b> image.cpp:121</div></div>
-<div class="ttc" id="aclassImage_html_a4884f3eb51efdecc005092534ba7e4ea"><div class="ttname"><a href="classImage.html#a4884f3eb51efdecc005092534ba7e4ea">Image::AdjustContrast</a></div><div class="ttdeci">void AdjustContrast(byte in1, byte in2, byte out1, byte out2)</div><div class="ttdoc">Modifica el contraste de una Imagen.</div><div class="ttdef"><b>Definition:</b> imageop.cpp:16</div></div>
-<div class="ttc" id="aclassImage_html_a58edd1c45b4faeb5f789b0d036d02313"><div class="ttname"><a href="classImage.html#a58edd1c45b4faeb5f789b0d036d02313">Image::Image</a></div><div class="ttdeci">Image()</div><div class="ttdoc">Constructor por defecto .</div><div class="ttdef"><b>Definition:</b> image.cpp:81</div></div>
-<div class="ttc" id="aclassImage_html_a6e316f867fd3b67a75d78ca66bc12195"><div class="ttname"><a href="classImage.html#a6e316f867fd3b67a75d78ca66bc12195">Image::set_pixel</a></div><div class="ttdeci">void set_pixel(int i, int j, byte value)</div><div class="ttdoc">Asigna el valor valor al píxel (i, j) de la imagen.</div><div class="ttdef"><b>Definition:</b> image.cpp:134</div></div>
-<div class="ttc" id="aclassImage_html_a78068ea10fef9954ea0e91705997652d"><div class="ttname"><a href="classImage.html#a78068ea10fef9954ea0e91705997652d">Image::size</a></div><div class="ttdeci">int size() const</div><div class="ttdoc">Devuelve el número de píxeles de la imagen.</div><div class="ttdef"><b>Definition:</b> image.cpp:129</div></div>
-<div class="ttc" id="aclassImage_html_a997e2d58be54bca2cf8f4da5818bf771"><div class="ttname"><a href="classImage.html#a997e2d58be54bca2cf8f4da5818bf771">Image::Load</a></div><div class="ttdeci">bool Load(const char *file_path)</div><div class="ttdoc">Carga en memoria una imagen de disco .</div><div class="ttdef"><b>Definition:</b> image.cpp:91</div></div>
-<div class="ttc" id="aclassImage_html_aa00e596a67ec6130922c560049457985"><div class="ttname"><a href="classImage.html#aa00e596a67ec6130922c560049457985">Image::Subsample</a></div><div class="ttdeci">Image Subsample(int factor) const</div><div class="ttdoc">Genera un icono como reducción de una imagen.</div><div class="ttdef"><b>Definition:</b> imageop.cpp:76</div></div>
-<div class="ttc" id="aclassImage_html_aad309b582d08dfd826c5106eaf80eb1e"><div class="ttname"><a href="classImage.html#aad309b582d08dfd826c5106eaf80eb1e">Image::Crop</a></div><div class="ttdeci">Image Crop(int nrow, int ncol, int height, int width) const</div><div class="ttdoc">Genera una subimagen.</div><div class="ttdef"><b>Definition:</b> imageop.cpp:39</div></div>
-<div class="ttc" id="aclassImage_html_ac52444a5ffbbc50d6dde8375ca5f45ea"><div class="ttname"><a href="classImage.html#ac52444a5ffbbc50d6dde8375ca5f45ea">Image::get_cols</a></div><div class="ttdeci">int get_cols() const</div><div class="ttdoc">Columnas de la imagen.</div><div class="ttdef"><b>Definition:</b> image.cpp:125</div></div>
-<div class="ttc" id="aclassImage_html_aca8a815018d91548953cf571d778020e"><div class="ttname"><a href="classImage.html#aca8a815018d91548953cf571d778020e">Image::get_pixel</a></div><div class="ttdeci">byte get_pixel(int i, int j) const</div><div class="ttdoc">Consulta el valor del píxel (fil, col) de la imagen.</div><div class="ttdef"><b>Definition:</b> image.cpp:137</div></div>
-<div class="ttc" id="aclassImage_html_adde1007dc6359087dae65fa8cae26448"><div class="ttname"><a href="classImage.html#adde1007dc6359087dae65fa8cae26448">Image::Save</a></div><div class="ttdeci">bool Save(const char *file_path) const</div><div class="ttdoc">Almacena imágenes en disco.</div><div class="ttdef"><b>Definition:</b> image.cpp:156</div></div>
-<div class="ttc" id="aclassImage_html_aeaa2d687caf48e3c72fc773c70a0e9fa"><div class="ttname"><a href="classImage.html#aeaa2d687caf48e3c72fc773c70a0e9fa">Image::operator=</a></div><div class="ttdeci">Image &amp; operator=(const Image &amp;orig)</div><div class="ttdoc">Operador de asignación .</div><div class="ttdef"><b>Definition:</b> image.cpp:111</div></div>
-<div class="ttc" id="aclassImage_html_af7c220a99f8b90c6e9f243ee22943305"><div class="ttname"><a href="classImage.html#af7c220a99f8b90c6e9f243ee22943305">Image::Zoom2X</a></div><div class="ttdeci">Image Zoom2X() const</div><div class="ttdoc">Genera una imagen aumentada 2x. Utiliza una interpolación lineal.</div><div class="ttdef"><b>Definition:</b> imageop.cpp:49</div></div>
+<div class="ttc" id="aclassImage_html_a0294f63700543e11c0f0da85601c7ae5"><div class="ttname"><a href="classImage.html#a0294f63700543e11c0f0da85601c7ae5">Image::~Image</a></div><div class="ttdeci">~Image()</div><div class="ttdoc">Oper ador de tipo destructor.</div><div class="ttdef"><b>Definition:</b> image-old.cpp:105</div></div>
+<div class="ttc" id="aclassImage_html_a0866c8c2e288fd753168a9c691ae17d2"><div class="ttname"><a href="classImage.html#a0866c8c2e288fd753168a9c691ae17d2">Image::Empty</a></div><div class="ttdeci">bool Empty() const</div><div class="ttdoc">Funcion para conocer si una imagen está vacía.</div><div class="ttdef"><b>Definition:</b> image-old.cpp:52</div></div>
+<div class="ttc" id="aclassImage_html_a08ac7df75c7bc99da2b3abdc35719203"><div class="ttname"><a href="classImage.html#a08ac7df75c7bc99da2b3abdc35719203">Image::Mean</a></div><div class="ttdeci">double Mean(int i, int j, int height, int width) const</div><div class="ttdoc">Calcula la media de los píxeles de una imagen entera o de un fragmento de ésta.</div><div class="ttdef"><b>Definition:</b> imageop-old.cpp:97</div></div>
+<div class="ttc" id="aclassImage_html_a19fc606085e6e76dedf57b7de391dfdb"><div class="ttname"><a href="classImage.html#a19fc606085e6e76dedf57b7de391dfdb">Image::get_rows</a></div><div class="ttdeci">int get_rows() const</div><div class="ttdoc">Filas de la imagen .</div><div class="ttdef"><b>Definition:</b> image-old.cpp:121</div></div>
+<div class="ttc" id="aclassImage_html_a27d5bab7af11a729048b82af06f2d0c0"><div class="ttname"><a href="classImage.html#a27d5bab7af11a729048b82af06f2d0c0">Image::ShuffleRows</a></div><div class="ttdeci">void ShuffleRows()</div><div class="ttdoc">Baraja pseudoaleatoriamente las filas de una imagen. Utiliza el concepto de anillo cíclico.</div><div class="ttdef"><b>Definition:</b> imageop-old.cpp:108</div></div>
+<div class="ttc" id="aclassImage_html_a4884f3eb51efdecc005092534ba7e4ea"><div class="ttname"><a href="classImage.html#a4884f3eb51efdecc005092534ba7e4ea">Image::AdjustContrast</a></div><div class="ttdeci">void AdjustContrast(byte in1, byte in2, byte out1, byte out2)</div><div class="ttdoc">Modifica el contraste de una Imagen. Utiliza una interpolación lineal.</div><div class="ttdef"><b>Definition:</b> imageop-old.cpp:16</div></div>
+<div class="ttc" id="aclassImage_html_a58edd1c45b4faeb5f789b0d036d02313"><div class="ttname"><a href="classImage.html#a58edd1c45b4faeb5f789b0d036d02313">Image::Image</a></div><div class="ttdeci">Image()</div><div class="ttdoc">Constructor por defecto .</div><div class="ttdef"><b>Definition:</b> image-old.cpp:81</div></div>
+<div class="ttc" id="aclassImage_html_a6e316f867fd3b67a75d78ca66bc12195"><div class="ttname"><a href="classImage.html#a6e316f867fd3b67a75d78ca66bc12195">Image::set_pixel</a></div><div class="ttdeci">void set_pixel(int i, int j, byte value)</div><div class="ttdoc">Asigna el valor valor al píxel (i, j) de la imagen.</div><div class="ttdef"><b>Definition:</b> image-old.cpp:134</div></div>
+<div class="ttc" id="aclassImage_html_a78068ea10fef9954ea0e91705997652d"><div class="ttname"><a href="classImage.html#a78068ea10fef9954ea0e91705997652d">Image::size</a></div><div class="ttdeci">int size() const</div><div class="ttdoc">Devuelve el número de píxeles de la imagen.</div><div class="ttdef"><b>Definition:</b> image-old.cpp:129</div></div>
+<div class="ttc" id="aclassImage_html_a997e2d58be54bca2cf8f4da5818bf771"><div class="ttname"><a href="classImage.html#a997e2d58be54bca2cf8f4da5818bf771">Image::Load</a></div><div class="ttdeci">bool Load(const char *file_path)</div><div class="ttdoc">Carga en memoria una imagen de disco .</div><div class="ttdef"><b>Definition:</b> image-old.cpp:91</div></div>
+<div class="ttc" id="aclassImage_html_aa00e596a67ec6130922c560049457985"><div class="ttname"><a href="classImage.html#aa00e596a67ec6130922c560049457985">Image::Subsample</a></div><div class="ttdeci">Image Subsample(int factor) const</div><div class="ttdoc">Genera un icono como reducción de una imagen.</div><div class="ttdef"><b>Definition:</b> imageop-old.cpp:86</div></div>
+<div class="ttc" id="aclassImage_html_aad309b582d08dfd826c5106eaf80eb1e"><div class="ttname"><a href="classImage.html#aad309b582d08dfd826c5106eaf80eb1e">Image::Crop</a></div><div class="ttdeci">Image Crop(int nrow, int ncol, int height, int width) const</div><div class="ttdoc">Genera una subimagen.</div><div class="ttdef"><b>Definition:</b> imageop-old.cpp:49</div></div>
+<div class="ttc" id="aclassImage_html_ac52444a5ffbbc50d6dde8375ca5f45ea"><div class="ttname"><a href="classImage.html#ac52444a5ffbbc50d6dde8375ca5f45ea">Image::get_cols</a></div><div class="ttdeci">int get_cols() const</div><div class="ttdoc">Columnas de la imagen.</div><div class="ttdef"><b>Definition:</b> image-old.cpp:125</div></div>
+<div class="ttc" id="aclassImage_html_aca8a815018d91548953cf571d778020e"><div class="ttname"><a href="classImage.html#aca8a815018d91548953cf571d778020e">Image::get_pixel</a></div><div class="ttdeci">byte get_pixel(int i, int j) const</div><div class="ttdoc">Consulta el valor del píxel (fil, col) de la imagen.</div><div class="ttdef"><b>Definition:</b> image-old.cpp:137</div></div>
+<div class="ttc" id="aclassImage_html_adde1007dc6359087dae65fa8cae26448"><div class="ttname"><a href="classImage.html#adde1007dc6359087dae65fa8cae26448">Image::Save</a></div><div class="ttdeci">bool Save(const char *file_path) const</div><div class="ttdoc">Almacena imágenes en disco.</div><div class="ttdef"><b>Definition:</b> image-old.cpp:156</div></div>
+<div class="ttc" id="aclassImage_html_aeaa2d687caf48e3c72fc773c70a0e9fa"><div class="ttname"><a href="classImage.html#aeaa2d687caf48e3c72fc773c70a0e9fa">Image::operator=</a></div><div class="ttdeci">Image &amp; operator=(const Image &amp;orig)</div><div class="ttdoc">Operador de asignación .</div><div class="ttdef"><b>Definition:</b> image-old.cpp:111</div></div>
+<div class="ttc" id="aclassImage_html_af7c220a99f8b90c6e9f243ee22943305"><div class="ttname"><a href="classImage.html#af7c220a99f8b90c6e9f243ee22943305">Image::Zoom2X</a></div><div class="ttdeci">Image Zoom2X() const</div><div class="ttdoc">Genera una imagen aumentada 2x. Utiliza una interpolación lineal.</div><div class="ttdef"><b>Definition:</b> imageop-old.cpp:59</div></div>
 <div class="ttc" id="aimageIO_8h_html"><div class="ttname"><a href="imageIO_8h.html">imageIO.h</a></div><div class="ttdoc">Fichero cabecera para la E/S de imágenes.</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->

@@ -125,7 +125,7 @@ Public Member Functions</h2></td></tr>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>Invert</b> ()</td></tr>
 <tr class="separator:a6c9c1b3fef7795378f8a56fdd491ffa0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4884f3eb51efdecc005092534ba7e4ea"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classImage.html#a4884f3eb51efdecc005092534ba7e4ea">AdjustContrast</a> (byte in1, byte in2, byte out1, byte out2)</td></tr>
-<tr class="memdesc:a4884f3eb51efdecc005092534ba7e4ea"><td class="mdescLeft">&#160;</td><td class="mdescRight">Modifica el contraste de una Imagen.  <a href="classImage.html#a4884f3eb51efdecc005092534ba7e4ea">More...</a><br /></td></tr>
+<tr class="memdesc:a4884f3eb51efdecc005092534ba7e4ea"><td class="mdescLeft">&#160;</td><td class="mdescRight">Modifica el contraste de una Imagen. Utiliza una interpolación lineal.  <a href="classImage.html#a4884f3eb51efdecc005092534ba7e4ea">More...</a><br /></td></tr>
 <tr class="separator:a4884f3eb51efdecc005092534ba7e4ea"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a08ac7df75c7bc99da2b3abdc35719203"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classImage.html#a08ac7df75c7bc99da2b3abdc35719203">Mean</a> (int i, int j, int height, int width) const</td></tr>
 <tr class="memdesc:a08ac7df75c7bc99da2b3abdc35719203"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calcula la media de los píxeles de una imagen entera o de un fragmento de ésta.  <a href="classImage.html#a08ac7df75c7bc99da2b3abdc35719203">More...</a><br /></td></tr>
@@ -139,8 +139,8 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>Invert</b> ()</td></t
 <tr class="memitem:af7c220a99f8b90c6e9f243ee22943305"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classImage.html">Image</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classImage.html#af7c220a99f8b90c6e9f243ee22943305">Zoom2X</a> () const</td></tr>
 <tr class="memdesc:af7c220a99f8b90c6e9f243ee22943305"><td class="mdescLeft">&#160;</td><td class="mdescRight">Genera una imagen aumentada 2x. Utiliza una interpolación lineal.  <a href="classImage.html#af7c220a99f8b90c6e9f243ee22943305">More...</a><br /></td></tr>
 <tr class="separator:af7c220a99f8b90c6e9f243ee22943305"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a27d5bab7af11a729048b82af06f2d0c0"><td class="memItemLeft" align="right" valign="top"><a id="a27d5bab7af11a729048b82af06f2d0c0"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>ShuffleRows</b> ()</td></tr>
+<tr class="memitem:a27d5bab7af11a729048b82af06f2d0c0"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classImage.html#a27d5bab7af11a729048b82af06f2d0c0">ShuffleRows</a> ()</td></tr>
+<tr class="memdesc:a27d5bab7af11a729048b82af06f2d0c0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Baraja pseudoaleatoriamente las filas de una imagen. Utiliza el concepto de anillo cíclico.  <a href="classImage.html#a27d5bab7af11a729048b82af06f2d0c0">More...</a><br /></td></tr>
 <tr class="separator:a27d5bab7af11a729048b82af06f2d0c0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
@@ -149,10 +149,10 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>ShuffleRows</b> ()</t
 <p>El TDA Imagen proporciona además distintas herramientas para la manipulación de dichas imágenes.</p>
 <p>Para poder usar el TDA Imagen se debe incluir el fichero</p>
 <p>#include &lt;Imagen.h&gt;</p>
-<dl class="section author"><dt>Author</dt><dd>Javier Abad </dd>
+<dl class="section author"><dt>Author</dt><dd>Andrés Gutiérrez </dd>
 <dd>
-Guillermo Gómez </dd></dl>
-<dl class="section date"><dt>Date</dt><dd>Septiembre 2021 </dd></dl>
+Pablo García </dd></dl>
+<dl class="section date"><dt>Date</dt><dd>Octubre 2022 </dd></dl>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a58edd1c45b4faeb5f789b0d036d02313"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a58edd1c45b4faeb5f789b0d036d02313">&#9670;&nbsp;</a></span>Image() <span class="overload">[1/3]</span></h2>
@@ -309,7 +309,7 @@ Guillermo Gómez </dd></dl>
       </table>
 </div><div class="memdoc">
 
-<p>Modifica el contraste de una Imagen. </p>
+<p>Modifica el contraste de una Imagen. Utiliza una interpolación lineal. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">in1</td><td>Umbral inferior de la imagen de entrada. </td></tr>
@@ -370,7 +370,7 @@ out1 &lt; out2. </dd></dl>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">nrow</td><td>Fila inicial. </td></tr>
-    <tr><td class="paramname">nfil</td><td>Columna inicial. </td></tr>
+    <tr><td class="paramname">ncol</td><td>Columna inicial. </td></tr>
     <tr><td class="paramname">height</td><td>Número de filas que tomamos. </td></tr>
     <tr><td class="paramname">width</td><td>Número de columnas que tomamos </td></tr>
   </table>
@@ -747,6 +747,26 @@ O &lt;= <code>value</code> &lt;= 255 </dd></dl>
 
 </div>
 </div>
+<a id="a27d5bab7af11a729048b82af06f2d0c0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a27d5bab7af11a729048b82af06f2d0c0">&#9670;&nbsp;</a></span>ShuffleRows()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Image::ShuffleRows </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Baraja pseudoaleatoriamente las filas de una imagen. Utiliza el concepto de anillo cíclico. </p>
+<dl class="section post"><dt>Postcondition</dt><dd>La imagen se modifica. </dd></dl>
+
+</div>
+</div>
 <a id="a78068ea10fef9954ea0e91705997652d"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a78068ea10fef9954ea0e91705997652d">&#9670;&nbsp;</a></span>size()</h2>
 
@@ -820,7 +840,9 @@ O &lt;= <code>value</code> &lt;= 255 </dd></dl>
 </div>
 <hr/>The documentation for this class was generated from the following files:<ul>
 <li>include/<a class="el" href="image_8h_source.html">image.h</a></li>
+<li>src/image-old.cpp</li>
 <li>src/<a class="el" href="image_8cpp.html">image.cpp</a></li>
+<li>src/imageop-old.cpp</li>
 <li>src/<a class="el" href="imageop_8cpp.html">imageop.cpp</a></li>
 </ul>
 </div><!-- contents -->

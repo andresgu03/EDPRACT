@@ -1,29 +1,8 @@
-/*! \mainpage Título de la página principal
-
-@image html doxyque.png "Pie de foto"
-
-# Información sobre Doxygen
-Doxygen admite el uso de la [sintaxis de Markdown (Consulta aquí los comandos básicos)](https://www.markdownguide.org/basic-syntax).
-
-Así como el uso de  <a href="https://htmlcheatsheet.com/">sintaxis <strong>HTML</strong></a>. Esto es especialmente útil
-para aquellos aspectos que Markdown no permite modificar, como el <span  style="color:red">color</span>. Aunque es buena idea evitarlo en la medida de lo posible, por dos
-motivos:
-
-1. <span style="font-size:1.1em">Hace el código <strong>poco</strong> <span style="  background-image: linear-gradient(to left, #4285f4, #34a853, #fbbc05, #ea4335); -webkit-background-clip: text; color: transparent;"> <strong> LEGIBLE </strong> </span></span>
-2. La idea detrás de Markdown es separar _aspecto_ y _contenido_. Y es una __gran idea__.
-
-La forma más correcta de modificar el aspecto debería ser mediante un documento ``.css`` configurado en el archivo ``Doxyfile.in``.
-Si te interesa, puedes echarle un vistazo a la [documentación](https://www.doxygen.nl/manual/customize.html) o a
-temas customizados como [este](https://jothepro.github.io/doxygen-awesome-css/). Aunque el tema por defecto nos parece
-perfecto, _CLÁSICO_. Así puedes centrarte en el contenido.
-
-Por último, lo hemos visto en clase y hay suficientes ejemplos en el código fuente proporcionado, pero puedes consultar la
-mayor parte de la sintaxis de Doxygen para comentar código en su
-[documentación](https://www.doxygen.nl/manual/docblocks.html).
+/*! \mainpage Clase Image
 
 # Introducción
 
-A RELLENAR POR EL ESTUDIANTE
+Veremos distintos ejecutables que permiten ver los resultados de los distintos métodos implementados en la clase Image.\n Naturalmente, estos ejecutables se ejecutarán por consola ya que necesitan de la introducción de parámetros por teclado.
 
 # Ejecutables
 
@@ -36,6 +15,68 @@ Calcula el negativo de una imagen
 @param "<FichImagenOriginal>" Imagen PGM a la que se va a calcular
 @param <FichImagenDestino> Imagen PGM resultado de calcular el negativo
 
+@image html subimagen.png
+
+## Subimagen:
+
+Calcula una subimagen de una imagen
+
+> __subimagen__ \<FichImagenOriginal\> \<FichImagenDestino\> \<fila\> \<col\> \<filas_sub\> \<cols_sub\>
+@param "<FichImagenOriginal>" Imagen PGM a la que se va a calcular
+@param <FichImagenDestino> Imagen PGM resultado de calcular la subimagen
+@param "<fila>" Especifica la fila de la esquina superior izquierda de la subimagen a extraer
+@param "<col>" Especifica la columna de la esquina superior izquierda de la subimagen a extraer
+@param "<filas_sub>" Especifica el número de filas de la subimagen a extraer
+@param "<cols_sub>" Especifica el número de columnas de la subimagen a extraer
+
+@image html zoomed.png
+
+## Zoom:
+
+Calcula el zoom X2 de una imagen
+
+> __zoom__ \<FichImagenOriginal\> \<FichImagenDestino\> \<fila\> \<col\> \<lado\>
+@param "<FichImagenOriginal>" Imagen PGM a la que se va a calcular el zoom
+@param <FichImagenDestino> Imagen PGM resultado de calcular el zoom
+@param "<fila>" Especifica la fila de la esquina superior izquierda de la subimagen a la que se hace zoom
+@param "<col>" Especifica la columna de la esquina superior izquierda de la subimagen a la que se hace zoom
+@param "<lado>" Especifica el lado del cuadrado de la subimagen a la que se hace zoom
+
+@image html iconed.png
+
+## Icono:
+
+Calcula un icono de una imagen reduciéndola por un factor
+
+> __icono__ \<FichImagenOriginal\> \<FichImagenDestino\> \<factor\>
+@param "<FichImagenOriginal>" Imagen PGM a la que se va a calcular el icono
+@param <FichImagenDestino> Imagen PGM resultado de calcular el icono
+@param <factor> Factor de reducción de la imagen para la reducción de la imagen
+
+@image html contrasted.png
+
+## Contraste:
+
+Ajusta el contraste de una imagen
+
+> __contraste__ \<FichImagenOriginal\> \<FichImagenDestino\> \<e1\> \<e2\> \<s1\> \<s2\>
+@param "<FichImagenOriginal>" Imagen PGM a la que se va a ajustar el contraste
+@param <FichImagenDestino> Imagen PGM resultado de ajustar el contraste
+@param <e1> Umbral inferior de la imagen de entrada
+@param <e2> Umbral superior de la imagen de entrada
+@param <s1> Umbral inferior de la imagen de salida
+@param <s2> Umbral superior de la imagen de salida
+
+@image html shuffled.png
+
+
+## Barajar:
+
+Baraja aleatoriamente las filas de una imagen
+
+> __barajar__ \<FichImagenOriginal\> \<FichImagenDestino\>
+@param "<FichImagenOriginal>" Imagen PGM a la que se van a barajar las filas
+@param <FichImagenDestino> Imagen PGM resultado de barajar las filas
 
 
 */

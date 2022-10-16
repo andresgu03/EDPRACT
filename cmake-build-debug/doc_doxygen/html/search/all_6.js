@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['mean_14',['Mean',['../classImage.html#a08ac7df75c7bc99da2b3abdc35719203',1,'Image']]]
+  ['load_18',['Load',['../classImage.html#a997e2d58be54bca2cf8f4da5818bf771',1,'Image']]]
 ];

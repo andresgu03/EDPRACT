@@ -1,6 +1,7 @@
-// Fichero: subimagen.cpp
-// Calcula una subimagen de una imagen PGM
-//
+/**
+ * @file subimagen.cpp
+ * @brief Fichero que permite ejecutar el método Crop sobre una imagen, es decir, generar una subimagen.
+ */
 
 #include <iostream>
 #include <cstring>

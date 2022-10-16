@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['título_20de_20la_20página_20principal_54',['Título de la página principal',['../index.html',1,'']]]
+  ['clase_20image_69',['Clase Image',['../index.html',1,'']]]
 ];
