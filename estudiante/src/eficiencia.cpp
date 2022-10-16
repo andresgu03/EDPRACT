@@ -16,6 +16,9 @@
 
          Para el análisis empírico haremos unas pruebas de tiempo del método __ShuffleRows__ usando las dos implementaciones y viendo cómo las gráficas del tiempo respecto a un valor variable ( que será o bien número de filas y columnas, únicamente número de filas con columnas fijas o únicamente número de columnas con filas fijas).
 
+        @image html efficiency_graphics.png "Gráficos obtenidos del análisis de eficiencia."
+
+        Podemos apreciar que para ambas implementaciones obtenemos un mismo resultado del análisis de la eficiencia, no coincidiendo con el análisis teórico visto previamente.\n En los casos de ambos parámetros variables obtenemos una gráfica cuadrática mientras que para uno fijo y el otro variable obtenemos una gráfica lineal.
        **/
 
 using namespace std;
