@@ -1,0 +1,6 @@
+PROJECT_NAME           = "Práctica 1. Imágenes"
+OUTPUT_DIRECTORY       = /home/andres/Escritorio/ANDRÉS/EDPRACT/ej01_imagenes/cmake-build-debug/doc_doxygen/
+INPUT                  = /home/andres/Escritorio/ANDRÉS/EDPRACT/ej01_imagenes/estudiante/include /home/andres/Escritorio/ANDRÉS/EDPRACT/ej01_imagenes/estudiante/src /home/andres/Escritorio/ANDRÉS/EDPRACT/ej01_imagenes/estudiante/doc
+GENERATE_LATEX         = NO
+IMAGE_PATH             = /home/andres/Escritorio/ANDRÉS/EDPRACT/ej01_imagenes/estudiante/doc
+EXTRACT_PRIVATE        = NO
