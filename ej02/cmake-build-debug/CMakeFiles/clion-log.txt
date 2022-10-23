@@ -1,0 +1,5 @@
+/home/andres/Escritorio/ANDRÉS/clion-2022.2.3/bin/cmake/linux/bin/cmake -DCMAKE_BUILD_TYPE=Debug -DCMAKE_MAKE_PROGRAM=/home/andres/Escritorio/ANDRÉS/clion-2022.2.3/bin/ninja/linux/ninja -G Ninja -S /home/andres/Escritorio/ANDRÉS/EDPRACT/ej02_pilas_colas -B /home/andres/Escritorio/ANDRÉS/EDPRACT/ej02_pilas_colas/cmake-build-debug
+Doxygen build started
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /home/andres/Escritorio/ANDRÉS/EDPRACT/ej02_pilas_colas/cmake-build-debug
