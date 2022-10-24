@@ -1,11 +1,29 @@
-/*! \mainpage Título de la página principal
+/*! \mainpage Práctica 2 (TDAs Lineales: Pilas y Colas)
+
+Autores:
+
+- Andrés Gutiérrez Armenteros
+
+- Pablo García Bas
 
 # Introducción
 
-A RELLENAR POR EL ESTUDIANTE
+    ... <- (NO SÉ QUE PONER AHÍ (?))
 
 # Ejecutables
 
-A RELLENAR POR EL ESTUDIANTE
+1. pila_max.cpp
+
+    ...
+
+2. cola_max.cpp
+
+    - Toma por argumentos una secuencia (separada por espacios) de valores enteros, o del literal ".".
+
+    - De forma ordenada, cada vez que se encuentra un valor entero, se añade a una pila (en principio vacía) de MaxQueue.
+
+    - Y cada vez que se encuentra con ".", primero imprime el valor del frente de la cola, y a continuación lo borra.
+
+    - p.e.: ./cola_max 1 2 . 3 4 . . . -> SALIDA: (1,2), (2,4), (3,4), (4,4)
 
 */
