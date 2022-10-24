@@ -5,47 +5,42 @@
  */
 
 #include "maxstack.h"
-#include <assert.h>
 
-
-
-MaxStack::MaxStack(const MaxStack & otro) {
-    assert( this != &otro);
-    q = otro.q ;
-}
-
-MaxStack & MaxStack::operator=(const MaxStack &otro) {
-    assert( this != &otro);
-    q = otro.q ;
-    return *this ;
-}
 
 void MaxStack::push(int val ) {
-    element e ;
-    e.value = val ;
-    if(val > q.front().maximum){
-        e.maximum = val ;
+    queue<element> cola_els;
+    element e;
+    e.maximum = val;
+    e.value = val;
+
+    if(size() != 0) {
+        if (top().maximum >= e.maximum)
+            e.maximum = top().maximum;
     }
-    else
-        e.maximum = q.front().maximum ;
 
-    q.push(e) ;
+    cola_els.push(e);
 
-    for (int i = 1 ; i < q.size() ; i++ ){
-        q.push(q.front());
-        q.pop();
+    while(!empty()){
+        cola_els.push(top());
+        pop();
+    }
+
+    while(!cola_els.empty()){
+        q.push(cola_els.front());
+        cola_els.pop();
     }
 }
 
-void MaxStack::pop() {
-    q.pop() ;
+void MaxStack::pop(){
+    if ( !q.empty()){
+        q.pop() ;
+    }
 }
 
-element MaxStack::top(){
-    return (q.front()) ;
-}
+std::ostream & operator<<(std::ostream& os, const element& elem){ // Operador de salida sobrecargado (struct element)
 
-ostream& operator<<(std::ostream &os, const element obj) {
-    os << obj.value << "," << obj.maximum ;
-    return os ;
+    os << elem.value << "," << elem.maximum;
+
+    return os;
+
 }

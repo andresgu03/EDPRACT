@@ -39,7 +39,7 @@ include CMakeFiles/rules.ninja
 #############################################
 # Logical path to working directory; prefix for absolute paths.
 
-cmake_ninja_workdir = /home/andres/Escritorio/ANDRÉS/EDPRACT/ej01_imagenes/cmake-build-debug/
+cmake_ninja_workdir = /home/andres/Escritorio/ANDRÉS/EDPRACT/GIT_EJS/ej01/cmake-build-debug/
 # =============================================================================
 # Object build statements for STATIC_LIBRARY target image
 
@@ -49,28 +49,28 @@ cmake_ninja_workdir = /home/andres/Escritorio/ANDRÉS/EDPRACT/ej01_imagenes/cmak
 
 build cmake_object_order_depends_target_image: phony || CMakeFiles/image.dir
 
-build CMakeFiles/image.dir/estudiante/src/image.cpp.o: CXX_COMPILER__image_Debug /home/andres/Escritorio/ANDRÉS/EDPRACT/ej01_imagenes/estudiante/src/image.cpp || cmake_object_order_depends_target_image
+build CMakeFiles/image.dir/estudiante/src/image.cpp.o: CXX_COMPILER__image_Debug /home/andres/Escritorio/ANDRÉS/EDPRACT/GIT_EJS/ej01/estudiante/src/image.cpp || cmake_object_order_depends_target_image
   DEP_FILE = CMakeFiles/image.dir/estudiante/src/image.cpp.o.d
   FLAGS = -g -std=gnu++14
-  INCLUDES = -I/home/andres/Escritorio/ANDRÉS/EDPRACT/ej01_imagenes/estudiante/include
+  INCLUDES = -I/home/andres/Escritorio/ANDRÉS/EDPRACT/GIT_EJS/ej01/estudiante/include
   OBJECT_DIR = CMakeFiles/image.dir
   OBJECT_FILE_DIR = CMakeFiles/image.dir/estudiante/src
   TARGET_COMPILE_PDB = CMakeFiles/image.dir/image.pdb
   TARGET_PDB = libimage.pdb
 
-build CMakeFiles/image.dir/estudiante/src/imageop.cpp.o: CXX_COMPILER__image_Debug /home/andres/Escritorio/ANDRÉS/EDPRACT/ej01_imagenes/estudiante/src/imageop.cpp || cmake_object_order_depends_target_image
+build CMakeFiles/image.dir/estudiante/src/imageop.cpp.o: CXX_COMPILER__image_Debug /home/andres/Escritorio/ANDRÉS/EDPRACT/GIT_EJS/ej01/estudiante/src/imageop.cpp || cmake_object_order_depends_target_image
   DEP_FILE = CMakeFiles/image.dir/estudiante/src/imageop.cpp.o.d
   FLAGS = -g -std=gnu++14
-  INCLUDES = -I/home/andres/Escritorio/ANDRÉS/EDPRACT/ej01_imagenes/estudiante/include
+  INCLUDES = -I/home/andres/Escritorio/ANDRÉS/EDPRACT/GIT_EJS/ej01/estudiante/include
   OBJECT_DIR = CMakeFiles/image.dir
   OBJECT_FILE_DIR = CMakeFiles/image.dir/estudiante/src
   TARGET_COMPILE_PDB = CMakeFiles/image.dir/image.pdb
   TARGET_PDB = libimage.pdb
 
-build CMakeFiles/image.dir/estudiante/src/imageIO.cpp.o: CXX_COMPILER__image_Debug /home/andres/Escritorio/ANDRÉS/EDPRACT/ej01_imagenes/estudiante/src/imageIO.cpp || cmake_object_order_depends_target_image
+build CMakeFiles/image.dir/estudiante/src/imageIO.cpp.o: CXX_COMPILER__image_Debug /home/andres/Escritorio/ANDRÉS/EDPRACT/GIT_EJS/ej01/estudiante/src/imageIO.cpp || cmake_object_order_depends_target_image
   DEP_FILE = CMakeFiles/image.dir/estudiante/src/imageIO.cpp.o.d
   FLAGS = -g -std=gnu++14
-  INCLUDES = -I/home/andres/Escritorio/ANDRÉS/EDPRACT/ej01_imagenes/estudiante/include
+  INCLUDES = -I/home/andres/Escritorio/ANDRÉS/EDPRACT/GIT_EJS/ej01/estudiante/include
   OBJECT_DIR = CMakeFiles/image.dir
   OBJECT_FILE_DIR = CMakeFiles/image.dir/estudiante/src
   TARGET_COMPILE_PDB = CMakeFiles/image.dir/image.pdb
@@ -102,10 +102,10 @@ build libimage.a: CXX_STATIC_LIBRARY_LINKER__image_Debug CMakeFiles/image.dir/es
 
 build cmake_object_order_depends_target_negativo: phony || cmake_object_order_depends_target_image
 
-build CMakeFiles/negativo.dir/estudiante/src/negativo.cpp.o: CXX_COMPILER__negativo_Debug /home/andres/Escritorio/ANDRÉS/EDPRACT/ej01_imagenes/estudiante/src/negativo.cpp || cmake_object_order_depends_target_negativo
+build CMakeFiles/negativo.dir/estudiante/src/negativo.cpp.o: CXX_COMPILER__negativo_Debug /home/andres/Escritorio/ANDRÉS/EDPRACT/GIT_EJS/ej01/estudiante/src/negativo.cpp || cmake_object_order_depends_target_negativo
   DEP_FILE = CMakeFiles/negativo.dir/estudiante/src/negativo.cpp.o.d
   FLAGS = -g -std=gnu++14
-  INCLUDES = -I/home/andres/Escritorio/ANDRÉS/EDPRACT/ej01_imagenes/estudiante/include
+  INCLUDES = -I/home/andres/Escritorio/ANDRÉS/EDPRACT/GIT_EJS/ej01/estudiante/include
   OBJECT_DIR = CMakeFiles/negativo.dir
   OBJECT_FILE_DIR = CMakeFiles/negativo.dir/estudiante/src
   TARGET_COMPILE_PDB = CMakeFiles/negativo.dir/
@@ -138,10 +138,10 @@ build negativo: CXX_EXECUTABLE_LINKER__negativo_Debug CMakeFiles/negativo.dir/es
 
 build cmake_object_order_depends_target_subimagen: phony || cmake_object_order_depends_target_image
 
-build CMakeFiles/subimagen.dir/estudiante/src/subimagen.cpp.o: CXX_COMPILER__subimagen_Debug /home/andres/Escritorio/ANDRÉS/EDPRACT/ej01_imagenes/estudiante/src/subimagen.cpp || cmake_object_order_depends_target_subimagen
+build CMakeFiles/subimagen.dir/estudiante/src/subimagen.cpp.o: CXX_COMPILER__subimagen_Debug /home/andres/Escritorio/ANDRÉS/EDPRACT/GIT_EJS/ej01/estudiante/src/subimagen.cpp || cmake_object_order_depends_target_subimagen
   DEP_FILE = CMakeFiles/subimagen.dir/estudiante/src/subimagen.cpp.o.d
   FLAGS = -g -std=gnu++14
-  INCLUDES = -I/home/andres/Escritorio/ANDRÉS/EDPRACT/ej01_imagenes/estudiante/include
+  INCLUDES = -I/home/andres/Escritorio/ANDRÉS/EDPRACT/GIT_EJS/ej01/estudiante/include
   OBJECT_DIR = CMakeFiles/subimagen.dir
   OBJECT_FILE_DIR = CMakeFiles/subimagen.dir/estudiante/src
   TARGET_COMPILE_PDB = CMakeFiles/subimagen.dir/
@@ -174,10 +174,10 @@ build subimagen: CXX_EXECUTABLE_LINKER__subimagen_Debug CMakeFiles/subimagen.dir
 
 build cmake_object_order_depends_target_zoom: phony || cmake_object_order_depends_target_image
 
-build CMakeFiles/zoom.dir/estudiante/src/zoom.cpp.o: CXX_COMPILER__zoom_Debug /home/andres/Escritorio/ANDRÉS/EDPRACT/ej01_imagenes/estudiante/src/zoom.cpp || cmake_object_order_depends_target_zoom
+build CMakeFiles/zoom.dir/estudiante/src/zoom.cpp.o: CXX_COMPILER__zoom_Debug /home/andres/Escritorio/ANDRÉS/EDPRACT/GIT_EJS/ej01/estudiante/src/zoom.cpp || cmake_object_order_depends_target_zoom
   DEP_FILE = CMakeFiles/zoom.dir/estudiante/src/zoom.cpp.o.d
   FLAGS = -g -std=gnu++14
-  INCLUDES = -I/home/andres/Escritorio/ANDRÉS/EDPRACT/ej01_imagenes/estudiante/include
+  INCLUDES = -I/home/andres/Escritorio/ANDRÉS/EDPRACT/GIT_EJS/ej01/estudiante/include
   OBJECT_DIR = CMakeFiles/zoom.dir
   OBJECT_FILE_DIR = CMakeFiles/zoom.dir/estudiante/src
   TARGET_COMPILE_PDB = CMakeFiles/zoom.dir/
@@ -210,10 +210,10 @@ build zoom: CXX_EXECUTABLE_LINKER__zoom_Debug CMakeFiles/zoom.dir/estudiante/src
 
 build cmake_object_order_depends_target_icono: phony || cmake_object_order_depends_target_image
 
-build CMakeFiles/icono.dir/estudiante/src/icono.cpp.o: CXX_COMPILER__icono_Debug /home/andres/Escritorio/ANDRÉS/EDPRACT/ej01_imagenes/estudiante/src/icono.cpp || cmake_object_order_depends_target_icono
+build CMakeFiles/icono.dir/estudiante/src/icono.cpp.o: CXX_COMPILER__icono_Debug /home/andres/Escritorio/ANDRÉS/EDPRACT/GIT_EJS/ej01/estudiante/src/icono.cpp || cmake_object_order_depends_target_icono
   DEP_FILE = CMakeFiles/icono.dir/estudiante/src/icono.cpp.o.d
   FLAGS = -g -std=gnu++14
-  INCLUDES = -I/home/andres/Escritorio/ANDRÉS/EDPRACT/ej01_imagenes/estudiante/include
+  INCLUDES = -I/home/andres/Escritorio/ANDRÉS/EDPRACT/GIT_EJS/ej01/estudiante/include
   OBJECT_DIR = CMakeFiles/icono.dir
   OBJECT_FILE_DIR = CMakeFiles/icono.dir/estudiante/src
   TARGET_COMPILE_PDB = CMakeFiles/icono.dir/
@@ -246,10 +246,10 @@ build icono: CXX_EXECUTABLE_LINKER__icono_Debug CMakeFiles/icono.dir/estudiante/
 
 build cmake_object_order_depends_target_contraste: phony || cmake_object_order_depends_target_image
 
-build CMakeFiles/contraste.dir/estudiante/src/contraste.cpp.o: CXX_COMPILER__contraste_Debug /home/andres/Escritorio/ANDRÉS/EDPRACT/ej01_imagenes/estudiante/src/contraste.cpp || cmake_object_order_depends_target_contraste
+build CMakeFiles/contraste.dir/estudiante/src/contraste.cpp.o: CXX_COMPILER__contraste_Debug /home/andres/Escritorio/ANDRÉS/EDPRACT/GIT_EJS/ej01/estudiante/src/contraste.cpp || cmake_object_order_depends_target_contraste
   DEP_FILE = CMakeFiles/contraste.dir/estudiante/src/contraste.cpp.o.d
   FLAGS = -g -std=gnu++14
-  INCLUDES = -I/home/andres/Escritorio/ANDRÉS/EDPRACT/ej01_imagenes/estudiante/include
+  INCLUDES = -I/home/andres/Escritorio/ANDRÉS/EDPRACT/GIT_EJS/ej01/estudiante/include
   OBJECT_DIR = CMakeFiles/contraste.dir
   OBJECT_FILE_DIR = CMakeFiles/contraste.dir/estudiante/src
   TARGET_COMPILE_PDB = CMakeFiles/contraste.dir/
@@ -282,10 +282,10 @@ build contraste: CXX_EXECUTABLE_LINKER__contraste_Debug CMakeFiles/contraste.dir
 
 build cmake_object_order_depends_target_barajar: phony || cmake_object_order_depends_target_image
 
-build CMakeFiles/barajar.dir/estudiante/src/barajar.cpp.o: CXX_COMPILER__barajar_Debug /home/andres/Escritorio/ANDRÉS/EDPRACT/ej01_imagenes/estudiante/src/barajar.cpp || cmake_object_order_depends_target_barajar
+build CMakeFiles/barajar.dir/estudiante/src/barajar.cpp.o: CXX_COMPILER__barajar_Debug /home/andres/Escritorio/ANDRÉS/EDPRACT/GIT_EJS/ej01/estudiante/src/barajar.cpp || cmake_object_order_depends_target_barajar
   DEP_FILE = CMakeFiles/barajar.dir/estudiante/src/barajar.cpp.o.d
   FLAGS = -g -std=gnu++14
-  INCLUDES = -I/home/andres/Escritorio/ANDRÉS/EDPRACT/ej01_imagenes/estudiante/include
+  INCLUDES = -I/home/andres/Escritorio/ANDRÉS/EDPRACT/GIT_EJS/ej01/estudiante/include
   OBJECT_DIR = CMakeFiles/barajar.dir
   OBJECT_FILE_DIR = CMakeFiles/barajar.dir/estudiante/src
   TARGET_COMPILE_PDB = CMakeFiles/barajar.dir/
@@ -318,10 +318,10 @@ build barajar: CXX_EXECUTABLE_LINKER__barajar_Debug CMakeFiles/barajar.dir/estud
 
 build cmake_object_order_depends_target_eficiencia: phony || cmake_object_order_depends_target_image
 
-build CMakeFiles/eficiencia.dir/estudiante/src/eficiencia.cpp.o: CXX_COMPILER__eficiencia_Debug /home/andres/Escritorio/ANDRÉS/EDPRACT/ej01_imagenes/estudiante/src/eficiencia.cpp || cmake_object_order_depends_target_eficiencia
+build CMakeFiles/eficiencia.dir/estudiante/src/eficiencia.cpp.o: CXX_COMPILER__eficiencia_Debug /home/andres/Escritorio/ANDRÉS/EDPRACT/GIT_EJS/ej01/estudiante/src/eficiencia.cpp || cmake_object_order_depends_target_eficiencia
   DEP_FILE = CMakeFiles/eficiencia.dir/estudiante/src/eficiencia.cpp.o.d
   FLAGS = -g -std=gnu++14
-  INCLUDES = -I/home/andres/Escritorio/ANDRÉS/EDPRACT/ej01_imagenes/estudiante/include
+  INCLUDES = -I/home/andres/Escritorio/ANDRÉS/EDPRACT/GIT_EJS/ej01/estudiante/include
   OBJECT_DIR = CMakeFiles/eficiencia.dir
   OBJECT_FILE_DIR = CMakeFiles/eficiencia.dir/estudiante/src
   TARGET_COMPILE_PDB = CMakeFiles/eficiencia.dir/
@@ -356,7 +356,7 @@ build doc_doxygen: phony CMakeFiles/doc_doxygen
 # Utility command for edit_cache
 
 build CMakeFiles/edit_cache.util: CUSTOM_COMMAND
-  COMMAND = cd /home/andres/Escritorio/ANDRÉS/EDPRACT/ej01_imagenes/cmake-build-debug && /home/andres/Escritorio/ANDRÉS/clion-2022.2.3/bin/cmake/linux/bin/ccmake -S/home/andres/Escritorio/ANDRÉS/EDPRACT/ej01_imagenes -B/home/andres/Escritorio/ANDRÉS/EDPRACT/ej01_imagenes/cmake-build-debug
+  COMMAND = cd /home/andres/Escritorio/ANDRÉS/EDPRACT/GIT_EJS/ej01/cmake-build-debug && /home/andres/Escritorio/ANDRÉS/clion-2022.2.3/bin/cmake/linux/bin/ccmake -S/home/andres/Escritorio/ANDRÉS/EDPRACT/GIT_EJS/ej01 -B/home/andres/Escritorio/ANDRÉS/EDPRACT/GIT_EJS/ej01/cmake-build-debug
   DESC = Running CMake cache editor...
   pool = console
   restat = 1
@@ -368,7 +368,7 @@ build edit_cache: phony CMakeFiles/edit_cache.util
 # Utility command for rebuild_cache
 
 build CMakeFiles/rebuild_cache.util: CUSTOM_COMMAND
-  COMMAND = cd /home/andres/Escritorio/ANDRÉS/EDPRACT/ej01_imagenes/cmake-build-debug && /home/andres/Escritorio/ANDRÉS/clion-2022.2.3/bin/cmake/linux/bin/cmake --regenerate-during-build -S/home/andres/Escritorio/ANDRÉS/EDPRACT/ej01_imagenes -B/home/andres/Escritorio/ANDRÉS/EDPRACT/ej01_imagenes/cmake-build-debug
+  COMMAND = cd /home/andres/Escritorio/ANDRÉS/EDPRACT/GIT_EJS/ej01/cmake-build-debug && /home/andres/Escritorio/ANDRÉS/clion-2022.2.3/bin/cmake/linux/bin/cmake --regenerate-during-build -S/home/andres/Escritorio/ANDRÉS/EDPRACT/GIT_EJS/ej01 -B/home/andres/Escritorio/ANDRÉS/EDPRACT/GIT_EJS/ej01/cmake-build-debug
   DESC = Running CMake to regenerate build system...
   pool = console
   restat = 1
@@ -380,7 +380,7 @@ build rebuild_cache: phony CMakeFiles/rebuild_cache.util
 # Custom command for CMakeFiles/doc_doxygen
 
 build CMakeFiles/doc_doxygen | ${cmake_ninja_workdir}CMakeFiles/doc_doxygen: CUSTOM_COMMAND
-  COMMAND = cd /home/andres/Escritorio/ANDRÉS/EDPRACT/ej01_imagenes/estudiante && /usr/bin/doxygen /home/andres/Escritorio/ANDRÉS/EDPRACT/ej01_imagenes/cmake-build-debug/Doxyfile
+  COMMAND = cd /home/andres/Escritorio/ANDRÉS/EDPRACT/GIT_EJS/ej01/estudiante && /usr/bin/doxygen /home/andres/Escritorio/ANDRÉS/EDPRACT/GIT_EJS/ej01/cmake-build-debug/Doxyfile
   DESC = Generating API documentation with Doxygen
 
 # =============================================================================
@@ -394,7 +394,7 @@ build image: phony libimage.a
 # =============================================================================
 
 #############################################
-# Folder: /home/andres/Escritorio/ANDRÉS/EDPRACT/ej01_imagenes/cmake-build-debug
+# Folder: /home/andres/Escritorio/ANDRÉS/EDPRACT/GIT_EJS/ej01/cmake-build-debug
 
 build all: phony libimage.a negativo subimagen zoom icono contraste barajar eficiencia doc_doxygen
 

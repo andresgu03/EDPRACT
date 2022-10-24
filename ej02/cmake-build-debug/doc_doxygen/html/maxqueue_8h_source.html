@@ -70,6 +70,56 @@ $(function() {
 </div><!--header-->
 <div class="contents">
 <a href="maxqueue_8h.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160; </div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="preprocessor">#include &lt;stack&gt;</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="preprocessor">#include &lt;iostream&gt;</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160; </div>
+<div class="line"><a name="l00011"></a><span class="lineno"><a class="line" href="structelement.html">   11</a></span>&#160;<span class="keyword">struct </span><a class="code" href="structelement.html">element</a>{</div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160; </div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;    <span class="keywordtype">int</span> value;</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;    <span class="keywordtype">int</span> max;</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160; </div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;};</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160; </div>
+<div class="line"><a name="l00040"></a><span class="lineno"><a class="line" href="classMaxQueue.html">   40</a></span>&#160;<span class="keyword">class </span><a class="code" href="classMaxQueue.html">MaxQueue</a>{</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160; </div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160; </div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    std::stack&lt;element&gt; pila;</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160; </div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160; </div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    <span class="comment">//******************</span></div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;    <span class="comment">// Métodos básicos:</span></div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;    <span class="comment">//</span></div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;    <span class="comment">// No es necesario declararlos (se llama a los metodos por defecto de la clase &lt;stack&gt;)</span></div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;    <span class="comment">//</span></div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;    <span class="comment">//MaxQueue(){};</span></div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;    <span class="comment">//MaxQueue(MaxQueue &amp;other){};</span></div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;    <span class="comment">//~MaxQueue(){};</span></div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;    <span class="comment">//******************</span></div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160; </div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classMaxQueue.html#aed7d5b6f03e83c6d5fa3dc8a6c2fca9c">push</a>(<span class="keywordtype">int</span> new_value);</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160; </div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classMaxQueue.html#a7e03f10bfb0ccfe9471dc061b7659ef2">pop</a>();</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160; </div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;    <span class="comment">//***************</span></div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;    <span class="comment">// Metodos inline</span></div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;    <span class="comment">//***************</span></div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160; </div>
+<div class="line"><a name="l00086"></a><span class="lineno"><a class="line" href="classMaxQueue.html#ae28fd3d9d9c6842a2a62f41253387716">   86</a></span>&#160;    <a class="code" href="structelement.html">element</a> <a class="code" href="classMaxQueue.html#ae28fd3d9d9c6842a2a62f41253387716">front</a>(){ <span class="keywordflow">return</span>(this-&gt;pila.top()); };</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160; </div>
+<div class="line"><a name="l00093"></a><span class="lineno"><a class="line" href="classMaxQueue.html#aafcf61270934668051ae2577543c6416">   93</a></span>&#160;    <span class="keywordtype">int</span> <a class="code" href="classMaxQueue.html#aafcf61270934668051ae2577543c6416">size</a>(){ <span class="keywordflow">return</span>(this-&gt;pila.size()); };</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160; </div>
+<div class="line"><a name="l00100"></a><span class="lineno"><a class="line" href="classMaxQueue.html#a2b9c77f44485ecc0bb51b1234a9fee05">  100</a></span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="classMaxQueue.html#a2b9c77f44485ecc0bb51b1234a9fee05">empty</a>(){ <span class="keywordflow">return</span>(this-&gt;pila.empty()); };</div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160; </div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;};</div>
+<div class="ttc" id="aclassMaxQueue_html"><div class="ttname"><a href="classMaxQueue.html">MaxQueue</a></div><div class="ttdoc">T.D.A. MaxQueue.</div><div class="ttdef"><b>Definition:</b> maxqueue.h:40</div></div>
+<div class="ttc" id="aclassMaxQueue_html_a2b9c77f44485ecc0bb51b1234a9fee05"><div class="ttname"><a href="classMaxQueue.html#a2b9c77f44485ecc0bb51b1234a9fee05">MaxQueue::empty</a></div><div class="ttdeci">bool empty()</div><div class="ttdoc">Comprueba si la cola esta o no vacia.</div><div class="ttdef"><b>Definition:</b> maxqueue.h:100</div></div>
+<div class="ttc" id="aclassMaxQueue_html_a7e03f10bfb0ccfe9471dc061b7659ef2"><div class="ttname"><a href="classMaxQueue.html#a7e03f10bfb0ccfe9471dc061b7659ef2">MaxQueue::pop</a></div><div class="ttdeci">void pop()</div><div class="ttdoc">Elimina un elemento de la cola (y actualiza el maximo).</div><div class="ttdef"><b>Definition:</b> maxqueue.cpp:76</div></div>
+<div class="ttc" id="aclassMaxQueue_html_aafcf61270934668051ae2577543c6416"><div class="ttname"><a href="classMaxQueue.html#aafcf61270934668051ae2577543c6416">MaxQueue::size</a></div><div class="ttdeci">int size()</div><div class="ttdoc">Devuelve el tamaño actual de la cola (numero de elementos).</div><div class="ttdef"><b>Definition:</b> maxqueue.h:93</div></div>
+<div class="ttc" id="aclassMaxQueue_html_ae28fd3d9d9c6842a2a62f41253387716"><div class="ttname"><a href="classMaxQueue.html#ae28fd3d9d9c6842a2a62f41253387716">MaxQueue::front</a></div><div class="ttdeci">element front()</div><div class="ttdoc">Accede al elemento en el frente de la cola.</div><div class="ttdef"><b>Definition:</b> maxqueue.h:86</div></div>
+<div class="ttc" id="aclassMaxQueue_html_aed7d5b6f03e83c6d5fa3dc8a6c2fca9c"><div class="ttname"><a href="classMaxQueue.html#aed7d5b6f03e83c6d5fa3dc8a6c2fca9c">MaxQueue::push</a></div><div class="ttdeci">void push(int new_value)</div><div class="ttdoc">Añade un elemento nuevo a la cola (y actualiza el maximo).</div><div class="ttdef"><b>Definition:</b> maxqueue.cpp:11</div></div>
+<div class="ttc" id="astructelement_html"><div class="ttname"><a href="structelement.html">element</a></div><div class="ttdoc">Tipo element.</div><div class="ttdef"><b>Definition:</b> maxqueue.h:11</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['representación_20de_20element_33',['Representación de Element',['../page_repElement.html',1,'']]],
-  ['representación_20de_20maxstack_34',['Representación de MaxStack',['../page_repMaxStack.html',1,'']]]
+  ['práctica_202_20_28tdas_20lineales_3a_20pilas_20y_20colas_29_29',['Práctica 2 (TDAs Lineales: Pilas y Colas)',['../index.html',1,'']]]
 ];

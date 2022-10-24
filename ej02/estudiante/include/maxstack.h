@@ -28,14 +28,6 @@ struct element{
     */
     int value ;
     int maximum;
-    // operator << overload.
-    /**
-      * @brief Sobrecarga del operador << para un objeto del tipo _element_
-      * @param os Flujo de salida.
-      * @param element Elemento a imprimir.
-      * @return Referencia al flujo de salida @os .
-      */
-    friend ostream & operator<<(std::ostream& os , const element obj);
 };
 /**
   @brief T.D.A. MaxStack
@@ -67,34 +59,13 @@ private :
     **/
     queue<element> q ;
 public :
-    /**
-      * @brief Constructor por defecto .
-      * @post Genera una instancia de la clase MaxStack con O elementos.
-      * @return Imagen, el objeto MaxStack creado.
-      */
-    MaxStack() {};
-
-    /**
-      * @brief Constructor de copias.
-      * @param orig Referencia a la MaxStack original que se quiere copiar.
-      * @return MaxStack, el objeto MaxStack creado.
-      */
-    MaxStack(const MaxStack & otro) ;
-
-    /**
-      * @brief Operador de asignación .
-      * @param orig Referencia a la MaxStack original que desea copiarse.
-      * @return Una referencia al objeto MaxStack modificado.
-      * @post Destruye cualquier información que contuviera previamente la MaxStack que llama al operador de asignación.
-      */
-    MaxStack & operator= ( const MaxStack & otro) ;
 
     /**
       * @brief Muestra el elemento del _tope_ de la pila.
       * @pre @q no vacía.
       * @return element _tope_ de la pila.
       */
-    element top () ;
+    element top () {return q.front();};
 
     /**
       * @brief Inserta un elemento a la pila.
@@ -121,11 +92,12 @@ public :
       * @return Valor entero que indica el número de elementos de la pila actualmente.
       */
     int size(){ return (q.size()) ; } ;
-
-    /**
-  * @brief Intercambia dos objetos MaxStack.
-  * @param x Referencia a la MaxStack que desea intercambiarse.
-  * @post El objeto actual pasa a tener los elementos de x y el objeto x pasa a tener los elementos del objeto MaxStack que llama a este método.
-  */
-    void swap(MaxStack & x ){q.swap(x.q) ;} ;
 };
+
+/**
+      * @brief Sobrecarga del operador << para un objeto del tipo _element_
+      * @param os Flujo de salida.
+      * @param element Elemento a imprimir.
+      * @return Referencia al flujo de salida @os .
+      */
+std::ostream & operator<<(std::ostream& os, const element& elem);// Operador de salida sobrecargado (struct element)

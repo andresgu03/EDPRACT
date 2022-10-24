@@ -39,7 +39,7 @@ include CMakeFiles/rules.ninja
 #############################################
 # Logical path to working directory; prefix for absolute paths.
 
-cmake_ninja_workdir = /home/andres/Escritorio/ANDRÉS/EDPRACT/ej02_pilas_colas/cmake-build-debug/
+cmake_ninja_workdir = /home/andres/Escritorio/ANDRÉS/EDPRACT/GIT_EJS/ej02/cmake-build-debug/
 # =============================================================================
 # Object build statements for STATIC_LIBRARY target maxstack
 
@@ -49,10 +49,10 @@ cmake_ninja_workdir = /home/andres/Escritorio/ANDRÉS/EDPRACT/ej02_pilas_colas/c
 
 build cmake_object_order_depends_target_maxstack: phony || CMakeFiles/maxstack.dir
 
-build CMakeFiles/maxstack.dir/estudiante/src/maxstack.cpp.o: CXX_COMPILER__maxstack_Debug /home/andres/Escritorio/ANDRÉS/EDPRACT/ej02_pilas_colas/estudiante/src/maxstack.cpp || cmake_object_order_depends_target_maxstack
+build CMakeFiles/maxstack.dir/estudiante/src/maxstack.cpp.o: CXX_COMPILER__maxstack_Debug /home/andres/Escritorio/ANDRÉS/EDPRACT/GIT_EJS/ej02/estudiante/src/maxstack.cpp || cmake_object_order_depends_target_maxstack
   DEP_FILE = CMakeFiles/maxstack.dir/estudiante/src/maxstack.cpp.o.d
   FLAGS = -g -std=gnu++14
-  INCLUDES = -I/home/andres/Escritorio/ANDRÉS/EDPRACT/ej02_pilas_colas/estudiante/include
+  INCLUDES = -I/home/andres/Escritorio/ANDRÉS/EDPRACT/GIT_EJS/ej02/estudiante/include
   OBJECT_DIR = CMakeFiles/maxstack.dir
   OBJECT_FILE_DIR = CMakeFiles/maxstack.dir/estudiante/src
 
@@ -81,10 +81,10 @@ build libmaxstack.a: CXX_STATIC_LIBRARY_LINKER__maxstack_Debug CMakeFiles/maxsta
 
 build cmake_object_order_depends_target_maxqueue: phony || CMakeFiles/maxqueue.dir
 
-build CMakeFiles/maxqueue.dir/estudiante/src/maxqueue.cpp.o: CXX_COMPILER__maxqueue_Debug /home/andres/Escritorio/ANDRÉS/EDPRACT/ej02_pilas_colas/estudiante/src/maxqueue.cpp || cmake_object_order_depends_target_maxqueue
+build CMakeFiles/maxqueue.dir/estudiante/src/maxqueue.cpp.o: CXX_COMPILER__maxqueue_Debug /home/andres/Escritorio/ANDRÉS/EDPRACT/GIT_EJS/ej02/estudiante/src/maxqueue.cpp || cmake_object_order_depends_target_maxqueue
   DEP_FILE = CMakeFiles/maxqueue.dir/estudiante/src/maxqueue.cpp.o.d
   FLAGS = -g -std=gnu++14
-  INCLUDES = -I/home/andres/Escritorio/ANDRÉS/EDPRACT/ej02_pilas_colas/estudiante/include
+  INCLUDES = -I/home/andres/Escritorio/ANDRÉS/EDPRACT/GIT_EJS/ej02/estudiante/include
   OBJECT_DIR = CMakeFiles/maxqueue.dir
   OBJECT_FILE_DIR = CMakeFiles/maxqueue.dir/estudiante/src
 
@@ -113,10 +113,10 @@ build libmaxqueue.a: CXX_STATIC_LIBRARY_LINKER__maxqueue_Debug CMakeFiles/maxque
 
 build cmake_object_order_depends_target_pila_max: phony || cmake_object_order_depends_target_maxstack
 
-build CMakeFiles/pila_max.dir/estudiante/src/pila_max.cpp.o: CXX_COMPILER__pila_max_Debug /home/andres/Escritorio/ANDRÉS/EDPRACT/ej02_pilas_colas/estudiante/src/pila_max.cpp || cmake_object_order_depends_target_pila_max
+build CMakeFiles/pila_max.dir/estudiante/src/pila_max.cpp.o: CXX_COMPILER__pila_max_Debug /home/andres/Escritorio/ANDRÉS/EDPRACT/GIT_EJS/ej02/estudiante/src/pila_max.cpp || cmake_object_order_depends_target_pila_max
   DEP_FILE = CMakeFiles/pila_max.dir/estudiante/src/pila_max.cpp.o.d
   FLAGS = -g -std=gnu++14
-  INCLUDES = -I/home/andres/Escritorio/ANDRÉS/EDPRACT/ej02_pilas_colas/estudiante/include
+  INCLUDES = -I/home/andres/Escritorio/ANDRÉS/EDPRACT/GIT_EJS/ej02/estudiante/include
   OBJECT_DIR = CMakeFiles/pila_max.dir
   OBJECT_FILE_DIR = CMakeFiles/pila_max.dir/estudiante/src
 
@@ -146,10 +146,10 @@ build pila_max: CXX_EXECUTABLE_LINKER__pila_max_Debug CMakeFiles/pila_max.dir/es
 
 build cmake_object_order_depends_target_cola_max: phony || cmake_object_order_depends_target_maxqueue
 
-build CMakeFiles/cola_max.dir/estudiante/src/cola_max.cpp.o: CXX_COMPILER__cola_max_Debug /home/andres/Escritorio/ANDRÉS/EDPRACT/ej02_pilas_colas/estudiante/src/cola_max.cpp || cmake_object_order_depends_target_cola_max
+build CMakeFiles/cola_max.dir/estudiante/src/cola_max.cpp.o: CXX_COMPILER__cola_max_Debug /home/andres/Escritorio/ANDRÉS/EDPRACT/GIT_EJS/ej02/estudiante/src/cola_max.cpp || cmake_object_order_depends_target_cola_max
   DEP_FILE = CMakeFiles/cola_max.dir/estudiante/src/cola_max.cpp.o.d
   FLAGS = -g -std=gnu++14
-  INCLUDES = -I/home/andres/Escritorio/ANDRÉS/EDPRACT/ej02_pilas_colas/estudiante/include
+  INCLUDES = -I/home/andres/Escritorio/ANDRÉS/EDPRACT/GIT_EJS/ej02/estudiante/include
   OBJECT_DIR = CMakeFiles/cola_max.dir
   OBJECT_FILE_DIR = CMakeFiles/cola_max.dir/estudiante/src
 
@@ -181,7 +181,7 @@ build doc_doxygen: phony CMakeFiles/doc_doxygen
 # Utility command for edit_cache
 
 build CMakeFiles/edit_cache.util: CUSTOM_COMMAND
-  COMMAND = cd /home/andres/Escritorio/ANDRÉS/EDPRACT/ej02_pilas_colas/cmake-build-debug && /home/andres/Escritorio/ANDRÉS/clion-2022.2.3/bin/cmake/linux/bin/ccmake -S/home/andres/Escritorio/ANDRÉS/EDPRACT/ej02_pilas_colas -B/home/andres/Escritorio/ANDRÉS/EDPRACT/ej02_pilas_colas/cmake-build-debug
+  COMMAND = cd /home/andres/Escritorio/ANDRÉS/EDPRACT/GIT_EJS/ej02/cmake-build-debug && /home/andres/Escritorio/ANDRÉS/clion-2022.2.3/bin/cmake/linux/bin/ccmake -S/home/andres/Escritorio/ANDRÉS/EDPRACT/GIT_EJS/ej02 -B/home/andres/Escritorio/ANDRÉS/EDPRACT/GIT_EJS/ej02/cmake-build-debug
   DESC = Running CMake cache editor...
   pool = console
   restat = 1
@@ -193,7 +193,7 @@ build edit_cache: phony CMakeFiles/edit_cache.util
 # Utility command for rebuild_cache
 
 build CMakeFiles/rebuild_cache.util: CUSTOM_COMMAND
-  COMMAND = cd /home/andres/Escritorio/ANDRÉS/EDPRACT/ej02_pilas_colas/cmake-build-debug && /home/andres/Escritorio/ANDRÉS/clion-2022.2.3/bin/cmake/linux/bin/cmake --regenerate-during-build -S/home/andres/Escritorio/ANDRÉS/EDPRACT/ej02_pilas_colas -B/home/andres/Escritorio/ANDRÉS/EDPRACT/ej02_pilas_colas/cmake-build-debug
+  COMMAND = cd /home/andres/Escritorio/ANDRÉS/EDPRACT/GIT_EJS/ej02/cmake-build-debug && /home/andres/Escritorio/ANDRÉS/clion-2022.2.3/bin/cmake/linux/bin/cmake --regenerate-during-build -S/home/andres/Escritorio/ANDRÉS/EDPRACT/GIT_EJS/ej02 -B/home/andres/Escritorio/ANDRÉS/EDPRACT/GIT_EJS/ej02/cmake-build-debug
   DESC = Running CMake to regenerate build system...
   pool = console
   restat = 1
@@ -205,7 +205,7 @@ build rebuild_cache: phony CMakeFiles/rebuild_cache.util
 # Custom command for CMakeFiles/doc_doxygen
 
 build CMakeFiles/doc_doxygen | ${cmake_ninja_workdir}CMakeFiles/doc_doxygen: CUSTOM_COMMAND
-  COMMAND = cd /home/andres/Escritorio/ANDRÉS/EDPRACT/ej02_pilas_colas/estudiante && /usr/bin/doxygen /home/andres/Escritorio/ANDRÉS/EDPRACT/ej02_pilas_colas/cmake-build-debug/Doxyfile
+  COMMAND = cd /home/andres/Escritorio/ANDRÉS/EDPRACT/GIT_EJS/ej02/estudiante && /usr/bin/doxygen /home/andres/Escritorio/ANDRÉS/EDPRACT/GIT_EJS/ej02/cmake-build-debug/Doxyfile
   DESC = Generating API documentation with Doxygen
 
 # =============================================================================
@@ -221,7 +221,7 @@ build maxstack: phony libmaxstack.a
 # =============================================================================
 
 #############################################
-# Folder: /home/andres/Escritorio/ANDRÉS/EDPRACT/ej02_pilas_colas/cmake-build-debug
+# Folder: /home/andres/Escritorio/ANDRÉS/EDPRACT/GIT_EJS/ej02/cmake-build-debug
 
 build all: phony libmaxstack.a libmaxqueue.a pila_max cola_max doc_doxygen
 

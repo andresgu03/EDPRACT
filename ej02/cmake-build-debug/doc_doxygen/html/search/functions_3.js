@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['pop_27',['pop',['../classMaxStack.html#ab1498f141850cbf2ce83873fa0551747',1,'MaxStack']]],
-  ['push_28',['push',['../classMaxStack.html#adb28ebc691fc7b179bed1c6d287752a1',1,'MaxStack']]]
+  ['size_27',['size',['../classMaxQueue.html#aafcf61270934668051ae2577543c6416',1,'MaxQueue::size()'],['../classMaxStack.html#ab5793ca38a98af44e031002616b54af3',1,'MaxStack::size()']]]
 ];
