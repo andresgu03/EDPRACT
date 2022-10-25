@@ -27,3 +27,13 @@
 0	232	1666646092536558064	CMakeFiles/maxstack.dir/estudiante/src/maxstack.cpp.o	a8207ff39f033299
 232	237	1666646092544558093	libmaxstack.a	bfa27e90c9ca9411
 0	67	1666646098080577855	pila_max	b16730d47a811941
+0	276	0	CMakeFiles/doc_doxygen	97001def1c0d171a
+0	276	0	/home/andres/Escritorio/ANDRÉS/EDPRACT/GIT_EJS/ej02/cmake-build-debug/CMakeFiles/doc_doxygen	97001def1c0d171a
+0	162	0	CMakeFiles/doc_doxygen	97001def1c0d171a
+0	162	0	/home/andres/Escritorio/ANDRÉS/EDPRACT/GIT_EJS/ej02/cmake-build-debug/CMakeFiles/doc_doxygen	97001def1c0d171a
+1	293	1666721693575648130	CMakeFiles/maxstack.dir/estudiante/src/maxstack.cpp.o	a8207ff39f033299
+293	301	1666721693587647722	libmaxstack.a	bfa27e90c9ca9411
+0	259	1666721696343553308	CMakeFiles/pila_max.dir/estudiante/src/pila_max.cpp.o	87c32d23af8119b7
+259	347	1666721696431550266	pila_max	b16730d47a811941
+0	160	0	CMakeFiles/doc_doxygen	97001def1c0d171a
+0	160	0	/home/andres/Escritorio/ANDRÉS/EDPRACT/GIT_EJS/ej02/cmake-build-debug/CMakeFiles/doc_doxygen	97001def1c0d171a

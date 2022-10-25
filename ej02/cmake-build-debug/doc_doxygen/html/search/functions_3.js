@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['size_27',['size',['../classMaxQueue.html#aafcf61270934668051ae2577543c6416',1,'MaxQueue::size()'],['../classMaxStack.html#ab5793ca38a98af44e031002616b54af3',1,'MaxStack::size()']]]
+  ['pop_27',['pop',['../classMaxQueue.html#a7e03f10bfb0ccfe9471dc061b7659ef2',1,'MaxQueue::pop()'],['../classMaxStack.html#ab1498f141850cbf2ce83873fa0551747',1,'MaxStack::pop()']]],
+  ['push_28',['push',['../classMaxQueue.html#aed7d5b6f03e83c6d5fa3dc8a6c2fca9c',1,'MaxQueue::push()'],['../classMaxStack.html#adb28ebc691fc7b179bed1c6d287752a1',1,'MaxStack::push()']]]
 ];

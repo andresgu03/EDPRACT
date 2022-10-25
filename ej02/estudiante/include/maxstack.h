@@ -62,7 +62,7 @@ public :
 
     /**
       * @brief Muestra el elemento del _tope_ de la pila.
-      * @pre @q no vacía.
+      * @pre cola no vacía.
       * @return element _tope_ de la pila.
       */
     element top () {return q.front();};
@@ -76,7 +76,7 @@ public :
 
     /**
       * @brief Elimina el elemento del _tope_ de la pila.
-      * @pre @q no vacía.
+      * @pre cola no vacía.
       * @post La pila pasa a tener un elemento menos.
       */
     void pop () ;
