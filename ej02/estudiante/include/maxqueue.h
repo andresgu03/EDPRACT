@@ -38,7 +38,14 @@ struct element{
 **/
 
 class MaxQueue{
+    /**
+     @page page_repMaxQueue Representación de MaxQueue
 
+     @section sec_Max_Queue MaxQueue
+
+     El **TDA MaxQueue** se corresponde con una cola de _elements_ donde se almacenan valores siguiendo la jerarquía **FIFO** (_First In first Out_) donde los elementos se almacenan de manera que se insertan por el final de la cola y se acceden por el frente. El último elemento en añadirse será el último al que se acceda por el frente de la cola. Al momento de acceder a un valor se indicará también el valor máximo de la cola en ese momento.
+
+   **/
 private:
 
     /**

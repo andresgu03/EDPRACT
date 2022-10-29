@@ -16,7 +16,7 @@ En este ejercicio veremos dos ejemplos distintos de la utilización de las estru
 
     - Toma por argumentos una secuencia (separada por espacios) de valores enteros, o del literal ".".
 
-        - De forma ordenada, cada vez que se encuentra un valor entero, se añade a una cola (en principio vacía) de MaxQueue.
+        - De forma ordenada, cada vez que se encuentra un valor entero, se añade a una cola (en principio vacía) de MaxStack.
 
         - Y cada vez que se encuentra con ".", primero imprime el valor del tope de la pila, y a continuación lo borra.
 

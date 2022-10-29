@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['maxqueue_18',['MaxQueue',['../classMaxQueue.html',1,'']]],
-  ['maxstack_19',['MaxStack',['../classMaxStack.html',1,'']]]
+  ['maxqueue_19',['MaxQueue',['../classMaxQueue.html',1,'']]],
+  ['maxstack_20',['MaxStack',['../classMaxStack.html',1,'']]]
 ];
