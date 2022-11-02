@@ -1,0 +1,27 @@
+# ninja log v5
+0	300	1667416518494714337	CMakeFiles/cantidad_letras.dir/estudiante/src/letters_set.cpp.o	46ac86249dd350e0
+0	308	1667416518502714345	CMakeFiles/cantidad_letras.dir/estudiante/src/dictionary.cpp.o	f4e9bb9ee08f3a9f
+0	320	1667416539550736140	CMakeFiles/cantidad_letras.dir/estudiante/src/cantidad_letras.cpp.o	891289069c324587
+320	397	1667416539630736223	cantidad_letras	d900cf6abb4d416e
+1	259	1667416545418742219	CMakeFiles/conjunto_letras.dir/estudiante/src/conjunto_letras.cpp.o	4780de6f6a8b95bc
+1	269	1667416545426742227	CMakeFiles/conjunto_letras.dir/estudiante/src/letters_set.cpp.o	41fa999a55bc06cc
+269	334	1667416545490742293	conjunto_letras	b07dc560dba590c5
+0	295	1667416549262746201	CMakeFiles/palabras_longitud.dir/estudiante/src/dictionary.cpp.o	caf5af1c22eb358
+0	277	1667416799503006198	CMakeFiles/palabras_longitud.dir/estudiante/src/palabras_longitud.cpp.o	bbcb978f5dfaff69
+277	356	1667416799583006282	palabras_longitud	168baadf68a97bd4
+1	160	0	CMakeFiles/doc_doxygen	d000ef6639a924ee
+1	160	0	/home/andres/Escritorio/ANDRÉS/EDPRACT/GIT_EJS/ej03/cmake-build-debug/CMakeFiles/doc_doxygen	d000ef6639a924ee
+1	294	1667418704873464344	CMakeFiles/cantidad_letras.dir/estudiante/src/letters_set.cpp.o	46ac86249dd350e0
+1	303	1667418704881464355	CMakeFiles/cantidad_letras.dir/estudiante/src/dictionary.cpp.o	f4e9bb9ee08f3a9f
+1	323	1667418704901464383	CMakeFiles/cantidad_letras.dir/estudiante/src/cantidad_letras.cpp.o	891289069c324587
+323	394	1667418704973464485	cantidad_letras	d900cf6abb4d416e
+1	258	1667418707969468703	CMakeFiles/conjunto_letras.dir/estudiante/src/conjunto_letras.cpp.o	4780de6f6a8b95bc
+1	298	1667418708009468759	CMakeFiles/conjunto_letras.dir/estudiante/src/letters_set.cpp.o	41fa999a55bc06cc
+298	361	1667418708073468849	conjunto_letras	b07dc560dba590c5
+1	289	1667418710997472963	CMakeFiles/palabras_longitud.dir/estudiante/src/palabras_longitud.cpp.o	bbcb978f5dfaff69
+1	319	1667418711029473008	CMakeFiles/palabras_longitud.dir/estudiante/src/dictionary.cpp.o	caf5af1c22eb358
+319	383	1667418711093473098	palabras_longitud	168baadf68a97bd4
+0	163	0	CMakeFiles/doc_doxygen	d000ef6639a924ee
+0	163	0	/home/andres/Escritorio/ANDRÉS/EDPRACT/GIT_EJS/ej03/cmake-build-debug/CMakeFiles/doc_doxygen	d000ef6639a924ee
+0	163	0	CMakeFiles/doc_doxygen	d000ef6639a924ee
+0	163	0	/home/andres/Escritorio/ANDRÉS/EDPRACT/GIT_EJS/ej03/cmake-build-debug/CMakeFiles/doc_doxygen	d000ef6639a924ee
