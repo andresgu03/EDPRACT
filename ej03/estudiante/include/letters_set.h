@@ -1,3 +1,10 @@
+/**
+ * @file letters_set.h
+ * @brief Archivo de especificación del TDA LettersSet
+ * @author Andrés Gutiérrez Armenteros
+ * @author Pablo García Bas
+ * @date Noviembre 2022
+ */
 #ifndef __LETTER_SET_H__
 #define __LETTER_SET_H__
 
@@ -31,11 +38,11 @@ struct LetterInfo{
 
 class LettersSet {
     /**
-    @page page_repMaxStack Representación de MaxStack
+    @page page_repLettersSet Representación de LettersSet
 
-    @section sec_Max_Stack MaxStack
+    @section sec_LettersSet LettersSet
 
-    El **TDA MaxStack** se corresponde con una pila de _elements_ donde se almacenan valores siguiendo la jerarquía **LIFO** (_Last In first Out_) donde los elementos se almacenan de manera que sólo pueden insertarse y accedera a ellos por el _tope_ de la pila. El último elemento en añadirse será el primero al que se acceda por el tope de la pila, mientras que los primeros insertados irán quedando siguiendo dicha jerarquía en el _fondo_ de la pila. Al momento de acceder a un valor se indicará también el valor máximo de la pila en ese momento.
+    El **TDA LettersSet** se corresponde con un mapa formado por _letras_ y su información correspondiente del tipo *LetterInfo*. Es decir, a cada letra le acompaña el número de veces que está repetida y la puntuación que tendrá al ser utilizada en la partida.
 
   **/
 private:

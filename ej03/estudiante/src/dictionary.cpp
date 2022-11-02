@@ -1,3 +1,10 @@
+/**
+ * @file dictionary.cpp
+ * @brief Implementación del TDA Dictionary
+ * @author Andrés Gutiérrez Armenteros
+ * @author Pablo García Bas
+ * @date Noviembre 2022
+ */
 #include "dictionary.h"
 
 int Dictionary::getOccurrences(const char c) {

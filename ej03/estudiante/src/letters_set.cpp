@@ -1,3 +1,10 @@
+/**
+ * @file letters_set.cpp
+ * @brief Implementación del TDA LettersSet
+ * @author Andrés Gutiérrez Armenteros
+ * @author Pablo García Bas
+ * @date Noviembre 2022
+ */
 #include "letters_set.h"
 
 int LettersSet::getScore( string word) {

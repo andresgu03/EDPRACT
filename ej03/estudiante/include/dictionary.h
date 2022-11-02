@@ -1,3 +1,10 @@
+/**
+ * @file dictionary.h
+ * @brief Archivo de especificación del TDA Dictionary
+ * @author Andrés Gutiérrez Armenteros
+ * @author Pablo García Bas
+ * @date Noviembre 2022
+ */
 #ifndef __DICTIONARY_H__
 #define __DICTIONARY_H__
 
@@ -15,11 +22,11 @@ using namespace std;
  */
 class Dictionary {
     /**
-    @page page_repMaxStack Representación de MaxStack
+    @page page_repDictionary Representación de Dictionary
 
-    @section sec_Max_Stack MaxStack
+    @section sec_Dictionary Dictionary
 
-    El **TDA MaxStack** se corresponde con una pila de _elements_ donde se almacenan valores siguiendo la jerarquía **LIFO** (_Last In first Out_) donde los elementos se almacenan de manera que sólo pueden insertarse y accedera a ellos por el _tope_ de la pila. El último elemento en añadirse será el primero al que se acceda por el tope de la pila, mientras que los primeros insertados irán quedando siguiendo dicha jerarquía en el _fondo_ de la pila. Al momento de acceder a un valor se indicará también el valor máximo de la pila en ese momento.
+    El **TDA Dictionary** se corresponde con un conjunto de _strings_ de manera que se trata a cada string como una palabra. Las palabras se ordenan por orden alfabético. Además, serán únicas.
 
   **/
 private:
