@@ -41,6 +41,45 @@ include CMakeFiles/rules.ninja
 
 cmake_ninja_workdir = /home/andres/Escritorio/ANDRÉS/EDPRACT/GIT_EJS/ej03/cmake-build-debug/
 # =============================================================================
+# Object build statements for EXECUTABLE target conjunto_letras
+
+
+#############################################
+# Order-only phony target for conjunto_letras
+
+build cmake_object_order_depends_target_conjunto_letras: phony || CMakeFiles/conjunto_letras.dir
+
+build CMakeFiles/conjunto_letras.dir/estudiante/src/conjunto_letras.cpp.o: CXX_COMPILER__conjunto_letras_Debug /home/andres/Escritorio/ANDRÉS/EDPRACT/GIT_EJS/ej03/estudiante/src/conjunto_letras.cpp || cmake_object_order_depends_target_conjunto_letras
+  DEP_FILE = CMakeFiles/conjunto_letras.dir/estudiante/src/conjunto_letras.cpp.o.d
+  FLAGS = -g -std=gnu++14
+  INCLUDES = -I/home/andres/Escritorio/ANDRÉS/EDPRACT/GIT_EJS/ej03/estudiante/include
+  OBJECT_DIR = CMakeFiles/conjunto_letras.dir
+  OBJECT_FILE_DIR = CMakeFiles/conjunto_letras.dir/estudiante/src
+
+build CMakeFiles/conjunto_letras.dir/estudiante/src/letters_set.cpp.o: CXX_COMPILER__conjunto_letras_Debug /home/andres/Escritorio/ANDRÉS/EDPRACT/GIT_EJS/ej03/estudiante/src/letters_set.cpp || cmake_object_order_depends_target_conjunto_letras
+  DEP_FILE = CMakeFiles/conjunto_letras.dir/estudiante/src/letters_set.cpp.o.d
+  FLAGS = -g -std=gnu++14
+  INCLUDES = -I/home/andres/Escritorio/ANDRÉS/EDPRACT/GIT_EJS/ej03/estudiante/include
+  OBJECT_DIR = CMakeFiles/conjunto_letras.dir
+  OBJECT_FILE_DIR = CMakeFiles/conjunto_letras.dir/estudiante/src
+
+
+# =============================================================================
+# Link build statements for EXECUTABLE target conjunto_letras
+
+
+#############################################
+# Link the executable conjunto_letras
+
+build conjunto_letras: CXX_EXECUTABLE_LINKER__conjunto_letras_Debug CMakeFiles/conjunto_letras.dir/estudiante/src/conjunto_letras.cpp.o CMakeFiles/conjunto_letras.dir/estudiante/src/letters_set.cpp.o
+  FLAGS = -g
+  OBJECT_DIR = CMakeFiles/conjunto_letras.dir
+  POST_BUILD = :
+  PRE_LINK = :
+  TARGET_FILE = conjunto_letras
+  TARGET_PDB = conjunto_letras.dbg
+
+# =============================================================================
 # Object build statements for EXECUTABLE target bolsa
 
 
@@ -71,6 +110,91 @@ build bolsa: CXX_EXECUTABLE_LINKER__bolsa_Debug CMakeFiles/bolsa.dir/estudiante/
   PRE_LINK = :
   TARGET_FILE = bolsa
   TARGET_PDB = bolsa.dbg
+
+# =============================================================================
+# Object build statements for EXECUTABLE target cantidad_letras
+
+
+#############################################
+# Order-only phony target for cantidad_letras
+
+build cmake_object_order_depends_target_cantidad_letras: phony || CMakeFiles/cantidad_letras.dir
+
+build CMakeFiles/cantidad_letras.dir/estudiante/src/cantidad_letras.cpp.o: CXX_COMPILER__cantidad_letras_Debug /home/andres/Escritorio/ANDRÉS/EDPRACT/GIT_EJS/ej03/estudiante/src/cantidad_letras.cpp || cmake_object_order_depends_target_cantidad_letras
+  DEP_FILE = CMakeFiles/cantidad_letras.dir/estudiante/src/cantidad_letras.cpp.o.d
+  FLAGS = -g -std=gnu++14
+  INCLUDES = -I/home/andres/Escritorio/ANDRÉS/EDPRACT/GIT_EJS/ej03/estudiante/include
+  OBJECT_DIR = CMakeFiles/cantidad_letras.dir
+  OBJECT_FILE_DIR = CMakeFiles/cantidad_letras.dir/estudiante/src
+
+build CMakeFiles/cantidad_letras.dir/estudiante/src/dictionary.cpp.o: CXX_COMPILER__cantidad_letras_Debug /home/andres/Escritorio/ANDRÉS/EDPRACT/GIT_EJS/ej03/estudiante/src/dictionary.cpp || cmake_object_order_depends_target_cantidad_letras
+  DEP_FILE = CMakeFiles/cantidad_letras.dir/estudiante/src/dictionary.cpp.o.d
+  FLAGS = -g -std=gnu++14
+  INCLUDES = -I/home/andres/Escritorio/ANDRÉS/EDPRACT/GIT_EJS/ej03/estudiante/include
+  OBJECT_DIR = CMakeFiles/cantidad_letras.dir
+  OBJECT_FILE_DIR = CMakeFiles/cantidad_letras.dir/estudiante/src
+
+build CMakeFiles/cantidad_letras.dir/estudiante/src/letters_set.cpp.o: CXX_COMPILER__cantidad_letras_Debug /home/andres/Escritorio/ANDRÉS/EDPRACT/GIT_EJS/ej03/estudiante/src/letters_set.cpp || cmake_object_order_depends_target_cantidad_letras
+  DEP_FILE = CMakeFiles/cantidad_letras.dir/estudiante/src/letters_set.cpp.o.d
+  FLAGS = -g -std=gnu++14
+  INCLUDES = -I/home/andres/Escritorio/ANDRÉS/EDPRACT/GIT_EJS/ej03/estudiante/include
+  OBJECT_DIR = CMakeFiles/cantidad_letras.dir
+  OBJECT_FILE_DIR = CMakeFiles/cantidad_letras.dir/estudiante/src
+
+
+# =============================================================================
+# Link build statements for EXECUTABLE target cantidad_letras
+
+
+#############################################
+# Link the executable cantidad_letras
+
+build cantidad_letras: CXX_EXECUTABLE_LINKER__cantidad_letras_Debug CMakeFiles/cantidad_letras.dir/estudiante/src/cantidad_letras.cpp.o CMakeFiles/cantidad_letras.dir/estudiante/src/dictionary.cpp.o CMakeFiles/cantidad_letras.dir/estudiante/src/letters_set.cpp.o
+  FLAGS = -g
+  OBJECT_DIR = CMakeFiles/cantidad_letras.dir
+  POST_BUILD = :
+  PRE_LINK = :
+  TARGET_FILE = cantidad_letras
+  TARGET_PDB = cantidad_letras.dbg
+
+# =============================================================================
+# Object build statements for EXECUTABLE target palabras_longitud
+
+
+#############################################
+# Order-only phony target for palabras_longitud
+
+build cmake_object_order_depends_target_palabras_longitud: phony || CMakeFiles/palabras_longitud.dir
+
+build CMakeFiles/palabras_longitud.dir/estudiante/src/palabras_longitud.cpp.o: CXX_COMPILER__palabras_longitud_Debug /home/andres/Escritorio/ANDRÉS/EDPRACT/GIT_EJS/ej03/estudiante/src/palabras_longitud.cpp || cmake_object_order_depends_target_palabras_longitud
+  DEP_FILE = CMakeFiles/palabras_longitud.dir/estudiante/src/palabras_longitud.cpp.o.d
+  FLAGS = -g -std=gnu++14
+  INCLUDES = -I/home/andres/Escritorio/ANDRÉS/EDPRACT/GIT_EJS/ej03/estudiante/include
+  OBJECT_DIR = CMakeFiles/palabras_longitud.dir
+  OBJECT_FILE_DIR = CMakeFiles/palabras_longitud.dir/estudiante/src
+
+build CMakeFiles/palabras_longitud.dir/estudiante/src/dictionary.cpp.o: CXX_COMPILER__palabras_longitud_Debug /home/andres/Escritorio/ANDRÉS/EDPRACT/GIT_EJS/ej03/estudiante/src/dictionary.cpp || cmake_object_order_depends_target_palabras_longitud
+  DEP_FILE = CMakeFiles/palabras_longitud.dir/estudiante/src/dictionary.cpp.o.d
+  FLAGS = -g -std=gnu++14
+  INCLUDES = -I/home/andres/Escritorio/ANDRÉS/EDPRACT/GIT_EJS/ej03/estudiante/include
+  OBJECT_DIR = CMakeFiles/palabras_longitud.dir
+  OBJECT_FILE_DIR = CMakeFiles/palabras_longitud.dir/estudiante/src
+
+
+# =============================================================================
+# Link build statements for EXECUTABLE target palabras_longitud
+
+
+#############################################
+# Link the executable palabras_longitud
+
+build palabras_longitud: CXX_EXECUTABLE_LINKER__palabras_longitud_Debug CMakeFiles/palabras_longitud.dir/estudiante/src/palabras_longitud.cpp.o CMakeFiles/palabras_longitud.dir/estudiante/src/dictionary.cpp.o
+  FLAGS = -g
+  OBJECT_DIR = CMakeFiles/palabras_longitud.dir
+  POST_BUILD = :
+  PRE_LINK = :
+  TARGET_FILE = palabras_longitud
+  TARGET_PDB = palabras_longitud.dbg
 
 
 #############################################
@@ -121,7 +245,7 @@ build CMakeFiles/doc_doxygen | ${cmake_ninja_workdir}CMakeFiles/doc_doxygen: CUS
 #############################################
 # Folder: /home/andres/Escritorio/ANDRÉS/EDPRACT/GIT_EJS/ej03/cmake-build-debug
 
-build all: phony bolsa doc_doxygen
+build all: phony conjunto_letras bolsa cantidad_letras palabras_longitud doc_doxygen
 
 # =============================================================================
 # Built-in targets

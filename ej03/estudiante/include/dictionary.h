@@ -4,6 +4,7 @@
 #include <set>
 #include <string>
 #include <vector>
+#include <iostream>
 
 using namespace std;
 
@@ -36,7 +37,8 @@ public:
       * @param other Dictionary que se quiere copiar.
       */
     inline Dictionary( const Dictionary & other){
-        this->words = other.words ;
+        set<string> aux (other.words) ;
+        words = aux ;
     };
 
     /**
@@ -110,5 +112,23 @@ public:
       * @return Vector de palabras con la longitud deseada.
       */
     vector<string> wordsOfLength ( int length) ;
+
+    /**
+      * @brief Sobrecarga del operador de salida.
+      * Permite imprimir el diccionario completo a un flujo de salida.
+      * @param os Flujo de salida, donde imprimir el Dictionary
+      * @param dic Dictionary a imprimir.
+      * @returns Flujo de salida, para poder encadenar el operador
+      */
+    friend ostream & operator<<(ostream & os, const Dictionary & dic);
+
+    /**
+      * @brief Sobrecarga del operador de entrada.
+      * Permite leer las palabras de un fichero de texto e introducirlas en el diccionario.
+      * @param is Flujo de entrada.
+      * @param dic Dictionary a rellenar.
+      * @returns Flujo de entrada para poder encadenar el operador
+      */
+    friend istream & operator>>(istream &is, Dictionary & dic);
 };
 #endif

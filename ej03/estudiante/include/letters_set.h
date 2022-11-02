@@ -3,7 +3,7 @@
 
 #include <map>
 #include <string>
-
+#include <iostream>
 using namespace std;
 
 /**
@@ -29,7 +29,7 @@ struct LetterInfo{
  * utiliza en una palabra
  */
 
-class LettersSet{
+class LettersSet {
     /**
     @page page_repMaxStack Representación de MaxStack
 
@@ -39,20 +39,21 @@ class LettersSet{
 
   **/
 private:
-    map <char, LetterInfo> letters;
+    map<char, LetterInfo> letters;
 public:
     /**
       * @brief Constructor por defecto.
       * Crea un LettersSet vacío.
       */
-    inline LettersSet(){};
+    inline LettersSet() {};
 
     /**
       * @brief Constructor de copia.
       * @param other LettersSet a copiar.
       */
-    inline LettersSet(const LettersSet & other){
-        this->letters = other.letters ;
+    inline LettersSet(const LettersSet &other) {
+        map<char, LetterInfo> aux(other.letters);
+        this->letters = aux;
     };
 
     /**
@@ -60,8 +61,8 @@ public:
       * @param val Pareja de letra y Letterinfo asociada a insertar.
       * @return booleano que marca si se ha podido insertar la letra en el LettersSet. La letra sólo se inserta correctamente si no estaba aún incluida en la colección.
       */
-    inline bool insert(const pair<char, LetterInfo> & val ){
-        return ( (this->letters.insert(val)).second);
+    inline bool insert(const pair<char, LetterInfo> &val) {
+        return ((this->letters.insert(val)).second);
     };
 
     /**
@@ -69,47 +70,47 @@ public:
       * @param key Carácter a eliminar
       * @return Booleano que indica si se ha podido eliminar correctamente la letra del LettersSet
       */
-    inline bool erase(const char & key){
-        return ( this->letters.erase(key));
+    inline bool erase(const char &key) {
+        return (this->letters.erase(key));
     };
 
     /**
       * @brief Limpia el contenido del LettersSet.
       * Elimina el contenido del LettersSet
       */
-    inline void clear(){
-        this->letters.clear() ;
+    inline void clear() {
+        this->letters.clear();
     };
 
     /**
       * @brief Consulta si el LettersSet es vacío
       * @return true si el LettersSet está vacío, false en caso contrario.
       */
-    inline bool empty() const{
-        return ( this->letters.empty()) ;
+    inline bool empty() const {
+        return (this->letters.empty());
     };
 
     /**
       * @brief Tamaño del LettersSet
       * @return Número de elementos en el LettersSet
       */
-    inline int size() const{
-        return ( this->letters.size()) ;
-    } ;
+    inline int size() const {
+        return (this->letters.size());
+    };
 
     /**
       * @brief Calcula la puntuación dada una palabra.
       * @param word String con la palabra cuya puntuación queremos calcular.
       * @return Puntuación de la palabra, calculada como la suma de las puntuaciones de cada una de las letras.
       */
-    int getScore( string word);
+    int getScore(string word);
 
     /**
       * @brief Sobrecarga del operador de asignación.
       * @param cl LettersSet a copiar
       * @return Referencia al objeto this para poder encadenar el operador.
       */
-    LettersSet & operator=(const LettersSet & cl);
+    LettersSet &operator=(const LettersSet &cl);
 
     /**
       * @brief Sobrecarga del operador de consulta.
@@ -117,22 +118,22 @@ public:
       * @param val Carácter a consultar
       * @return Estructura de tipo Letterinfo con la información del carácter consultado. Número de repeticiones y puntuación.
       */
-    LetterInfo & operator[]( const char & val );
+    LetterInfo &operator[](const char &val);
 
-};
-
-/**
+    /**
       * @brief Sobrecarga del operador de salida.
       * @param os Flujo de salida, donde escribir el LettersSet
       * @param cl LettersSet que se escribe.
       */
-ostream & operator<<( ostream & os , const LettersSet & cl );
+    friend ostream &operator<<(ostream &os, const LettersSet &cl);
 
-/**
+    /**
       * @brief Sobrecarga del operador de entrada.
       * @param is Flujo de salida, del que leer el LettersSet.
       * @param cl LettersSet en el que se almacena la información leída.
       */
-istream & operator>>( istream & is , LettersSet & cl );
+    friend istream &operator>>(istream &is, LettersSet &cl);
+
+};
 
 #endif
