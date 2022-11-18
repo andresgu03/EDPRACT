@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['size_24',['size',['../classDictionary.html#ac2456f6eb0cb7f997acc69eac47e2244',1,'Dictionary::size()'],['../classLettersSet.html#ad188ac02152674fe6191241dce329b40',1,'LettersSet::size()']]]
+  ['representación_20de_20dictionary_31',['Representación de Dictionary',['../page_repDictionary.html',1,'']]],
+  ['representación_20de_20lettersset_32',['Representación de LettersSet',['../page_repLettersSet.html',1,'']]]
 ];

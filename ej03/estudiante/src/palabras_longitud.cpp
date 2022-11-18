@@ -11,22 +11,22 @@
 int main(int argc, char* argv[]){
 
     Dictionary aux;
-    ifstream entrada;
-    entrada.open(argv[1]);
+    ifstream fentrada;
+    fentrada.open(argv[1]);
 
-    if(!entrada.is_open()){
+    if(!fentrada.is_open()){
         cout << "Error al abrir el fichero" << argv[1] << endl;
         cerr << "Error en open()" << endl;
         return -1;
     }
 
-    string cad;
-    while(entrada){
-        entrada >> cad;
-        aux.insert(cad);
+    string str1;
+    while(fentrada){
+        fentrada >> str1;
+        aux.insert(str1);
     }
 
-    entrada.close();
+    fentrada.close();
 
     vector<string> v(aux.wordsOfLength(atoi(argv[2])));
     vector<string>::iterator it;

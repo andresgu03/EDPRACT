@@ -12,7 +12,7 @@
 
 int main(int argc, char* argv[]){
 
-    LettersSet letters;
+    LettersSet letras;
     ifstream fentrada;
     fentrada.open(argv[1]);
 
@@ -21,10 +21,10 @@ int main(int argc, char* argv[]){
         cerr << "Error en open()" << endl;
         return -1;
     }
-    fentrada >> letters;
+    fentrada >> letras;
     fentrada.close();
 
-    int score = letters.getScore(argv[2]);
+    int score = letras.getScore(argv[2]);
 
     cout << score << endl;
     return 0;

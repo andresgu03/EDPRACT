@@ -137,5 +137,214 @@ public:
       * @returns Flujo de entrada para poder encadenar el operador
       */
     friend istream & operator>>(istream &is, Dictionary & dic);
+
+    /**
+     * @brief TDA iterator de la clase Dictionary
+     *
+     *
+     * Permite recorrer una instancia de la clase Dictionary permitiendo modificaciones, por lo que solo
+     * se puede usar con contenedores no constantes.
+    */
+    class iterator{
+    private:
+        set<string>::iterator it;
+
+    public:
+
+        /**
+         * @brief Constructor sin parámetros. Crea un iterador nulo
+         */
+        iterator(){}
+
+        /**
+         * @brief Constructor de copia
+         * @param otro iterador de un conjunto de strings que se desea copiar
+         */
+        iterator(const set<string>::iterator& otro):it(otro){}
+
+        /**
+         * @brief Constructor de copia
+         * @param otro iterador que se desea copiar
+         */
+        iterator(const iterator& otro):it(otro.it){}
+        /**
+         * @brief Destructor
+         */
+        ~iterator(){}
+
+        /**
+         * @brief Operador de asignación
+         * @param otro iterador de un conjunto de strings que se desea copiar
+         * @return puntero al iterador llamante
+         */
+        iterator& operator=(const set<string>::iterator& otro){it=otro;return *this;}
+        /**
+         * @brief Operador de asignación
+         * @param otro iterador que se desea copiar
+         * @return puntero al iterador llamante
+         */
+        iterator& operator=(const iterator& otro){it=otro.it;return *this;}
+        /**
+         * @brief Operador * (obtiene el objeto al que apunta el iterador).
+         * @pre El iterador llamante es distinto de end()
+         * @return String del diccionario al que apunta el iterador.
+         */
+        string operator*()const{return *it;}
+        /**
+         * @brief Operador ++(elemento).
+         * @pre El iterador llamante es distinto de end()
+         * @return puntero al iterador llamante
+         * @post El iterador apunta una posición más a la derecha
+         */
+        iterator& operator++(){++it;return *this;}
+        /**
+         * @brief Operador --(elemento).
+         * @pre El iterador llamante es distinto de begin().
+         * @return puntero al iterador llamante
+         * @post El iterador apunta una posición más a la izquierda
+         */
+        iterator& operator--(){--it;return *this;}
+        /**
+         * @brief Operador (elemento)++.
+         * @pre El iterador llamante es distinto de end()
+         * @return puntero al iterador llamante.
+         * @post El iterador apunta una posición más a la derecha
+         */
+        iterator& operator++(int){it++;return *this;}
+        /**
+          * @brief Operador (elemento)--.
+          * @pre El iterador llamante es distinto de begin().
+          * @return puntero al iterador llamante
+          * @post El iterador apunta una posición más a la izquierda
+          */
+        iterator& operator--(int){it--;return *this;}
+        /**
+         * @brief Operador de desigualdad
+         * @param otro iterador con el que se va a comparar el iterador llamante
+         * @return "false" si apuntan a la misma posición y "true" si no.
+         */
+        bool operator!=(const iterator& otro){return it != otro.it;}
+        /**
+         * @brief Operador de igualdad
+         * @param otro iterador con el que se va a comparar el iterador llamante
+         * @return "true" si apuntan a la misma posición y "false" si no.
+         */
+        bool operator==(const iterator& otro){return it == otro.it;}
+    };
+
+    /**
+     * @brief Devuelve un iterador que apunta al comienzo del diccionario
+     * @return iterador apuntando al principio del conjunto de palabras
+     */
+    iterator begin(){iterator i = words.begin();return i;}
+
+    /**
+     * @brief Devuelve un iterador que apunta al final del diccionario (posición después de la última)
+     * @return iterador apuntando al final del conjunto de palabras
+     */
+    iterator end(){iterator i = words.end();return i;}
+
+    /**
+     * @brief TDA const_iterator de la clase Dictionary, señala a los elementos contenidos en él.
+     *
+     *
+     * Permite recorrer una instancia de la clase Dictionary pero no modificarla, por lo que se puede usar tanto con objetos
+     * Dictionary constantes y no constantes.
+     */
+    class const_iterator{
+    private:
+        set<string>::const_iterator it;
+
+    public:
+
+        /**
+         * @brief Constructor sin parámetros
+         */
+        const_iterator(){}
+        /**
+         * @brief Constructor de copia
+         * @param otro iterador constante de un conjunto de strings que se desea copiar
+         */
+        const_iterator(const set<string>::const_iterator& otro):it(otro){}
+        /**
+         * @brief Constructor de copia
+         * @param otro iterador constante que se desea copiar
+         */
+        const_iterator(const const_iterator& otro):it(otro.it){}
+        /**
+         * @brief Destructor
+         */
+        ~const_iterator(){}
+        /**
+         * @brief Operador de asignación
+         * @param otro iterador constante de un conjunto de strings que se desea copiar
+         * @return puntero al iterador llamante
+         */
+        const_iterator& operator=(const set<string>::const_iterator& otro){it=otro;return *this;}
+        /**
+         * @brief Operador de asignación
+         * @param otro iterador constante que se desea copiar
+         * @return puntero al iterador llamante
+         */
+        const_iterator& operator=(const const_iterator& otro){it=otro.it;return *this;}
+        /**
+         * @brief Operador * (obtiene el objeto al que apunta el iterador).
+         * @pre El iterador llamante es distinto de end()
+         * @return String del diccionario al que apunta el iterador.
+         */
+        const string operator*()const{return *it;}
+        /**
+         * @brief Operador ++(elemento).
+         * @pre El iterador llamante es distinto de end()
+         * @return puntero al iterador llamante
+         * @post El iterador apunta una posición más a la derecha
+         */
+        const_iterator& operator++(){++it;return *this;}
+        /**
+         * @brief Operador --(elemento).
+         * @pre El iterador llamante es distinto de begin().
+         * @return puntero al iterador llamante
+         * @post El iterador apunta una posición más a la izquierda
+         */
+        const_iterator& operator--(){--it;return *this;}
+        /**
+         * @brief Operador (elemento)++.
+         * @pre El iterador llamante es distinto de end()
+         * @return puntero al iterador llamante.
+         * @post El iterador apunta una posición más a la derecha
+         */
+        const_iterator& operator++(int){it++;return *this;}
+        /**
+          * @brief Operador (elemento)--.
+          * @pre El iterador llamante es distinto de begin().
+          * @return puntero al iterador llamante
+          * @post El iterador apunta una posición más a la izquierda
+          */
+        const_iterator& operator--(int){it--;return *this;}
+        /**
+        * @brief Operador de desigualdad
+        * @param otro iterador constante con el que se va a comparar el iterador llamante
+        * @return "false" si apuntan a la misma posición y "true" si no.
+        */
+        bool operator!=(const const_iterator& otro){return it != otro.it;}
+        /**
+         * @brief Operador de igualdad
+         * @param otro iterador constante con el que se va a comparar el iterador llamante
+         * @return "true" si apuntan a la misma posición y "false" si no.
+         */
+        bool operator==(const const_iterator& otro){return it == otro.it;}
+    };
+
+    /**
+     * @brief Devuelve un iterador constante que apunta al comienzo del diccionario
+     * @return iterador constante apuntando al principio del conjunto de palabras
+     */
+    const_iterator begin() const{const_iterator i = words.begin();return i;}
+
+    /**
+     * @brief Devuelve un iterador constante que apunta al final del diccionario (posición después de la última)
+     * @return iterador constante apuntando al final del conjunto de palabras
+     */
+    const_iterator end() const{const_iterator i = words.end();return i;}
 };
 #endif

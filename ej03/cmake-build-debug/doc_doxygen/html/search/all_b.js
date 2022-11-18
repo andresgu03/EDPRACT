@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['wordsoflength_26',['wordsOfLength',['../classDictionary.html#abd400f845d39de7f44be67599737fd91',1,'Dictionary']]]
+  ['título_20de_20la_20página_20principal_34',['Título de la página principal',['../index.html',1,'']]]
 ];

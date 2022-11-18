@@ -1,6 +1,4 @@
 var searchData=
 [
-  ['cantidad_5fletras_2ecpp_0',['cantidad_letras.cpp',['../cantidad__letras_8cpp.html',1,'']]],
-  ['clear_1',['clear',['../classDictionary.html#a2d54b74d14335da04ad9d64e49536d9a',1,'Dictionary::clear()'],['../classLettersSet.html#ada4a23ad85fa4481a764975aaabf380f',1,'LettersSet::clear()']]],
-  ['conjunto_5fletras_2ecpp_2',['conjunto_letras.cpp',['../conjunto__letras_8cpp.html',1,'']]]
+  ['begin_0',['begin',['../classDictionary.html#aa4bf50954ba16f76b6ba78f247486e50',1,'Dictionary::begin()'],['../classDictionary.html#a69c28759c7e437adbba64deb530cd313',1,'Dictionary::begin() const'],['../classLettersSet.html#a9bf4495dbcb0ac62b70f642a1ddafbc3',1,'LettersSet::begin()'],['../classLettersSet.html#a5d1396c51a75f0b2cc9eeb36556fade2',1,'LettersSet::begin() const']]]
 ];

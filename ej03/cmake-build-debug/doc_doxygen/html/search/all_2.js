@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['empty_6',['empty',['../classDictionary.html#ab45dc9793957e562ccc104150fc7af8f',1,'Dictionary::empty()'],['../classLettersSet.html#aa94569c5875ddb88b4c5aa7d3e6c9120',1,'LettersSet::empty()']]],
-  ['erase_7',['erase',['../classDictionary.html#ade0c02d2c1f45e826a87f52c4f1d0ee6',1,'Dictionary::erase()'],['../classLettersSet.html#a97a0a1ec618aad0bce8a6a275f546995',1,'LettersSet::erase()']]],
-  ['exists_8',['exists',['../classDictionary.html#aa9986002efbed7c5a8a2db1ca104245d',1,'Dictionary']]]
+  ['dictionary_5',['Dictionary',['../classDictionary.html',1,'Dictionary'],['../classDictionary.html#aee8d612bc9d323c38faba045ba384b8b',1,'Dictionary::Dictionary()'],['../classDictionary.html#a408e2c9dfcea8f536666b89fed403074',1,'Dictionary::Dictionary(const Dictionary &amp;other)']]],
+  ['dictionary_2ecpp_6',['dictionary.cpp',['../dictionary_8cpp.html',1,'']]],
+  ['dictionary_2eh_7',['dictionary.h',['../dictionary_8h.html',1,'']]]
 ];

@@ -12,41 +12,41 @@
 
 int main(int argc, char* argv[]){
 
-    Dictionary dictionary;
-    ifstream entrada;
-    entrada.open(argv[1]);
-    string cad;
+    Dictionary diccionario;
+    ifstream fentrada;
+    fentrada.open(argv[1]);
+    string str1;
 
-    if(!entrada.is_open()){
+    if(!fentrada.is_open()){
         cout << "Error al abrir el fichero" << argv[1] << endl;
         cerr << "Error en open()" << endl;
         return -1;
     }
 
-    while(entrada){
-        entrada >> cad;
-        dictionary.insert(cad);
+    while(fentrada){
+        fentrada >> str1;
+        diccionario.insert(str1);
     }
 
-    entrada.close();
+    fentrada.close();
 
-    LettersSet letters;
-    ifstream entrada1;
+    LettersSet letras;
+    ifstream fentrada2;
 
-    entrada1.open(argv[2]);
-    entrada1 >> letters;
-    entrada1.close();
+    fentrada2.open(argv[2]);
+    fentrada2 >> letras;
+    fentrada2.close();
 
-    char letter = 'A';
-    int totalletters = dictionary.getTotalLetters();
+    char letra = 'A';
+    int total_letras = diccionario.getTotalLetters();
 
     cout << "Letra\tFAbs.\tFrel." << "\n";
-    while(letter <= 'Z'){
-        if(letters[letter].repetitions != 0) {
-            int ocurrences = dictionary.getOccurrences(letter);
-            cout << letter << "\t" << ocurrences << "\t" << (double)ocurrences/totalletters << "\n";
+    while(letra <= 'Z'){
+        if(letras[letra].repetitions != 0) {
+            int ocurrencias = diccionario.getOccurrences(letra);
+            cout << letra << "\t" << ocurrencias << "\t" << (double)ocurrencias/total_letras << "\n";
         }
-        letter++;
+        letra++;
     }
 
     return 0;

@@ -1,4 +1,6 @@
 var searchData=
 [
-  ['insert_45',['insert',['../classDictionary.html#a7046bcc3b1c32a38ab7682d9b9774622',1,'Dictionary::insert()'],['../classLettersSet.html#a6e3351bc593fd6f95e842688385d792a',1,'LettersSet::insert()']]]
+  ['getoccurrences_58',['getOccurrences',['../classDictionary.html#aa189136a538e61de16234065add885c4',1,'Dictionary']]],
+  ['getscore_59',['getScore',['../classLettersSet.html#aa5404fdadb72614e7185fc4338968d12',1,'LettersSet']]],
+  ['gettotalletters_60',['getTotalLetters',['../classDictionary.html#a51cc0cfda4914db2c15ac8ba30c1673a',1,'Dictionary']]]
 ];

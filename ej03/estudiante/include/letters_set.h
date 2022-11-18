@@ -141,6 +141,214 @@ public:
       */
     friend istream &operator>>(istream &is, LettersSet &cl);
 
+    /**
+ * @brief TDA iterator de la clase LettersSet
+ *
+ *
+ * Permite recorrer una instancia de la clase LettersSet permitiendo modificaciones, por lo que solo
+ * se puede usar con contenedores no constantes.
+*/
+    class iterator{
+    private:
+        map<char,LetterInfo>::iterator it;
+
+    public:
+
+        /**
+         * @brief Constructor sin parámetros. Crea un iterador nulo
+         */
+        iterator(){}
+
+        /**
+         * @brief Constructor de copia
+         * @param otro iterador de un LettersSet que se desea copiar
+         */
+        iterator(const map<char,LetterInfo>::iterator& otro):it(otro){}
+
+        /**
+         * @brief Constructor de copia
+         * @param otro iterador que se desea copiar
+         */
+        iterator(const iterator& otro):it(otro.it){}
+        /**
+         * @brief Destructor
+         */
+        ~iterator(){}
+
+        /**
+         * @brief Operador de asignación
+         * @param otro iterador de un LettersSet que se desea copiar
+         * @return puntero al iterador llamante
+         */
+        iterator& operator=(const map<char,LetterInfo>::iterator& otro){it=otro;return *this;}
+        /**
+         * @brief Operador de asignación
+         * @param otro iterador que se desea copiar
+         * @return puntero al iterador llamante
+         */
+        iterator& operator=(const iterator& otro){it=otro.it;return *this;}
+        /**
+         * @brief Operador * (obtiene el objeto al que apunta el iterador).
+         * @pre El iterador llamante es distinto de end()
+         * @return  pair<char,LetterInfo> al que apunta el iterador.
+         */
+        pair<char,LetterInfo> operator*()const{return *it;}
+        /**
+         * @brief Operador ++(elemento).
+         * @pre El iterador llamante es distinto de end()
+         * @return puntero al iterador llamante
+         * @post El iterador apunta una posición más a la derecha
+         */
+        iterator& operator++(){++it;return *this;}
+        /**
+         * @brief Operador --(elemento).
+         * @pre El iterador llamante es distinto de begin().
+         * @return puntero al iterador llamante
+         * @post El iterador apunta una posición más a la izquierda
+         */
+        iterator& operator--(){--it;return *this;}
+        /**
+         * @brief Operador (elemento)++.
+         * @pre El iterador llamante es distinto de end()
+         * @return puntero al iterador llamante.
+         * @post El iterador apunta una posición más a la derecha
+         */
+        iterator& operator++(int){it++;return *this;}
+        /**
+          * @brief Operador (elemento)--.
+          * @pre El iterador llamante es distinto de begin().
+          * @return puntero al iterador llamante
+          * @post El iterador apunta una posición más a la izquierda
+          */
+        iterator& operator--(int){it--;return *this;}
+        /**
+         * @brief Operador de desigualdad
+         * @param otro iterador con el que se va a comparar el iterador llamante
+         * @return "false" si apuntan a la misma posición y "true" si no.
+         */
+        bool operator!=(const iterator& otro){return it != otro.it;}
+        /**
+         * @brief Operador de igualdad
+         * @param otro iterador con el que se va a comparar el iterador llamante
+         * @return "true" si apuntan a la misma posición y "false" si no.
+         */
+        bool operator==(const iterator& otro){return it == otro.it;}
+    };
+
+    /**
+     * @brief Devuelve un iterador que apunta al comienzo del LettersSet
+     * @return iterador apuntando al principio del LettersSet
+     */
+    iterator begin(){iterator i = letters.begin();return i;}
+
+    /**
+     * @brief Devuelve un iterador que apunta al final del LettersSet (posición después de la última)
+     * @return iterador apuntando al final del LettersSet
+     */
+    iterator end(){iterator i = letters.end();return i;}
+
+    /**
+     * @brief TDA const_iterator de la clase LettersSet, señala a los elementos contenidos en él.
+     *
+     *
+     * Permite recorrer una instancia de la clase LettersSet pero no modificarla, por lo que se puede usar tanto con objetos
+     * LettersSet constantes y no constantes.
+     */
+    class const_iterator{
+    private:
+        map<char,LetterInfo>::const_iterator it;
+
+    public:
+
+        /**
+         * @brief Constructor sin parámetros
+         */
+        const_iterator(){}
+        /**
+         * @brief Constructor de copia
+         * @param otro iterador constante de un conjunto de strings que se desea copiar
+         */
+        const_iterator(const map<char,LetterInfo>::const_iterator& otro):it(otro){}
+        /**
+         * @brief Constructor de copia
+         * @param otro iterador constante que se desea copiar
+         */
+        const_iterator(const const_iterator& otro):it(otro.it){}
+        /**
+         * @brief Destructor
+         */
+        ~const_iterator(){}
+        /**
+         * @brief Operador de asignación
+         * @param otro iterador constante de un LettersSet que se desea copiar
+         * @return puntero al iterador llamante
+         */
+        const_iterator& operator=(const map<char,LetterInfo>::const_iterator& otro){it=otro;return *this;}
+        /**
+         * @brief Operador de asignación
+         * @param otro iterador constante que se desea copiar
+         * @return puntero al iterador llamante
+         */
+        const_iterator& operator=(const const_iterator& otro){it=otro.it;return *this;}
+        /**
+         * @brief Operador * (obtiene el objeto al que apunta el iterador).
+         * @pre El iterador llamante es distinto de end()
+         * @return pair<char,LetterInfo> al que apunta el iterador.
+         */
+        const pair<char,LetterInfo> operator*()const{return *it;}
+        /**
+         * @brief Operador ++(elemento).
+         * @pre El iterador llamante es distinto de end()
+         * @return puntero al iterador llamante
+         * @post El iterador apunta una posición más a la derecha
+         */
+        const_iterator& operator++(){++it;return *this;}
+        /**
+         * @brief Operador --(elemento).
+         * @pre El iterador llamante es distinto de begin().
+         * @return puntero al iterador llamante
+         * @post El iterador apunta una posición más a la izquierda
+         */
+        const_iterator& operator--(){--it;return *this;}
+        /**
+         * @brief Operador (elemento)++.
+         * @pre El iterador llamante es distinto de end()
+         * @return puntero al iterador llamante.
+         * @post El iterador apunta una posición más a la derecha
+         */
+        const_iterator& operator++(int){it++;return *this;}
+        /**
+          * @brief Operador (elemento)--.
+          * @pre El iterador llamante es distinto de begin().
+          * @return puntero al iterador llamante
+          * @post El iterador apunta una posición más a la izquierda
+          */
+        const_iterator& operator--(int){it--;return *this;}
+        /**
+        * @brief Operador de desigualdad
+        * @param otro iterador constante con el que se va a comparar el iterador llamante
+        * @return "false" si apuntan a la misma posición y "true" si no.
+        */
+        bool operator!=(const const_iterator& otro){return it != otro.it;}
+        /**
+         * @brief Operador de igualdad
+         * @param otro iterador constante con el que se va a comparar el iterador llamante
+         * @return "true" si apuntan a la misma posición y "false" si no.
+         */
+        bool operator==(const const_iterator& otro){return it == otro.it;}
+    };
+
+    /**
+     * @brief Devuelve un iterador constante que apunta al comienzo del LettersSet
+     * @return iterador constante apuntando al principio del LettersSet
+     */
+    const_iterator begin() const{const_iterator i = letters.begin();return i;}
+
+    /**
+     * @brief Devuelve un iterador constante que apunta al final del LettersSet (posición después de la última)
+     * @return iterador constante apuntando al final del LettersSet
+     */
+    const_iterator end() const{const_iterator i = letters.end();return i;}
 };
 
 #endif
