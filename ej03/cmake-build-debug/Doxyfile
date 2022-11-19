@@ -1,6 +1,0 @@
-PROJECT_NAME           = "Práctica 3. Contenedores no lineales - Juego de las Letras"
-OUTPUT_DIRECTORY       = /home/andres/Escritorio/ANDRÉS/EDPRACT/GIT_EJS/ej03/cmake-build-debug/doc_doxygen/
-INPUT                  = /home/andres/Escritorio/ANDRÉS/EDPRACT/GIT_EJS/ej03/estudiante/include /home/andres/Escritorio/ANDRÉS/EDPRACT/GIT_EJS/ej03/estudiante/src /home/andres/Escritorio/ANDRÉS/EDPRACT/GIT_EJS/ej03/estudiante/doc
-GENERATE_LATEX         = NO
-IMAGE_PATH             = /home/andres/Escritorio/ANDRÉS/EDPRACT/GIT_EJS/ej03/estudiante/doc
-EXTRACT_PRIVATE	       = NO

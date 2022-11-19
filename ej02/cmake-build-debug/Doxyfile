@@ -1,6 +1,0 @@
-PROJECT_NAME           = "Práctica 2. Pilas y Colas"
-OUTPUT_DIRECTORY       = /home/andres/Escritorio/ANDRÉS/EDPRACT/GIT_EJS/ej02/cmake-build-debug/doc_doxygen/
-INPUT                  = /home/andres/Escritorio/ANDRÉS/EDPRACT/GIT_EJS/ej02/estudiante/include /home/andres/Escritorio/ANDRÉS/EDPRACT/GIT_EJS/ej02/estudiante/src /home/andres/Escritorio/ANDRÉS/EDPRACT/GIT_EJS/ej02/estudiante/doc
-GENERATE_LATEX         = NO
-IMAGE_PATH             = /home/andres/Escritorio/ANDRÉS/EDPRACT/GIT_EJS/ej02/estudiante/doc
-EXTRACT_PRIVATE	       = NO
