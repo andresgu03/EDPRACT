@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['letterinfo_56',['LetterInfo',['../structLetterInfo.html',1,'']]],
-  ['lettersbag_57',['LettersBag',['../classLettersBag.html',1,'']]],
-  ['lettersset_58',['LettersSet',['../classLettersSet.html',1,'']]]
+  ['letterinfo_57',['LetterInfo',['../structLetterInfo.html',1,'']]],
+  ['lettersbag_58',['LettersBag',['../classLettersBag.html',1,'']]],
+  ['lettersset_59',['LettersSet',['../classLettersSet.html',1,'']]]
 ];

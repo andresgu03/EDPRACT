@@ -1,4 +1,11 @@
-#ifndef __LETTERS_BAG_H__
+/**
+ * @file letters_bag.h
+ * @brief Archivo de especificación del TDA LettersBag
+ * @author Andrés Gutiérrez Armenteros
+ * @author Pablo García Bas
+ * @date Noviembre 2022
+ */
+ #ifndef __LETTERS_BAG_H__
 #define __LETTERS_BAG_H__
 
 #include <cstdlib>
