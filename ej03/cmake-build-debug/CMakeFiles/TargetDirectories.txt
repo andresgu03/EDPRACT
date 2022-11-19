@@ -1,7 +1,8 @@
-/home/andres/Escritorio/ANDRÉS/EDPRACT/GIT_EJS/ej03/cmake-build-debug/CMakeFiles/conjunto_letras.dir
-/home/andres/Escritorio/ANDRÉS/EDPRACT/GIT_EJS/ej03/cmake-build-debug/CMakeFiles/bolsa.dir
-/home/andres/Escritorio/ANDRÉS/EDPRACT/GIT_EJS/ej03/cmake-build-debug/CMakeFiles/cantidad_letras.dir
-/home/andres/Escritorio/ANDRÉS/EDPRACT/GIT_EJS/ej03/cmake-build-debug/CMakeFiles/palabras_longitud.dir
-/home/andres/Escritorio/ANDRÉS/EDPRACT/GIT_EJS/ej03/cmake-build-debug/CMakeFiles/doc_doxygen.dir
-/home/andres/Escritorio/ANDRÉS/EDPRACT/GIT_EJS/ej03/cmake-build-debug/CMakeFiles/edit_cache.dir
-/home/andres/Escritorio/ANDRÉS/EDPRACT/GIT_EJS/ej03/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/home/pablo/EDPRACT/ej03/cmake-build-debug/CMakeFiles/conjunto_letras.dir
+/home/pablo/EDPRACT/ej03/cmake-build-debug/CMakeFiles/bolsa.dir
+/home/pablo/EDPRACT/ej03/cmake-build-debug/CMakeFiles/bolsa_letras.dir
+/home/pablo/EDPRACT/ej03/cmake-build-debug/CMakeFiles/cantidad_letras.dir
+/home/pablo/EDPRACT/ej03/cmake-build-debug/CMakeFiles/palabras_longitud.dir
+/home/pablo/EDPRACT/ej03/cmake-build-debug/CMakeFiles/doc_doxygen.dir
+/home/pablo/EDPRACT/ej03/cmake-build-debug/CMakeFiles/edit_cache.dir
+/home/pablo/EDPRACT/ej03/cmake-build-debug/CMakeFiles/rebuild_cache.dir

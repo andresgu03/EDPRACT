@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['const_5fiterator_38',['const_iterator',['../classDictionary_1_1const__iterator.html',1,'Dictionary::const_iterator'],['../classLettersSet_1_1const__iterator.html',1,'LettersSet::const_iterator']]]
+  ['bag_51',['Bag',['../classBag.html',1,'']]],
+  ['bag_3c_20char_20_3e_52',['Bag&lt; char &gt;',['../classBag.html',1,'']]]
 ];

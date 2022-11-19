@@ -1,5 +1,7 @@
 var searchData=
 [
-  ['insert_61',['insert',['../classDictionary.html#a7046bcc3b1c32a38ab7682d9b9774622',1,'Dictionary::insert()'],['../classLettersSet.html#a6e3351bc593fd6f95e842688385d792a',1,'LettersSet::insert()']]],
-  ['iterator_62',['iterator',['../classDictionary_1_1iterator.html#a916e7d7bf8d9b5377e16c34726251cbf',1,'Dictionary::iterator::iterator()'],['../classDictionary_1_1iterator.html#adcf6fa16b49ce3d3e09214e9b37c15eb',1,'Dictionary::iterator::iterator(const set&lt; string &gt;::iterator &amp;otro)'],['../classDictionary_1_1iterator.html#ad4d8095db4e40e3a9fc267c2b72ca077',1,'Dictionary::iterator::iterator(const iterator &amp;otro)'],['../classLettersSet_1_1iterator.html#af4b6ee85ba432c9fbe528b04be85ea20',1,'LettersSet::iterator::iterator()'],['../classLettersSet_1_1iterator.html#aa2fbc0a744e1384051d3e8513e97dc5f',1,'LettersSet::iterator::iterator(const map&lt; char, LetterInfo &gt;::iterator &amp;otro)'],['../classLettersSet_1_1iterator.html#ad6bb104179c956af71c439c591335277',1,'LettersSet::iterator::iterator(const iterator &amp;otro)']]]
+  ['get_81',['get',['../classBag.html#ab733fc91f41bcaefb07f5d37b0bd5627',1,'Bag']]],
+  ['getoccurrences_82',['getOccurrences',['../classDictionary.html#aa189136a538e61de16234065add885c4',1,'Dictionary']]],
+  ['getscore_83',['getScore',['../classLettersSet.html#aa5404fdadb72614e7185fc4338968d12',1,'LettersSet']]],
+  ['gettotalletters_84',['getTotalLetters',['../classDictionary.html#a51cc0cfda4914db2c15ac8ba30c1673a',1,'Dictionary']]]
 ];
