@@ -14,22 +14,6 @@ Para ello necesitaremos tener una bolsa con letras, donde cada letra irá acompa
         - El programa imprimirá por pantalla la puntuación de la palabra( siendo esta la suma de todas las puntuaciones de las letras de la palabra).
         - Se mostrarán, si es necesario, los correspondientes errores de lectura del fichero de entrada.
 
-2. bolsa.cpp
-
-    - Recibe varios argumentos, el primero, puede ser la letra I o la letra C. El resto de argumentos, serán una lista de enteros (si el primer argumento fue I) ó caracteres (si fue C).
-
-        - El programa introducirá todos los elementos (a partir del segundo argumento en adelante) en una bolsa de enteros (I) ó caracteres (C), según corresponda.
-        - Se extraerán los elementos de la bolsa (de forma aleatoria), hasta que esta quede vacía, imprimiéndolos en pantalla.
-
-3. bolsa_letras.cpp
-
-    - Recibe un argumento, un archivo con una serie de letras (con eventuales repeticiones), con el formato apropiado para ser procesado con el operador de entrada de la clase LettersSet.
-
-        - El programa creará un objeto LettersSet y lo rellenará con la información del archivo de entrada
-        - En caso de ocurrir, se mostrará el eventual error al abrir el fichero de entrada.
-        - Se creará un objeto LettersBag (bolsa de letras) con la información del objeto LettersSet anterior.
-        - Se extraerán todos los elementos de la bolsa (aleatoriamente), y se imprimirán en pantalla.
-
 4. palabras_longitud.cpp
 
     - Recibe dos argumentos, un archivo con las palabras de un diccionario y un entero con la longitud de las palabras que buscamos.

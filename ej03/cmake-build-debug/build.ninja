@@ -112,6 +112,52 @@ build bolsa: CXX_EXECUTABLE_LINKER__bolsa_Debug CMakeFiles/bolsa.dir/estudiante/
   TARGET_PDB = bolsa.dbg
 
 # =============================================================================
+# Object build statements for EXECUTABLE target bolsa_letras
+
+
+#############################################
+# Order-only phony target for bolsa_letras
+
+build cmake_object_order_depends_target_bolsa_letras: phony || CMakeFiles/bolsa_letras.dir
+
+build CMakeFiles/bolsa_letras.dir/estudiante/src/bolsa_letras.cpp.o: CXX_COMPILER__bolsa_letras_Debug /home/andres/Escritorio/ANDRÉS/EDPRACT/GIT_EJS/ej03/estudiante/src/bolsa_letras.cpp || cmake_object_order_depends_target_bolsa_letras
+  DEP_FILE = CMakeFiles/bolsa_letras.dir/estudiante/src/bolsa_letras.cpp.o.d
+  FLAGS = -g -std=gnu++14
+  INCLUDES = -I/home/andres/Escritorio/ANDRÉS/EDPRACT/GIT_EJS/ej03/estudiante/include
+  OBJECT_DIR = CMakeFiles/bolsa_letras.dir
+  OBJECT_FILE_DIR = CMakeFiles/bolsa_letras.dir/estudiante/src
+
+build CMakeFiles/bolsa_letras.dir/estudiante/src/letters_bag.cpp.o: CXX_COMPILER__bolsa_letras_Debug /home/andres/Escritorio/ANDRÉS/EDPRACT/GIT_EJS/ej03/estudiante/src/letters_bag.cpp || cmake_object_order_depends_target_bolsa_letras
+  DEP_FILE = CMakeFiles/bolsa_letras.dir/estudiante/src/letters_bag.cpp.o.d
+  FLAGS = -g -std=gnu++14
+  INCLUDES = -I/home/andres/Escritorio/ANDRÉS/EDPRACT/GIT_EJS/ej03/estudiante/include
+  OBJECT_DIR = CMakeFiles/bolsa_letras.dir
+  OBJECT_FILE_DIR = CMakeFiles/bolsa_letras.dir/estudiante/src
+
+build CMakeFiles/bolsa_letras.dir/estudiante/src/letters_set.cpp.o: CXX_COMPILER__bolsa_letras_Debug /home/andres/Escritorio/ANDRÉS/EDPRACT/GIT_EJS/ej03/estudiante/src/letters_set.cpp || cmake_object_order_depends_target_bolsa_letras
+  DEP_FILE = CMakeFiles/bolsa_letras.dir/estudiante/src/letters_set.cpp.o.d
+  FLAGS = -g -std=gnu++14
+  INCLUDES = -I/home/andres/Escritorio/ANDRÉS/EDPRACT/GIT_EJS/ej03/estudiante/include
+  OBJECT_DIR = CMakeFiles/bolsa_letras.dir
+  OBJECT_FILE_DIR = CMakeFiles/bolsa_letras.dir/estudiante/src
+
+
+# =============================================================================
+# Link build statements for EXECUTABLE target bolsa_letras
+
+
+#############################################
+# Link the executable bolsa_letras
+
+build bolsa_letras: CXX_EXECUTABLE_LINKER__bolsa_letras_Debug CMakeFiles/bolsa_letras.dir/estudiante/src/bolsa_letras.cpp.o CMakeFiles/bolsa_letras.dir/estudiante/src/letters_bag.cpp.o CMakeFiles/bolsa_letras.dir/estudiante/src/letters_set.cpp.o
+  FLAGS = -g
+  OBJECT_DIR = CMakeFiles/bolsa_letras.dir
+  POST_BUILD = :
+  PRE_LINK = :
+  TARGET_FILE = bolsa_letras
+  TARGET_PDB = bolsa_letras.dbg
+
+# =============================================================================
 # Object build statements for EXECUTABLE target cantidad_letras
 
 
@@ -245,7 +291,7 @@ build CMakeFiles/doc_doxygen | ${cmake_ninja_workdir}CMakeFiles/doc_doxygen: CUS
 #############################################
 # Folder: /home/andres/Escritorio/ANDRÉS/EDPRACT/GIT_EJS/ej03/cmake-build-debug
 
-build all: phony conjunto_letras bolsa cantidad_letras palabras_longitud doc_doxygen
+build all: phony conjunto_letras bolsa bolsa_letras cantidad_letras palabras_longitud doc_doxygen
 
 # =============================================================================
 # Built-in targets
