@@ -40,14 +40,33 @@ private:
          */
         inline char_info(char character, bool valid = false) : character(character), valid_word(valid) {}
 
+        /**
+         * @brief Operador de igualdad
+         *
+         * @param rhs char_info a comparar.
+         * @return booleano (true si son iguales o false si son distintos).
+         */
         inline bool operator==(const char_info &rhs) {
           return this->character == rhs.character && this->valid_word == rhs.valid_word;
         }
 
+        /**
+         * @brief Operador de desigualdad
+         *
+         * @param rhs char_info a comparar.
+         * @return booleano (true si son distintos o false si son iguales).
+         */
         inline bool operator!=(const char_info &rhs) { return !(*this == rhs); }
 
         inline bool operator*() { return this->character; }
 
+        /**
+         * @brief Operador de salida.
+         *
+         * @param os Flujo de salida.
+         * @param other char_info a comparar.
+         * @return referencia al flujo de salida.
+         */
         inline friend std::ostream &operator<<(std::ostream &os, const char_info &other) {
           os << other.character << (other.valid_word ? "✓" : "×");
           return os;
@@ -197,6 +216,13 @@ public:
 
     ///////////////////////////////////////////////////// Iterator ////////////////////////////////////////////////////
 
+    /**
+     * @brief TDA iterator de la clase Dictionary
+     *
+     *
+     * Permite recorrer una instancia de la clase Dictionary.
+     * Está formado por un iterador de preorden constante de la clase árbol de char_info y por un string que contiene la palabra actual.
+    */
     class iterator {
     private:
         std::string curr_word;
@@ -204,42 +230,131 @@ public:
 
     public:
 
+        /**
+         * @brief Constructor sin parámetros. Crea un iterador nulo.
+         */
         iterator();
 
+        /**
+         * @brief Constructor de copia
+         *
+         * @param other_iter iterador a copiar.
+         */
         iterator(tree<char_info>::const_preorder_iterator other_iter);
 
+        /**
+         * @brief Operador *
+         *
+         * @return string correspondiente a la palabra actual apuntada por el iterador.
+         */
         std::string operator*();
 
+        /**
+         * @brief Operador de incremento.
+         *
+         * @return Referencia al iterador que apunta a la posición obtenida tras el incremento.
+         */
         iterator &operator++();
 
+        /**
+         * @brief Operador de igualdad
+         *
+         * @param other iterador a comparar.
+         * @return booleano (true si son iguales o false si son distintos).
+         */
         bool operator==(const iterator &other);
 
+        /**
+         * @brief Operador de desigualdad
+         *
+         * @param other iterador a comparar.
+         * @return booleano (true si son distintos o false si son iguales).
+         */
         bool operator!=(const iterator &other);
 
     };
 
+    /**
+     * @brief Función begin()
+     *
+     * @return Iterador que apunta al comienzo de la estructura.
+     */
     iterator begin() const;
 
+    /**
+     * @brief Función end()
+     *
+     * @return Iterador que apunta al final de la estructura.
+     */
     iterator end() const;
 
     ///////////////////////////////////////////////// Letters Iterator /////////////////////////////////////////////////
 
+    /**
+     * @brief TDA iterator de la clase Dictionary de palabras posibles.
+     *
+     *
+     * Permite recorrer una instancia de la clase Dictionary dada una bolsa de letras para que resulte más eficiente.
+     * Está formado por la bolsa de letras, representada por un multiconjunto; un string que contiene la palabra actual; un entero, que representa el nivel en el árbol; y un nodo que nos representa la posición exacta en la que nos encontramos dentro del árbol.
+    */
     class possible_words_iterator {
     public:
+        /**
+         * @brief Constructor sin parámetros. Crea un iterador nulo.
+         */
         possible_words_iterator();
 
+        /**
+         * @brief Constructor con parámetros.
+         *
+         * @param available_letters Vector que contiene los caracteres disponibles para formar la palabra.
+         * @param current_node nodo actual en el que comienza la estructura.
+         */
         possible_words_iterator(node current_node, vector<char> available_letters);
 
+        /**
+         * @brief Constructor de copia.
+         *
+         * @param other Iterador a copiar.
+         */
         possible_words_iterator(const possible_words_iterator &other);
 
+        /**
+         * @brief Operador de asignación.
+         *
+         * @param other Iterador que se desea copiar.
+         * @return Referencia al iterador.
+         */
         possible_words_iterator &operator=(const possible_words_iterator &other);
 
+        /**
+         * @brief Operador de igualdad
+         *
+         * @param other iterador a comparar.
+         * @return booleano (true si son iguales o false si son distintos).
+         */
         bool operator==(const possible_words_iterator &other) const;
 
+        /**
+         * @brief Operador de desigualdad
+         *
+         * @param other iterador a comparar.
+         * @return booleano (true si son distintos o false si son iguales).
+         */
         bool operator!=(const possible_words_iterator &other) const;
 
+        /**
+         * @brief Operador de incremento.
+         *
+         * @return Referencia al iterador tras el incremento.
+         */
         possible_words_iterator &operator++();
 
+        /**
+         * @brief Operador *
+         *
+         * @return string correspondiente a la palabra actual apuntada por el iterador.
+         */
         std::string operator*() const;
 
     private:
@@ -250,8 +365,19 @@ public:
 
     };
 
+    /**
+     * @brief Función possible_words_begin()
+     *
+     * @param available_characters vector que contiene todos los caracteres disponibles.
+     * @return Iterador que apunta al comienzo de la estructura.
+     */
     possible_words_iterator possible_words_begin(vector<char> available_characters) const;
 
+    /**
+     * @brief Función possible_words_end()
+     *
+     * @return Iterador que apunta al final de la estructura.
+     */
     possible_words_iterator possible_words_end() const;
 };
 
