@@ -182,6 +182,7 @@ Dictionary::iterator &Dictionary::iterator::operator++() {
             }
             this->curr_word += (*(this->iter)).character;
         }
+        nivel_actual = this->iter.get_level() ;
     }while(!this->iter.operator*().valid_word) ;
     return *this;
 }
@@ -263,7 +264,37 @@ bool Dictionary::possible_words_iterator::operator!=(const Dictionary::possible_
 }
 
 Dictionary::possible_words_iterator &Dictionary::possible_words_iterator::operator++() {
-
+    tree<char_info>::const_preorder_iterator iter (this->current_node) ;
+    tree<char_info>::const_preorder_iterator null_iterator ;
+    tree<char_info>::const_preorder_iterator aux_iterator ;
+    char c ;
+    int nivel_actual ;
+    do {
+        this->level = iter.get_level() ;
+        nivel_actual = this->level ;
+        ++iter;
+        c = (*iter).character ;
+        if(this->available_letters.count(c) != 0) {
+            if (this->level < nivel_actual) {
+                for(int i = 0 ; i < nivel_actual - this->level ; i++){
+                    this->available_letters.insert(this->current_word.at(this->current_word.length()-1));
+                    this->current_word.pop_back() ;
+                }
+            }
+            else if(this->level == nivel_actual){
+                this->available_letters.insert(this->current_word.at(this->current_word.length()-1));
+                this->current_word.pop_back() ;
+            }
+            this->available_letters.erase(this->available_letters.find(c));
+            this->current_word += c;
+        }
+        else{
+            ++iter ;
+            this->level = iter.get_level() ;
+            nivel_actual = this->level ;
+        }
+    }while(!this->current_node.operator*().valid_word) ;
+    return *this;
 }
 
 std::string Dictionary::possible_words_iterator::operator*() const {
