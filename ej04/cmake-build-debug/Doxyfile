@@ -1,0 +1,6 @@
+PROJECT_NAME           = "Práctica 5. Juego de las Letras - Árbol para Diccionario"
+OUTPUT_DIRECTORY       = /home/andres/Escritorio/ANDRÉS/EDPRACT/GIT_EJS/ej04/cmake-build-debug/doc_doxygen/
+INPUT                  = /home/andres/Escritorio/ANDRÉS/EDPRACT/GIT_EJS/ej04/estudiante/include /home/andres/Escritorio/ANDRÉS/EDPRACT/GIT_EJS/ej04/estudiante/src /home/andres/Escritorio/ANDRÉS/EDPRACT/GIT_EJS/ej04/estudiante/doc
+GENERATE_LATEX         = NO
+IMAGE_PATH             = /home/andres/Escritorio/ANDRÉS/EDPRACT/GIT_EJS/ej04/estudiante/doc
+EXTRACT_PRIVATE	       = NO
