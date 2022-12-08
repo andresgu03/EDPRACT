@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['tree_71',['tree',['../classtree.html#ae79eee474e984b533cfaf3b0f29868ef',1,'tree::tree()'],['../classtree.html#aafab68223c757f4ebff61c01985772a3',1,'tree::tree(const T &amp;label)'],['../classtree.html#a1f45cb9d772f5d6257699ff4c25d984b',1,'tree::tree(const tree&lt; T &gt; &amp;other)']]]
+  ['set_5froot_81',['set_root',['../classtree.html#ad4103ba9093d3f5c02bb4d8e789957ab',1,'tree']]],
+  ['size_82',['size',['../classDictionary.html#ac2456f6eb0cb7f997acc69eac47e2244',1,'Dictionary::size()'],['../classtree.html#af4bcfcb29fddb0d57406fa5c53e11a6b',1,'tree::size()']]]
 ];

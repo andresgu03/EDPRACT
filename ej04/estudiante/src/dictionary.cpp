@@ -168,35 +168,43 @@ std::string Dictionary::iterator::operator*() {
 }
 
 Dictionary::iterator &Dictionary::iterator::operator++() {
-    int nivel_actual = this->iter.get_level() ;
-    do {
-        ++this->iter;
-        if (this->iter.get_level() > nivel_actual) {
-            this->curr_word += (*(this->iter)).character;
-        } else if (this->iter.get_level() == nivel_actual) {
-            this->curr_word.pop_back();
-            this->curr_word += (*(this->iter)).character;
-        } else {
-            for (int i = 0; i <= (nivel_actual - this->iter.get_level()); i++) {
+    int nivel_actual = this->iter.get_level();
+    Dictionary::iterator copy (*this) ;
+    if( ++(copy.iter) != Dictionary::iterator().iter ) {
+        do {
+            ++this->iter ;
+            if (this->iter.get_level() > nivel_actual) {
+                this->curr_word += (*(this->iter)).character;
+            } else if (this->iter.get_level() == nivel_actual) {
                 this->curr_word.pop_back();
+                this->curr_word += (*(this->iter)).character;
+            } else {
+                for (int i = 0; i <= (nivel_actual - this->iter.get_level()); i++) {
+                    this->curr_word.pop_back();
+                }
+                this->curr_word += (*(this->iter)).character;
             }
-            this->curr_word += (*(this->iter)).character;
-        }
-        nivel_actual = this->iter.get_level() ;
-    }while(!this->iter.operator*().valid_word) ;
+            nivel_actual = this->iter.get_level();
+        } while (!this->iter.operator*().valid_word);
+    }
+    else {
+        this->iter = tree<char_info>::const_preorder_iterator () ;
+    }
     return *this;
 }
 
 bool Dictionary::iterator::operator==(const iterator &other) {
-    return ((this->iter == other.iter) && (this->curr_word == other.curr_word)) ;
+    return ((this->iter == other.iter) /*&& (this->curr_word == other.curr_word)*/) ;
 }
 
 bool Dictionary::iterator::operator!=(const iterator &other) {
-    return !((this->iter == other.iter) && (this->curr_word == other.curr_word)) ;
+    return !((this->iter == other.iter) /*&& (this->curr_word == other.curr_word)*/) ;
 }
 
 Dictionary::iterator Dictionary::begin() const {
-    return words.cbegin_preorder() ;
+    Dictionary::iterator iter (words.cbegin_preorder()) ;
+    ++iter ;
+    return iter ;
 }
 
 Dictionary::iterator Dictionary::end() const {

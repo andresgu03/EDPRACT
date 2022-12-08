@@ -1,4 +1,6 @@
 var searchData=
 [
-  ['dictionary_3',['Dictionary',['../classDictionary.html',1,'Dictionary'],['../classDictionary.html#aee8d612bc9d323c38faba045ba384b8b',1,'Dictionary::Dictionary()'],['../classDictionary.html#a408e2c9dfcea8f536666b89fed403074',1,'Dictionary::Dictionary(const Dictionary &amp;other)']]]
+  ['clear_1',['clear',['../classDictionary.html#a2d54b74d14335da04ad9d64e49536d9a',1,'Dictionary::clear()'],['../classtree.html#ad42b7e30545f02316f5d22c375ff1323',1,'tree::clear()']]],
+  ['clone_2',['clone',['../classtree_1_1node.html#aa32e9f6a408e9129950785ed07927bd5',1,'tree::node']]],
+  ['const_5fpreorder_5fiterator_3',['const_preorder_iterator',['../classtree_1_1const__preorder__iterator.html',1,'tree']]]
 ];

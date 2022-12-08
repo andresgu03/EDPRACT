@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['_7edictionary_72',['~Dictionary',['../classDictionary.html#aa36f24073d9c9001768517aa2322cb82',1,'Dictionary']]],
-  ['_7etree_73',['~tree',['../classtree.html#a14e55536cde00c544de0ee8af244d1d0',1,'tree']]]
+  ['tree_83',['tree',['../classtree.html#ae79eee474e984b533cfaf3b0f29868ef',1,'tree::tree()'],['../classtree.html#aafab68223c757f4ebff61c01985772a3',1,'tree::tree(const T &amp;label)'],['../classtree.html#a1f45cb9d772f5d6257699ff4c25d984b',1,'tree::tree(const tree&lt; T &gt; &amp;other)']]]
 ];

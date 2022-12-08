@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['node_16',['node',['../classtree_1_1node.html#a7aa43e5241dfff68de4e5b18ed9ef0e2',1,'tree::node::node()'],['../classtree_1_1node.html',1,'tree&lt; T &gt;::node']]]
+  ['left_5fchild_17',['left_child',['../classtree_1_1node.html#a4e23dbf02a32706ad63675669caa5ec8',1,'tree::node']]]
 ];
