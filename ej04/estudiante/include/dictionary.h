@@ -103,8 +103,23 @@ private:
      */
     node insertCharacter(char character, node current);
 
+    /**
+     * @brief Cuenta las ocurrencias de la letra c en el subárbol que cuelga del node curr_node
+     *
+     * @param curr_node Nodo del árbol a partir del cual hacer el conteo.
+     * @param c Letra a buscar.
+     * @return El número de ocurrencias de la letra en el subárbol que cuelga del nodo curr_node.
+     */
     int getOccurrences(node curr_node, char c);
 
+    /**
+     * @brief Cuenta el número de usos de la letra c para formar palabras en el subárbol que cuelga del node curr_node
+     *
+     * @param curr_node Nodo del árbol a partir del cual hacer el conteo.
+     * @param c Letra a buscar.
+     * @return Par<int, int>, el número de usos de letra en el subárbol que cuelga del nodo curr_node, y el número de
+     * palabras que terminan por debajo del nodo curr_node.
+     */
     std::pair<int, int> getTotalUsages(node curr_node, char c);
 
 public:
@@ -210,8 +225,20 @@ public:
 
     //////////////////////////////////////////////// Recursive functions ///////////////////////////////////////////////
 
+    /**
+     * @brief Cuenta las ocurrencias de la letra c en el diccionario.
+     *
+     * @param c Letra a buscar.
+     * @return El número de ocurrencias de la letra en el diccionario.
+     */
     int getOccurrences(const char c);
 
+    /**
+     * @brief Cuenta los usos de la letra c para formar palabras en el diccionario.
+     *
+     * @param c Letra a buscar.
+     * @return El número de usos de la letra para formar palabras en el diccionario.
+     */
     int getTotalUsages(const char c);
 
     ///////////////////////////////////////////////////// Iterator ////////////////////////////////////////////////////

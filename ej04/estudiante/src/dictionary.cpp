@@ -1,6 +1,10 @@
-//
-// Created by fluque1995 on 8/9/21.
-//
+/**
+ * @file dictionary.cpp
+ * @brief Implementación del TDA Dictionary
+ * @author Andrés Gutiérrez Armenteros
+ * @author Pablo García Bas
+ * @date Diciembre 2022
+ */
 
 #include <string>
 #include <vector>
@@ -41,13 +45,54 @@ Dictionary::node Dictionary::insertCharacter(char character, Dictionary::node cu
   }
 }
 
-/*int Dictionary::getOccurrences(node curr_node, char c){
+int Dictionary::getOccurrences(node curr_node, char c){
+
+    int num_ocurr = 0;
+
+    if ((*curr_node).character == tolower(c)) // If current node letter == c --> Increment num_ocurr
+        num_ocurr++;
+
+    if (!curr_node.left_child().is_null()) // If left_child is not null -> Call getOcurrences
+        num_ocurr += getOccurrences(curr_node.left_child(), c);
+
+    if (!curr_node.right_sibling().is_null()) // If right_sibling is not null -> Call getOcurrences
+        num_ocurr += getOccurrences(curr_node.right_sibling(), c);
+
+    return num_ocurr;
 
 }
 
 std::pair<int, int> Dictionary::getTotalUsages(node curr_node, char c){
 
-}*/
+    pair<int, int> num_usages(0,0);           // FIRST: character num_usages below current node
+                                                    // SECOND: num_words ending below current node
+    pair <int, int> child_usages(0,0);
+    pair <int, int> sibling_usages(0,0);
+
+    // (1) Sum of contributions between left_child and right_sibling
+    if (!curr_node.left_child().is_null())
+        child_usages = getTotalUsages(curr_node.left_child(), c);
+    if (!curr_node.right_sibling().is_null())
+        sibling_usages = getTotalUsages(curr_node.right_sibling(), c);
+
+    num_usages.first = (child_usages.first + sibling_usages.first);
+    num_usages.second = (child_usages.second + sibling_usages.second);
+
+    // (2) Independent checks for current node:
+
+    // (2.1) If current node character matches --> Every word below must share this letter (whole words in left_child)
+    if ((*curr_node).character == tolower(c))
+        num_usages.first += child_usages.second;
+
+    // (2.2) If current node is the end of a valid word --> Increment number of words
+    if((*curr_node).valid_word){
+        num_usages.second++;
+        if ((*curr_node).character == tolower(c))    // Also, if current node character matches, it means another word
+            num_usages.first++;             // uses the letter (not just those that fall below - already in 2.1)
+    }
+
+    return num_usages;
+}
 
 ///////////////////////////////////////////////////////////////////////////////
 //                              Public functions                             //
@@ -142,13 +187,13 @@ std::istream& operator>>(std::istream &is, Dictionary &dict){
 //                            Recursive counters                             //
 ///////////////////////////////////////////////////////////////////////////////
 
-/*int Dictionary::getOccurrences(const char c){
-
+int Dictionary::getOccurrences(const char c){
+    return getOccurrences(this->words.get_root(), c);
 }
 
 int Dictionary::getTotalUsages(const char c){
-
-}*/
+    return getTotalUsages(this->words.get_root(), c).first;
+}
 
 ///////////////////////////////////////////////////////////////////////////////
 //                                 Iterator                                  //
