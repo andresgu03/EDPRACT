@@ -1,11 +1,70 @@
-/*! \mainpage Título de la página principal
+/*! \mainpage Practica 4: El juego de las letras. Estructura de árbol para el diccionario y Solver.
 
 # Introducción
 
-A RELLENAR POR EL ESTUDIANTE
+__El juego de las letras__ \n En esta práctica querremos representar el famoso juego del _Scrabble_. Este juego consiste en formar palabras de un idioma dadas ciertas letras. Cada letra lleva asociada una puntuación y el objetivo es, o bien conseguir el mayor número de puntos posibles al formar una palabra, o bien conseguir la palabra más larga posible.\n
+
+En esta práctica modificaremos la implementación del TDA Dictionary de la práctica anterior utilizando como contenedor subyacente un árbol LCRS (Left-Child Right-Sibling). De esta forma, podremos almacenar nuestro diccionario con menos espacio y crear un solver más eficiente.
+
+Concretamente:
+    1. Necesitaremos almacenar menos información para representar el diccionario completo (lo podremos comprobar contando el número de letras almacenadas en total).
+    2. Podremos recuperar más rápidamente las palabras que se pueden formar dado un vector de letras, ya que la estructura de árbol en la que almacenaremos el diccionario nos permitirá explorar las posibles soluciones de una forma bastante eficiente.
 
 # Ejecutables
 
-A RELLENAR POR EL ESTUDIANTE
+2. cantidad_letras.cpp
+
+    - Recibe como argumentos un fichero de diccionario y un fichero de letras. Con esa información:
+        - Creará el LettersSet y el Dictionary.
+        - Para cada letra del diccionario calculará el número de veces que se usa esa letra y el número de ocurrencias de la letra.
+
+    - Ejemplo: ./cantidad_letras ../data/diccionario_mini.txt ../data/letras_mini.txt
+
+    <pre>
+       <code>
+          Letra Usos Ocurrencias
+          A	    8	 3
+          C	    3	 1
+          L	    2	 2
+          M	    4	 1
+          O	    4	 2
+          R	    2	 2
+          Z	    1	 1
+       </code>
+    </pre>
+
+3. partida_letras.cpp
+
+    - Recibe cuatro argumentos:
+        1. Ruta al archivo que contiene el diccionario.
+        2. Ruta al archivo que contiene las letras y su puntuación.
+        3. Modo de juego (L = longitud, P = puntuación).
+        4. Cantidad de letras para la partida.
+
+    - El programa se encargará de construir:
+        - El LettersSet para la partida a partir del archivo de letras.
+        - El Dictionary con las palabras que se consideran soluciones correctas.
+        - El Solver que va a jugar la partida.
+        - La LettersBag que se utilizará para extraer las letras.
+
+    - Una vez construidos los TDAs necesarios:
+        - Extraerá las letras con las que se jugará la partida
+        - Utilizará el Solver para buscar las soluciones
+        - Imprimirá por pantalla tanto las letras para la partida como las mejores soluciones que se pueden obtener con dichas letras y la puntuación de dichas soluciones.
+
+    - Ejemplo: ./partida_letras ../data/diccionario.txt ../data/letras.txt L 9
+
+    <pre>
+       <code>
+          LETRAS DISPONIBLES:
+          A E A O U E E E T
+          SOLUCIONES:
+          aeta
+          ateo
+          auto
+          PUNTUACION:
+          4
+       </code>
+    </pre>
 
 */
