@@ -67,4 +67,40 @@ Concretamente:
        </code>
     </pre>
 
+5. partida_letras_eficiente.cpp
+
+    - NOTA: Al ser una implementación alternativa (más eficiente) de partida_letras.cpp, el resultado esperado es el mismo, así como el formato de entrada y salida.
+
+    - Recibe cuatro argumentos:
+        1. Ruta al archivo que contiene el diccionario.
+        2. Ruta al archivo que contiene las letras y su puntuación.
+        3. Modo de juego (L = longitud, P = puntuación).
+        4. Cantidad de letras para la partida.
+
+    - El programa se encargará de construir:
+        - El LettersSet para la partida a partir del archivo de letras.
+        - El Dictionary con las palabras que se consideran soluciones correctas.
+        - El Solver que va a jugar la partida.
+        - La LettersBag que se utilizará para extraer las letras.
+
+    - Una vez construidos los TDAs necesarios:
+        - Extraerá las letras con las que se jugará la partida
+        - Utilizará el Solver para buscar las soluciones
+        - Imprimirá por pantalla tanto las letras para la partida como las mejores soluciones que se pueden obtener con dichas letras y la puntuación de dichas soluciones.
+
+    - Ejemplo: ./partida_letras_eficiente ../data/diccionario.txt ../data/letras.txt L 9
+
+    <pre>
+       <code>
+          LETRAS DISPONIBLES:
+          A E A O U E E E T
+          SOLUCIONES:
+          aeta
+          ateo
+          auto
+          PUNTUACION:
+          4
+       </code>
+    </pre>
+
 */

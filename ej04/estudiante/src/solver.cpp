@@ -10,6 +10,12 @@
 #include "string"
 #include "vector"
 
+//******************************************
+
+// SOLVER (NO EFICIENTE)
+
+//******************************************
+
 // PUBLIC //
 Solver::Solver(const Dictionary& dict, const LettersSet& letters_set){  // Using copy constructors from Dictionary and
     this->dictionary = dict;                                            // LettersSet
@@ -56,11 +62,7 @@ pair<vector<string>,int> Solver::getSolutionsByScore(const vector<char>& availab
     int score;
     pair<vector<string>,int> solutions_pair;
 
-    int i=0;
-
-    for(Dictionary::iterator it=this->dictionary.begin(); it!=this->dictionary.end()/*i<77000*/; ++it){
-
-        i++;
+    for(Dictionary::iterator it=this->dictionary.begin(); it!=this->dictionary.end(); ++it){
 
         score = this->letters.getScore(*it); // O(n)
 
@@ -86,11 +88,7 @@ pair<vector<string>,int> Solver::getSolutionsByLength(const vector<char>& availa
     int length;
     pair<vector<string>,int> solutions_pair;
 
-    int i=0;
-
-    for(Dictionary::iterator it=this->dictionary.begin(); it!=this->dictionary.end()/*i<77000*/; ++it){
-
-        i++;
+    for(Dictionary::iterator it=this->dictionary.begin(); it!=this->dictionary.end(); ++it){
 
         length = (*it).size(); // O(n)
 
@@ -107,6 +105,68 @@ pair<vector<string>,int> Solver::getSolutionsByLength(const vector<char>& availa
                     solutions_pair.second = length;
                 }
             }
+        }
+    }
+    return solutions_pair;
+}
+
+//******************************************
+
+// SOLVER (EFICIENTE)
+
+//******************************************
+
+// PUBLIC //
+SolverEficiente::SolverEficiente(const Dictionary &dict, const LettersSet &letters_set){  // Using copy constructors
+    this->dictionary = dict;                                                              // from Dictionary and
+    this->letters = letters_set;                                                          // LettersSet
+}
+
+pair<vector<string>,int> SolverEficiente::getSolutions(const vector<char>& available_letters, bool score_game){
+    pair<vector<string>,int> solutions_pair;
+    if(score_game)          // By Score
+        solutions_pair = getSolutionsByScore(available_letters);
+    else                    // By Length
+        solutions_pair = getSolutionsByLength(available_letters);
+    return solutions_pair;
+}
+
+// PRIVATE //
+pair<vector<string>,int> SolverEficiente::getSolutionsByScore(const vector<char>& available_letters){
+    int score;
+    pair<vector<string>,int> solutions_pair;
+
+    for(Dictionary::possible_words_iterator it=dictionary.possible_words_begin(available_letters); it!=dictionary.possible_words_end(); ++it){
+
+        score = this->letters.getScore(*it); // O(n)
+
+        if(score == solutions_pair.second)
+            solutions_pair.first.push_back(*it);
+
+        else if(score > solutions_pair.second){
+            solutions_pair.first.clear();
+            solutions_pair.first.push_back(*it);
+            solutions_pair.second = score;
+        }
+    }
+    return solutions_pair;
+}
+
+pair<vector<string>,int> SolverEficiente::getSolutionsByLength(const vector<char>& available_letters){
+    int length;
+    pair<vector<string>,int> solutions_pair;
+
+    for(Dictionary::possible_words_iterator it=dictionary.possible_words_begin(available_letters); it!=dictionary.possible_words_end(); ++it){
+
+        length = (*it).size(); // O(n)
+
+        if(length == solutions_pair.second)
+            solutions_pair.first.push_back(*it);
+
+        else if(length > solutions_pair.second){
+            solutions_pair.first.clear();
+            solutions_pair.first.push_back(*it);
+            solutions_pair.second = length;
         }
     }
     return solutions_pair;
