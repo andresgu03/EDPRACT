@@ -1,5 +1,8 @@
-/home/andres/Escritorio/ANDRÉS/EDPRACT/GIT_EJS/ej04/cmake-build-debug/CMakeFiles/diccionario.dir
-/home/andres/Escritorio/ANDRÉS/EDPRACT/GIT_EJS/ej04/cmake-build-debug/CMakeFiles/palabras_validas_diccionario.dir
-/home/andres/Escritorio/ANDRÉS/EDPRACT/GIT_EJS/ej04/cmake-build-debug/CMakeFiles/doc_doxygen.dir
-/home/andres/Escritorio/ANDRÉS/EDPRACT/GIT_EJS/ej04/cmake-build-debug/CMakeFiles/edit_cache.dir
-/home/andres/Escritorio/ANDRÉS/EDPRACT/GIT_EJS/ej04/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/home/andres/ANDRÉS/EDPRACT/GIT_EJS/ej04/cmake-build-debug/CMakeFiles/cantidad_letras.dir
+/home/andres/ANDRÉS/EDPRACT/GIT_EJS/ej04/cmake-build-debug/CMakeFiles/diccionario.dir
+/home/andres/ANDRÉS/EDPRACT/GIT_EJS/ej04/cmake-build-debug/CMakeFiles/partida_letras.dir
+/home/andres/ANDRÉS/EDPRACT/GIT_EJS/ej04/cmake-build-debug/CMakeFiles/palabras_validas_diccionario.dir
+/home/andres/ANDRÉS/EDPRACT/GIT_EJS/ej04/cmake-build-debug/CMakeFiles/partida_letras_eficiente.dir
+/home/andres/ANDRÉS/EDPRACT/GIT_EJS/ej04/cmake-build-debug/CMakeFiles/doc_doxygen.dir
+/home/andres/ANDRÉS/EDPRACT/GIT_EJS/ej04/cmake-build-debug/CMakeFiles/edit_cache.dir
+/home/andres/ANDRÉS/EDPRACT/GIT_EJS/ej04/cmake-build-debug/CMakeFiles/rebuild_cache.dir

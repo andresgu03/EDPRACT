@@ -264,11 +264,11 @@ Dictionary::iterator Dictionary::end() const {
 Dictionary::possible_words_iterator Dictionary::possible_words_begin(vector<char> available_characters) const {
 
     Dictionary::possible_words_iterator iter (this->words.get_root(),available_characters) ;
+    ++iter ;
     return iter ;
 }
 
 Dictionary::possible_words_iterator Dictionary::possible_words_end() const {
-    vector<char> empty_bag ;
     Dictionary::possible_words_iterator iter ;
     return iter ;
 }
@@ -309,47 +309,141 @@ Dictionary::possible_words_iterator &Dictionary::possible_words_iterator::operat
 }
 
 bool Dictionary::possible_words_iterator::operator==(const Dictionary::possible_words_iterator &other) const {
-    return (this->available_letters == other.available_letters && this->level == other.level && this->current_node == other.current_node && this->current_word == other.current_word) ;
+    return (this->is_equal(other)) ;
 }
 
 bool Dictionary::possible_words_iterator::operator!=(const Dictionary::possible_words_iterator &other) const {
-    return !(this->available_letters == other.available_letters && this->level == other.level && this->current_node == other.current_node && this->current_word == other.current_word) ;
+    return !(this->is_equal(other)) ;
 }
 
 Dictionary::possible_words_iterator &Dictionary::possible_words_iterator::operator++() {
-    tree<char_info>::const_preorder_iterator iter (this->current_node) ;
-    tree<char_info>::const_preorder_iterator null_iterator ;
-    tree<char_info>::const_preorder_iterator aux_iterator ;
-    char c ;
-    int nivel_actual ;
-    do {
-        this->level = iter.get_level() ;
-        nivel_actual = this->level ;
-        ++iter;
-        c = (*iter).character ;
-        if(this->available_letters.count(c) != 0) {
-            if (this->level < nivel_actual) {
-                for(int i = 0 ; i < nivel_actual - this->level ; i++){
-                    this->available_letters.insert(this->current_word.at(this->current_word.length()-1));
-                    this->current_word.pop_back() ;
-                }
-            }
-            else if(this->level == nivel_actual){
-                this->available_letters.insert(this->current_word.at(this->current_word.length()-1));
-                this->current_word.pop_back() ;
-            }
-            this->available_letters.erase(this->available_letters.find(c));
-            this->current_word += c;
-        }
-        else{
-            ++iter ;
-            this->level = iter.get_level() ;
-            nivel_actual = this->level ;
-        }
-    }while(!this->current_node.operator*().valid_word) ;
+    bool is_valid = false ;
+    find_left_child(is_valid);
+    if(!is_valid){
+        *this = possible_words_iterator() ;
+    }
     return *this;
 }
 
 std::string Dictionary::possible_words_iterator::operator*() const {
     return current_word ;
+}
+
+//PRIVATE
+bool Dictionary::possible_words_iterator::is_equal(const Dictionary::possible_words_iterator &other) const{
+    return ( this->level == other.level && this->current_node == other.current_node && this->current_word == other.current_word) ;
+}
+bool Dictionary::possible_words_iterator::AddLetter(char c) {
+    bool no_error = true ;
+    if(true) {
+        this->available_letters.erase(this->available_letters.find(c));
+        this->current_word += c;
+    }
+    else no_error = false ;
+    return no_error ;
+}
+bool Dictionary::possible_words_iterator::ExtractLetter(void) {
+    bool no_error = true;
+    if (this->current_word.length() > 0) {
+        this->available_letters.insert(this->current_word.at(this->current_word.length() - 1));
+        this->current_word.pop_back();
+    } else no_error = false;
+    return no_error;
+}
+
+void Dictionary::possible_words_iterator::find_left_child(bool & is_valid){
+    if(!current_node.left_child().is_null() && !is_valid) {
+        current_node = current_node.left_child();
+        level++ ;
+        if((this->available_letters.count(this->current_node.operator*().character) != 0)){
+            char c = current_node.operator*().character ;
+            current_word += c ;
+            this->available_letters.erase(this->available_letters.find(c));
+
+            is_valid = current_node.operator*().valid_word ;
+            if(!is_valid){
+                find_left_child(is_valid);
+                find_right_sibling(is_valid);
+                find_right_uncle(is_valid) ;
+            }
+        }
+        else{
+            find_right_sibling(is_valid) ;
+            find_right_uncle(is_valid) ;
+        }
+    }
+    else{
+        find_right_sibling(is_valid);
+        find_right_uncle(is_valid) ;
+    }
+}
+void Dictionary::possible_words_iterator::find_right_sibling(bool & is_valid) {
+    if(!current_node.right_sibling().is_null() && !is_valid) {
+        current_node = current_node.right_sibling();
+
+        if(level <= current_word.size()){
+            available_letters.insert(current_word.back());
+            current_word.pop_back() ;
+        }
+
+        if((this->available_letters.count(this->current_node.operator*().character) != 0)){
+            char c = current_node.operator*().character ;
+            current_word += c ;
+            this->available_letters.erase(this->available_letters.find(c));
+
+            is_valid = is_valid = current_node.operator*().valid_word ;
+
+            if(!is_valid){
+                find_left_child(is_valid);
+                find_right_sibling(is_valid);
+                find_right_uncle(is_valid) ;
+            }
+        }
+        else{
+            find_right_sibling(is_valid) ;
+            find_right_uncle(is_valid) ;
+        }
+    }
+}
+
+void Dictionary::possible_words_iterator::find_right_uncle(bool & is_valid) {
+    if(!current_node.parent().is_null() && !is_valid) {
+        if(!current_node.parent().right_sibling().is_null()) {
+            level--;
+            while (level <= current_word.size()) {
+                available_letters.insert(current_word.back());
+                current_word.pop_back();
+            }
+
+            current_node = current_node.parent().right_sibling();
+
+            if ((this->available_letters.count(this->current_node.operator*().character) != 0)) {
+                char c = current_node.operator*().character;
+                current_word += c;
+                this->available_letters.erase(this->available_letters.find(c));
+
+                is_valid = current_node.operator*().valid_word ;
+
+                if (!is_valid) {
+                    find_left_child(is_valid);
+                    find_right_sibling(is_valid);
+                    find_right_uncle(is_valid);
+                }
+            } else {
+                find_right_sibling(is_valid);
+                find_right_uncle(is_valid);
+            }
+        }
+        else{
+            while (level <= current_word.size()) {
+                available_letters.insert(current_word.back());
+                current_word.pop_back();
+            }
+            level-- ;
+            current_node = current_node.parent();
+
+            if(!current_node.parent().is_null())
+                find_right_uncle(is_valid) ;
+        }
+    }
 }

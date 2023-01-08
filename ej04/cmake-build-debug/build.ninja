@@ -39,7 +39,53 @@ include CMakeFiles/rules.ninja
 #############################################
 # Logical path to working directory; prefix for absolute paths.
 
-cmake_ninja_workdir = /home/andres/Escritorio/ANDRÉS/EDPRACT/GIT_EJS/ej04/cmake-build-debug/
+cmake_ninja_workdir = /home/andres/ANDRÉS/EDPRACT/GIT_EJS/ej04/cmake-build-debug/
+# =============================================================================
+# Object build statements for EXECUTABLE target cantidad_letras
+
+
+#############################################
+# Order-only phony target for cantidad_letras
+
+build cmake_object_order_depends_target_cantidad_letras: phony || CMakeFiles/cantidad_letras.dir
+
+build CMakeFiles/cantidad_letras.dir/estudiante/src/cantidad_letras.cpp.o: CXX_COMPILER__cantidad_letras_Debug /home/andres/ANDRÉS/EDPRACT/GIT_EJS/ej04/estudiante/src/cantidad_letras.cpp || cmake_object_order_depends_target_cantidad_letras
+  DEP_FILE = CMakeFiles/cantidad_letras.dir/estudiante/src/cantidad_letras.cpp.o.d
+  FLAGS = -g -std=gnu++14
+  INCLUDES = -I/home/andres/ANDRÉS/EDPRACT/GIT_EJS/ej04/estudiante/include
+  OBJECT_DIR = CMakeFiles/cantidad_letras.dir
+  OBJECT_FILE_DIR = CMakeFiles/cantidad_letras.dir/estudiante/src
+
+build CMakeFiles/cantidad_letras.dir/estudiante/src/dictionary.cpp.o: CXX_COMPILER__cantidad_letras_Debug /home/andres/ANDRÉS/EDPRACT/GIT_EJS/ej04/estudiante/src/dictionary.cpp || cmake_object_order_depends_target_cantidad_letras
+  DEP_FILE = CMakeFiles/cantidad_letras.dir/estudiante/src/dictionary.cpp.o.d
+  FLAGS = -g -std=gnu++14
+  INCLUDES = -I/home/andres/ANDRÉS/EDPRACT/GIT_EJS/ej04/estudiante/include
+  OBJECT_DIR = CMakeFiles/cantidad_letras.dir
+  OBJECT_FILE_DIR = CMakeFiles/cantidad_letras.dir/estudiante/src
+
+build CMakeFiles/cantidad_letras.dir/estudiante/src/letters_set.cpp.o: CXX_COMPILER__cantidad_letras_Debug /home/andres/ANDRÉS/EDPRACT/GIT_EJS/ej04/estudiante/src/letters_set.cpp || cmake_object_order_depends_target_cantidad_letras
+  DEP_FILE = CMakeFiles/cantidad_letras.dir/estudiante/src/letters_set.cpp.o.d
+  FLAGS = -g -std=gnu++14
+  INCLUDES = -I/home/andres/ANDRÉS/EDPRACT/GIT_EJS/ej04/estudiante/include
+  OBJECT_DIR = CMakeFiles/cantidad_letras.dir
+  OBJECT_FILE_DIR = CMakeFiles/cantidad_letras.dir/estudiante/src
+
+
+# =============================================================================
+# Link build statements for EXECUTABLE target cantidad_letras
+
+
+#############################################
+# Link the executable cantidad_letras
+
+build cantidad_letras: CXX_EXECUTABLE_LINKER__cantidad_letras_Debug CMakeFiles/cantidad_letras.dir/estudiante/src/cantidad_letras.cpp.o CMakeFiles/cantidad_letras.dir/estudiante/src/dictionary.cpp.o CMakeFiles/cantidad_letras.dir/estudiante/src/letters_set.cpp.o
+  FLAGS = -g
+  OBJECT_DIR = CMakeFiles/cantidad_letras.dir
+  POST_BUILD = :
+  PRE_LINK = :
+  TARGET_FILE = cantidad_letras
+  TARGET_PDB = cantidad_letras.dbg
+
 # =============================================================================
 # Object build statements for EXECUTABLE target diccionario
 
@@ -49,17 +95,17 @@ cmake_ninja_workdir = /home/andres/Escritorio/ANDRÉS/EDPRACT/GIT_EJS/ej04/cmake
 
 build cmake_object_order_depends_target_diccionario: phony || CMakeFiles/diccionario.dir
 
-build CMakeFiles/diccionario.dir/estudiante/src/diccionario.cpp.o: CXX_COMPILER__diccionario_Debug /home/andres/Escritorio/ANDRÉS/EDPRACT/GIT_EJS/ej04/estudiante/src/diccionario.cpp || cmake_object_order_depends_target_diccionario
+build CMakeFiles/diccionario.dir/estudiante/src/diccionario.cpp.o: CXX_COMPILER__diccionario_Debug /home/andres/ANDRÉS/EDPRACT/GIT_EJS/ej04/estudiante/src/diccionario.cpp || cmake_object_order_depends_target_diccionario
   DEP_FILE = CMakeFiles/diccionario.dir/estudiante/src/diccionario.cpp.o.d
   FLAGS = -g -std=gnu++14
-  INCLUDES = -I/home/andres/Escritorio/ANDRÉS/EDPRACT/GIT_EJS/ej04/estudiante/include
+  INCLUDES = -I/home/andres/ANDRÉS/EDPRACT/GIT_EJS/ej04/estudiante/include
   OBJECT_DIR = CMakeFiles/diccionario.dir
   OBJECT_FILE_DIR = CMakeFiles/diccionario.dir/estudiante/src
 
-build CMakeFiles/diccionario.dir/estudiante/src/dictionary.cpp.o: CXX_COMPILER__diccionario_Debug /home/andres/Escritorio/ANDRÉS/EDPRACT/GIT_EJS/ej04/estudiante/src/dictionary.cpp || cmake_object_order_depends_target_diccionario
+build CMakeFiles/diccionario.dir/estudiante/src/dictionary.cpp.o: CXX_COMPILER__diccionario_Debug /home/andres/ANDRÉS/EDPRACT/GIT_EJS/ej04/estudiante/src/dictionary.cpp || cmake_object_order_depends_target_diccionario
   DEP_FILE = CMakeFiles/diccionario.dir/estudiante/src/dictionary.cpp.o.d
   FLAGS = -g -std=gnu++14
-  INCLUDES = -I/home/andres/Escritorio/ANDRÉS/EDPRACT/GIT_EJS/ej04/estudiante/include
+  INCLUDES = -I/home/andres/ANDRÉS/EDPRACT/GIT_EJS/ej04/estudiante/include
   OBJECT_DIR = CMakeFiles/diccionario.dir
   OBJECT_FILE_DIR = CMakeFiles/diccionario.dir/estudiante/src
 
@@ -80,6 +126,66 @@ build diccionario: CXX_EXECUTABLE_LINKER__diccionario_Debug CMakeFiles/diccionar
   TARGET_PDB = diccionario.dbg
 
 # =============================================================================
+# Object build statements for EXECUTABLE target partida_letras
+
+
+#############################################
+# Order-only phony target for partida_letras
+
+build cmake_object_order_depends_target_partida_letras: phony || CMakeFiles/partida_letras.dir
+
+build CMakeFiles/partida_letras.dir/estudiante/src/partida_letras.cpp.o: CXX_COMPILER__partida_letras_Debug /home/andres/ANDRÉS/EDPRACT/GIT_EJS/ej04/estudiante/src/partida_letras.cpp || cmake_object_order_depends_target_partida_letras
+  DEP_FILE = CMakeFiles/partida_letras.dir/estudiante/src/partida_letras.cpp.o.d
+  FLAGS = -g -std=gnu++14
+  INCLUDES = -I/home/andres/ANDRÉS/EDPRACT/GIT_EJS/ej04/estudiante/include
+  OBJECT_DIR = CMakeFiles/partida_letras.dir
+  OBJECT_FILE_DIR = CMakeFiles/partida_letras.dir/estudiante/src
+
+build CMakeFiles/partida_letras.dir/estudiante/src/letters_set.cpp.o: CXX_COMPILER__partida_letras_Debug /home/andres/ANDRÉS/EDPRACT/GIT_EJS/ej04/estudiante/src/letters_set.cpp || cmake_object_order_depends_target_partida_letras
+  DEP_FILE = CMakeFiles/partida_letras.dir/estudiante/src/letters_set.cpp.o.d
+  FLAGS = -g -std=gnu++14
+  INCLUDES = -I/home/andres/ANDRÉS/EDPRACT/GIT_EJS/ej04/estudiante/include
+  OBJECT_DIR = CMakeFiles/partida_letras.dir
+  OBJECT_FILE_DIR = CMakeFiles/partida_letras.dir/estudiante/src
+
+build CMakeFiles/partida_letras.dir/estudiante/src/letters_bag.cpp.o: CXX_COMPILER__partida_letras_Debug /home/andres/ANDRÉS/EDPRACT/GIT_EJS/ej04/estudiante/src/letters_bag.cpp || cmake_object_order_depends_target_partida_letras
+  DEP_FILE = CMakeFiles/partida_letras.dir/estudiante/src/letters_bag.cpp.o.d
+  FLAGS = -g -std=gnu++14
+  INCLUDES = -I/home/andres/ANDRÉS/EDPRACT/GIT_EJS/ej04/estudiante/include
+  OBJECT_DIR = CMakeFiles/partida_letras.dir
+  OBJECT_FILE_DIR = CMakeFiles/partida_letras.dir/estudiante/src
+
+build CMakeFiles/partida_letras.dir/estudiante/src/solver.cpp.o: CXX_COMPILER__partida_letras_Debug /home/andres/ANDRÉS/EDPRACT/GIT_EJS/ej04/estudiante/src/solver.cpp || cmake_object_order_depends_target_partida_letras
+  DEP_FILE = CMakeFiles/partida_letras.dir/estudiante/src/solver.cpp.o.d
+  FLAGS = -g -std=gnu++14
+  INCLUDES = -I/home/andres/ANDRÉS/EDPRACT/GIT_EJS/ej04/estudiante/include
+  OBJECT_DIR = CMakeFiles/partida_letras.dir
+  OBJECT_FILE_DIR = CMakeFiles/partida_letras.dir/estudiante/src
+
+build CMakeFiles/partida_letras.dir/estudiante/src/dictionary.cpp.o: CXX_COMPILER__partida_letras_Debug /home/andres/ANDRÉS/EDPRACT/GIT_EJS/ej04/estudiante/src/dictionary.cpp || cmake_object_order_depends_target_partida_letras
+  DEP_FILE = CMakeFiles/partida_letras.dir/estudiante/src/dictionary.cpp.o.d
+  FLAGS = -g -std=gnu++14
+  INCLUDES = -I/home/andres/ANDRÉS/EDPRACT/GIT_EJS/ej04/estudiante/include
+  OBJECT_DIR = CMakeFiles/partida_letras.dir
+  OBJECT_FILE_DIR = CMakeFiles/partida_letras.dir/estudiante/src
+
+
+# =============================================================================
+# Link build statements for EXECUTABLE target partida_letras
+
+
+#############################################
+# Link the executable partida_letras
+
+build partida_letras: CXX_EXECUTABLE_LINKER__partida_letras_Debug CMakeFiles/partida_letras.dir/estudiante/src/partida_letras.cpp.o CMakeFiles/partida_letras.dir/estudiante/src/letters_set.cpp.o CMakeFiles/partida_letras.dir/estudiante/src/letters_bag.cpp.o CMakeFiles/partida_letras.dir/estudiante/src/solver.cpp.o CMakeFiles/partida_letras.dir/estudiante/src/dictionary.cpp.o
+  FLAGS = -g
+  OBJECT_DIR = CMakeFiles/partida_letras.dir
+  POST_BUILD = :
+  PRE_LINK = :
+  TARGET_FILE = partida_letras
+  TARGET_PDB = partida_letras.dbg
+
+# =============================================================================
 # Object build statements for EXECUTABLE target palabras_validas_diccionario
 
 
@@ -88,17 +194,17 @@ build diccionario: CXX_EXECUTABLE_LINKER__diccionario_Debug CMakeFiles/diccionar
 
 build cmake_object_order_depends_target_palabras_validas_diccionario: phony || CMakeFiles/palabras_validas_diccionario.dir
 
-build CMakeFiles/palabras_validas_diccionario.dir/estudiante/src/palabras_validas_diccionario.cpp.o: CXX_COMPILER__palabras_validas_diccionario_Debug /home/andres/Escritorio/ANDRÉS/EDPRACT/GIT_EJS/ej04/estudiante/src/palabras_validas_diccionario.cpp || cmake_object_order_depends_target_palabras_validas_diccionario
+build CMakeFiles/palabras_validas_diccionario.dir/estudiante/src/palabras_validas_diccionario.cpp.o: CXX_COMPILER__palabras_validas_diccionario_Debug /home/andres/ANDRÉS/EDPRACT/GIT_EJS/ej04/estudiante/src/palabras_validas_diccionario.cpp || cmake_object_order_depends_target_palabras_validas_diccionario
   DEP_FILE = CMakeFiles/palabras_validas_diccionario.dir/estudiante/src/palabras_validas_diccionario.cpp.o.d
   FLAGS = -g -std=gnu++14
-  INCLUDES = -I/home/andres/Escritorio/ANDRÉS/EDPRACT/GIT_EJS/ej04/estudiante/include
+  INCLUDES = -I/home/andres/ANDRÉS/EDPRACT/GIT_EJS/ej04/estudiante/include
   OBJECT_DIR = CMakeFiles/palabras_validas_diccionario.dir
   OBJECT_FILE_DIR = CMakeFiles/palabras_validas_diccionario.dir/estudiante/src
 
-build CMakeFiles/palabras_validas_diccionario.dir/estudiante/src/dictionary.cpp.o: CXX_COMPILER__palabras_validas_diccionario_Debug /home/andres/Escritorio/ANDRÉS/EDPRACT/GIT_EJS/ej04/estudiante/src/dictionary.cpp || cmake_object_order_depends_target_palabras_validas_diccionario
+build CMakeFiles/palabras_validas_diccionario.dir/estudiante/src/dictionary.cpp.o: CXX_COMPILER__palabras_validas_diccionario_Debug /home/andres/ANDRÉS/EDPRACT/GIT_EJS/ej04/estudiante/src/dictionary.cpp || cmake_object_order_depends_target_palabras_validas_diccionario
   DEP_FILE = CMakeFiles/palabras_validas_diccionario.dir/estudiante/src/dictionary.cpp.o.d
   FLAGS = -g -std=gnu++14
-  INCLUDES = -I/home/andres/Escritorio/ANDRÉS/EDPRACT/GIT_EJS/ej04/estudiante/include
+  INCLUDES = -I/home/andres/ANDRÉS/EDPRACT/GIT_EJS/ej04/estudiante/include
   OBJECT_DIR = CMakeFiles/palabras_validas_diccionario.dir
   OBJECT_FILE_DIR = CMakeFiles/palabras_validas_diccionario.dir/estudiante/src
 
@@ -118,6 +224,66 @@ build palabras_validas_diccionario: CXX_EXECUTABLE_LINKER__palabras_validas_dicc
   TARGET_FILE = palabras_validas_diccionario
   TARGET_PDB = palabras_validas_diccionario.dbg
 
+# =============================================================================
+# Object build statements for EXECUTABLE target partida_letras_eficiente
+
+
+#############################################
+# Order-only phony target for partida_letras_eficiente
+
+build cmake_object_order_depends_target_partida_letras_eficiente: phony || CMakeFiles/partida_letras_eficiente.dir
+
+build CMakeFiles/partida_letras_eficiente.dir/estudiante/src/partida_letras_eficiente.cpp.o: CXX_COMPILER__partida_letras_eficiente_Debug /home/andres/ANDRÉS/EDPRACT/GIT_EJS/ej04/estudiante/src/partida_letras_eficiente.cpp || cmake_object_order_depends_target_partida_letras_eficiente
+  DEP_FILE = CMakeFiles/partida_letras_eficiente.dir/estudiante/src/partida_letras_eficiente.cpp.o.d
+  FLAGS = -g -std=gnu++14
+  INCLUDES = -I/home/andres/ANDRÉS/EDPRACT/GIT_EJS/ej04/estudiante/include
+  OBJECT_DIR = CMakeFiles/partida_letras_eficiente.dir
+  OBJECT_FILE_DIR = CMakeFiles/partida_letras_eficiente.dir/estudiante/src
+
+build CMakeFiles/partida_letras_eficiente.dir/estudiante/src/letters_set.cpp.o: CXX_COMPILER__partida_letras_eficiente_Debug /home/andres/ANDRÉS/EDPRACT/GIT_EJS/ej04/estudiante/src/letters_set.cpp || cmake_object_order_depends_target_partida_letras_eficiente
+  DEP_FILE = CMakeFiles/partida_letras_eficiente.dir/estudiante/src/letters_set.cpp.o.d
+  FLAGS = -g -std=gnu++14
+  INCLUDES = -I/home/andres/ANDRÉS/EDPRACT/GIT_EJS/ej04/estudiante/include
+  OBJECT_DIR = CMakeFiles/partida_letras_eficiente.dir
+  OBJECT_FILE_DIR = CMakeFiles/partida_letras_eficiente.dir/estudiante/src
+
+build CMakeFiles/partida_letras_eficiente.dir/estudiante/src/letters_bag.cpp.o: CXX_COMPILER__partida_letras_eficiente_Debug /home/andres/ANDRÉS/EDPRACT/GIT_EJS/ej04/estudiante/src/letters_bag.cpp || cmake_object_order_depends_target_partida_letras_eficiente
+  DEP_FILE = CMakeFiles/partida_letras_eficiente.dir/estudiante/src/letters_bag.cpp.o.d
+  FLAGS = -g -std=gnu++14
+  INCLUDES = -I/home/andres/ANDRÉS/EDPRACT/GIT_EJS/ej04/estudiante/include
+  OBJECT_DIR = CMakeFiles/partida_letras_eficiente.dir
+  OBJECT_FILE_DIR = CMakeFiles/partida_letras_eficiente.dir/estudiante/src
+
+build CMakeFiles/partida_letras_eficiente.dir/estudiante/src/solver.cpp.o: CXX_COMPILER__partida_letras_eficiente_Debug /home/andres/ANDRÉS/EDPRACT/GIT_EJS/ej04/estudiante/src/solver.cpp || cmake_object_order_depends_target_partida_letras_eficiente
+  DEP_FILE = CMakeFiles/partida_letras_eficiente.dir/estudiante/src/solver.cpp.o.d
+  FLAGS = -g -std=gnu++14
+  INCLUDES = -I/home/andres/ANDRÉS/EDPRACT/GIT_EJS/ej04/estudiante/include
+  OBJECT_DIR = CMakeFiles/partida_letras_eficiente.dir
+  OBJECT_FILE_DIR = CMakeFiles/partida_letras_eficiente.dir/estudiante/src
+
+build CMakeFiles/partida_letras_eficiente.dir/estudiante/src/dictionary.cpp.o: CXX_COMPILER__partida_letras_eficiente_Debug /home/andres/ANDRÉS/EDPRACT/GIT_EJS/ej04/estudiante/src/dictionary.cpp || cmake_object_order_depends_target_partida_letras_eficiente
+  DEP_FILE = CMakeFiles/partida_letras_eficiente.dir/estudiante/src/dictionary.cpp.o.d
+  FLAGS = -g -std=gnu++14
+  INCLUDES = -I/home/andres/ANDRÉS/EDPRACT/GIT_EJS/ej04/estudiante/include
+  OBJECT_DIR = CMakeFiles/partida_letras_eficiente.dir
+  OBJECT_FILE_DIR = CMakeFiles/partida_letras_eficiente.dir/estudiante/src
+
+
+# =============================================================================
+# Link build statements for EXECUTABLE target partida_letras_eficiente
+
+
+#############################################
+# Link the executable partida_letras_eficiente
+
+build partida_letras_eficiente: CXX_EXECUTABLE_LINKER__partida_letras_eficiente_Debug CMakeFiles/partida_letras_eficiente.dir/estudiante/src/partida_letras_eficiente.cpp.o CMakeFiles/partida_letras_eficiente.dir/estudiante/src/letters_set.cpp.o CMakeFiles/partida_letras_eficiente.dir/estudiante/src/letters_bag.cpp.o CMakeFiles/partida_letras_eficiente.dir/estudiante/src/solver.cpp.o CMakeFiles/partida_letras_eficiente.dir/estudiante/src/dictionary.cpp.o
+  FLAGS = -g
+  OBJECT_DIR = CMakeFiles/partida_letras_eficiente.dir
+  POST_BUILD = :
+  PRE_LINK = :
+  TARGET_FILE = partida_letras_eficiente
+  TARGET_PDB = partida_letras_eficiente.dbg
+
 
 #############################################
 # Utility command for doc_doxygen
@@ -129,7 +295,7 @@ build doc_doxygen: phony CMakeFiles/doc_doxygen
 # Utility command for edit_cache
 
 build CMakeFiles/edit_cache.util: CUSTOM_COMMAND
-  COMMAND = cd /home/andres/Escritorio/ANDRÉS/EDPRACT/GIT_EJS/ej04/cmake-build-debug && /home/andres/Escritorio/ANDRÉS/clion-2022.2.3/bin/cmake/linux/bin/ccmake -S/home/andres/Escritorio/ANDRÉS/EDPRACT/GIT_EJS/ej04 -B/home/andres/Escritorio/ANDRÉS/EDPRACT/GIT_EJS/ej04/cmake-build-debug
+  COMMAND = cd /home/andres/ANDRÉS/EDPRACT/GIT_EJS/ej04/cmake-build-debug && /home/andres/ANDRÉS/clion-2022.2.3/bin/cmake/linux/bin/ccmake -S/home/andres/ANDRÉS/EDPRACT/GIT_EJS/ej04 -B/home/andres/ANDRÉS/EDPRACT/GIT_EJS/ej04/cmake-build-debug
   DESC = Running CMake cache editor...
   pool = console
   restat = 1
@@ -141,7 +307,7 @@ build edit_cache: phony CMakeFiles/edit_cache.util
 # Utility command for rebuild_cache
 
 build CMakeFiles/rebuild_cache.util: CUSTOM_COMMAND
-  COMMAND = cd /home/andres/Escritorio/ANDRÉS/EDPRACT/GIT_EJS/ej04/cmake-build-debug && /home/andres/Escritorio/ANDRÉS/clion-2022.2.3/bin/cmake/linux/bin/cmake --regenerate-during-build -S/home/andres/Escritorio/ANDRÉS/EDPRACT/GIT_EJS/ej04 -B/home/andres/Escritorio/ANDRÉS/EDPRACT/GIT_EJS/ej04/cmake-build-debug
+  COMMAND = cd /home/andres/ANDRÉS/EDPRACT/GIT_EJS/ej04/cmake-build-debug && /home/andres/ANDRÉS/clion-2022.2.3/bin/cmake/linux/bin/cmake --regenerate-during-build -S/home/andres/ANDRÉS/EDPRACT/GIT_EJS/ej04 -B/home/andres/ANDRÉS/EDPRACT/GIT_EJS/ej04/cmake-build-debug
   DESC = Running CMake to regenerate build system...
   pool = console
   restat = 1
@@ -153,7 +319,7 @@ build rebuild_cache: phony CMakeFiles/rebuild_cache.util
 # Custom command for CMakeFiles/doc_doxygen
 
 build CMakeFiles/doc_doxygen | ${cmake_ninja_workdir}CMakeFiles/doc_doxygen: CUSTOM_COMMAND
-  COMMAND = cd /home/andres/Escritorio/ANDRÉS/EDPRACT/GIT_EJS/ej04/estudiante && /usr/bin/doxygen /home/andres/Escritorio/ANDRÉS/EDPRACT/GIT_EJS/ej04/cmake-build-debug/Doxyfile
+  COMMAND = cd /home/andres/ANDRÉS/EDPRACT/GIT_EJS/ej04/estudiante && /usr/bin/doxygen /home/andres/ANDRÉS/EDPRACT/GIT_EJS/ej04/cmake-build-debug/Doxyfile
   DESC = Generating API documentation with Doxygen
 
 # =============================================================================
@@ -165,9 +331,9 @@ build CMakeFiles/doc_doxygen | ${cmake_ninja_workdir}CMakeFiles/doc_doxygen: CUS
 # =============================================================================
 
 #############################################
-# Folder: /home/andres/Escritorio/ANDRÉS/EDPRACT/GIT_EJS/ej04/cmake-build-debug
+# Folder: /home/andres/ANDRÉS/EDPRACT/GIT_EJS/ej04/cmake-build-debug
 
-build all: phony diccionario palabras_validas_diccionario doc_doxygen
+build all: phony cantidad_letras diccionario partida_letras palabras_validas_diccionario partida_letras_eficiente doc_doxygen
 
 # =============================================================================
 # Built-in targets
@@ -176,14 +342,14 @@ build all: phony diccionario palabras_validas_diccionario doc_doxygen
 #############################################
 # Re-run CMake if any of its inputs changed.
 
-build build.ninja: RERUN_CMAKE | ../CMakeLists.txt ../Doxyfile.in /home/andres/Escritorio/ANDRÉS/clion-2022.2.3/bin/cmake/linux/share/cmake-3.23/Modules/CMakeCInformation.cmake /home/andres/Escritorio/ANDRÉS/clion-2022.2.3/bin/cmake/linux/share/cmake-3.23/Modules/CMakeCXXInformation.cmake /home/andres/Escritorio/ANDRÉS/clion-2022.2.3/bin/cmake/linux/share/cmake-3.23/Modules/CMakeCommonLanguageInclude.cmake /home/andres/Escritorio/ANDRÉS/clion-2022.2.3/bin/cmake/linux/share/cmake-3.23/Modules/CMakeGenericSystem.cmake /home/andres/Escritorio/ANDRÉS/clion-2022.2.3/bin/cmake/linux/share/cmake-3.23/Modules/CMakeInitializeConfigs.cmake /home/andres/Escritorio/ANDRÉS/clion-2022.2.3/bin/cmake/linux/share/cmake-3.23/Modules/CMakeLanguageInformation.cmake /home/andres/Escritorio/ANDRÉS/clion-2022.2.3/bin/cmake/linux/share/cmake-3.23/Modules/CMakeSystemSpecificInformation.cmake /home/andres/Escritorio/ANDRÉS/clion-2022.2.3/bin/cmake/linux/share/cmake-3.23/Modules/CMakeSystemSpecificInitialize.cmake /home/andres/Escritorio/ANDRÉS/clion-2022.2.3/bin/cmake/linux/share/cmake-3.23/Modules/Compiler/CMakeCommonCompilerMacros.cmake /home/andres/Escritorio/ANDRÉS/clion-2022.2.3/bin/cmake/linux/share/cmake-3.23/Modules/Compiler/GNU-C.cmake /home/andres/Escritorio/ANDRÉS/clion-2022.2.3/bin/cmake/linux/share/cmake-3.23/Modules/Compiler/GNU-CXX.cmake /home/andres/Escritorio/ANDRÉS/clion-2022.2.3/bin/cmake/linux/share/cmake-3.23/Modules/Compiler/GNU.cmake /home/andres/Escritorio/ANDRÉS/clion-2022.2.3/bin/cmake/linux/share/cmake-3.23/Modules/FindDoxygen.cmake /home/andres/Escritorio/ANDRÉS/clion-2022.2.3/bin/cmake/linux/share/cmake-3.23/Modules/FindPackageHandleStandardArgs.cmake /home/andres/Escritorio/ANDRÉS/clion-2022.2.3/bin/cmake/linux/share/cmake-3.23/Modules/FindPackageMessage.cmake /home/andres/Escritorio/ANDRÉS/clion-2022.2.3/bin/cmake/linux/share/cmake-3.23/Modules/Platform/Linux-GNU-C.cmake /home/andres/Escritorio/ANDRÉS/clion-2022.2.3/bin/cmake/linux/share/cmake-3.23/Modules/Platform/Linux-GNU-CXX.cmake /home/andres/Escritorio/ANDRÉS/clion-2022.2.3/bin/cmake/linux/share/cmake-3.23/Modules/Platform/Linux-GNU.cmake /home/andres/Escritorio/ANDRÉS/clion-2022.2.3/bin/cmake/linux/share/cmake-3.23/Modules/Platform/Linux.cmake /home/andres/Escritorio/ANDRÉS/clion-2022.2.3/bin/cmake/linux/share/cmake-3.23/Modules/Platform/UnixPaths.cmake CMakeCache.txt CMakeFiles/3.23.2/CMakeCCompiler.cmake CMakeFiles/3.23.2/CMakeCXXCompiler.cmake CMakeFiles/3.23.2/CMakeSystem.cmake
+build build.ninja: RERUN_CMAKE | ../CMakeLists.txt ../Doxyfile.in /home/andres/ANDRÉS/clion-2022.2.3/bin/cmake/linux/share/cmake-3.23/Modules/CMakeCInformation.cmake /home/andres/ANDRÉS/clion-2022.2.3/bin/cmake/linux/share/cmake-3.23/Modules/CMakeCXXInformation.cmake /home/andres/ANDRÉS/clion-2022.2.3/bin/cmake/linux/share/cmake-3.23/Modules/CMakeCommonLanguageInclude.cmake /home/andres/ANDRÉS/clion-2022.2.3/bin/cmake/linux/share/cmake-3.23/Modules/CMakeGenericSystem.cmake /home/andres/ANDRÉS/clion-2022.2.3/bin/cmake/linux/share/cmake-3.23/Modules/CMakeInitializeConfigs.cmake /home/andres/ANDRÉS/clion-2022.2.3/bin/cmake/linux/share/cmake-3.23/Modules/CMakeLanguageInformation.cmake /home/andres/ANDRÉS/clion-2022.2.3/bin/cmake/linux/share/cmake-3.23/Modules/CMakeSystemSpecificInformation.cmake /home/andres/ANDRÉS/clion-2022.2.3/bin/cmake/linux/share/cmake-3.23/Modules/CMakeSystemSpecificInitialize.cmake /home/andres/ANDRÉS/clion-2022.2.3/bin/cmake/linux/share/cmake-3.23/Modules/Compiler/CMakeCommonCompilerMacros.cmake /home/andres/ANDRÉS/clion-2022.2.3/bin/cmake/linux/share/cmake-3.23/Modules/Compiler/GNU-C.cmake /home/andres/ANDRÉS/clion-2022.2.3/bin/cmake/linux/share/cmake-3.23/Modules/Compiler/GNU-CXX.cmake /home/andres/ANDRÉS/clion-2022.2.3/bin/cmake/linux/share/cmake-3.23/Modules/Compiler/GNU.cmake /home/andres/ANDRÉS/clion-2022.2.3/bin/cmake/linux/share/cmake-3.23/Modules/FindDoxygen.cmake /home/andres/ANDRÉS/clion-2022.2.3/bin/cmake/linux/share/cmake-3.23/Modules/FindPackageHandleStandardArgs.cmake /home/andres/ANDRÉS/clion-2022.2.3/bin/cmake/linux/share/cmake-3.23/Modules/FindPackageMessage.cmake /home/andres/ANDRÉS/clion-2022.2.3/bin/cmake/linux/share/cmake-3.23/Modules/Platform/Linux-GNU-C.cmake /home/andres/ANDRÉS/clion-2022.2.3/bin/cmake/linux/share/cmake-3.23/Modules/Platform/Linux-GNU-CXX.cmake /home/andres/ANDRÉS/clion-2022.2.3/bin/cmake/linux/share/cmake-3.23/Modules/Platform/Linux-GNU.cmake /home/andres/ANDRÉS/clion-2022.2.3/bin/cmake/linux/share/cmake-3.23/Modules/Platform/Linux.cmake /home/andres/ANDRÉS/clion-2022.2.3/bin/cmake/linux/share/cmake-3.23/Modules/Platform/UnixPaths.cmake CMakeCache.txt CMakeFiles/3.23.2/CMakeCCompiler.cmake CMakeFiles/3.23.2/CMakeCXXCompiler.cmake CMakeFiles/3.23.2/CMakeSystem.cmake
   pool = console
 
 
 #############################################
 # A missing CMake input file is not an error.
 
-build ../CMakeLists.txt ../Doxyfile.in /home/andres/Escritorio/ANDRÉS/clion-2022.2.3/bin/cmake/linux/share/cmake-3.23/Modules/CMakeCInformation.cmake /home/andres/Escritorio/ANDRÉS/clion-2022.2.3/bin/cmake/linux/share/cmake-3.23/Modules/CMakeCXXInformation.cmake /home/andres/Escritorio/ANDRÉS/clion-2022.2.3/bin/cmake/linux/share/cmake-3.23/Modules/CMakeCommonLanguageInclude.cmake /home/andres/Escritorio/ANDRÉS/clion-2022.2.3/bin/cmake/linux/share/cmake-3.23/Modules/CMakeGenericSystem.cmake /home/andres/Escritorio/ANDRÉS/clion-2022.2.3/bin/cmake/linux/share/cmake-3.23/Modules/CMakeInitializeConfigs.cmake /home/andres/Escritorio/ANDRÉS/clion-2022.2.3/bin/cmake/linux/share/cmake-3.23/Modules/CMakeLanguageInformation.cmake /home/andres/Escritorio/ANDRÉS/clion-2022.2.3/bin/cmake/linux/share/cmake-3.23/Modules/CMakeSystemSpecificInformation.cmake /home/andres/Escritorio/ANDRÉS/clion-2022.2.3/bin/cmake/linux/share/cmake-3.23/Modules/CMakeSystemSpecificInitialize.cmake /home/andres/Escritorio/ANDRÉS/clion-2022.2.3/bin/cmake/linux/share/cmake-3.23/Modules/Compiler/CMakeCommonCompilerMacros.cmake /home/andres/Escritorio/ANDRÉS/clion-2022.2.3/bin/cmake/linux/share/cmake-3.23/Modules/Compiler/GNU-C.cmake /home/andres/Escritorio/ANDRÉS/clion-2022.2.3/bin/cmake/linux/share/cmake-3.23/Modules/Compiler/GNU-CXX.cmake /home/andres/Escritorio/ANDRÉS/clion-2022.2.3/bin/cmake/linux/share/cmake-3.23/Modules/Compiler/GNU.cmake /home/andres/Escritorio/ANDRÉS/clion-2022.2.3/bin/cmake/linux/share/cmake-3.23/Modules/FindDoxygen.cmake /home/andres/Escritorio/ANDRÉS/clion-2022.2.3/bin/cmake/linux/share/cmake-3.23/Modules/FindPackageHandleStandardArgs.cmake /home/andres/Escritorio/ANDRÉS/clion-2022.2.3/bin/cmake/linux/share/cmake-3.23/Modules/FindPackageMessage.cmake /home/andres/Escritorio/ANDRÉS/clion-2022.2.3/bin/cmake/linux/share/cmake-3.23/Modules/Platform/Linux-GNU-C.cmake /home/andres/Escritorio/ANDRÉS/clion-2022.2.3/bin/cmake/linux/share/cmake-3.23/Modules/Platform/Linux-GNU-CXX.cmake /home/andres/Escritorio/ANDRÉS/clion-2022.2.3/bin/cmake/linux/share/cmake-3.23/Modules/Platform/Linux-GNU.cmake /home/andres/Escritorio/ANDRÉS/clion-2022.2.3/bin/cmake/linux/share/cmake-3.23/Modules/Platform/Linux.cmake /home/andres/Escritorio/ANDRÉS/clion-2022.2.3/bin/cmake/linux/share/cmake-3.23/Modules/Platform/UnixPaths.cmake CMakeCache.txt CMakeFiles/3.23.2/CMakeCCompiler.cmake CMakeFiles/3.23.2/CMakeCXXCompiler.cmake CMakeFiles/3.23.2/CMakeSystem.cmake: phony
+build ../CMakeLists.txt ../Doxyfile.in /home/andres/ANDRÉS/clion-2022.2.3/bin/cmake/linux/share/cmake-3.23/Modules/CMakeCInformation.cmake /home/andres/ANDRÉS/clion-2022.2.3/bin/cmake/linux/share/cmake-3.23/Modules/CMakeCXXInformation.cmake /home/andres/ANDRÉS/clion-2022.2.3/bin/cmake/linux/share/cmake-3.23/Modules/CMakeCommonLanguageInclude.cmake /home/andres/ANDRÉS/clion-2022.2.3/bin/cmake/linux/share/cmake-3.23/Modules/CMakeGenericSystem.cmake /home/andres/ANDRÉS/clion-2022.2.3/bin/cmake/linux/share/cmake-3.23/Modules/CMakeInitializeConfigs.cmake /home/andres/ANDRÉS/clion-2022.2.3/bin/cmake/linux/share/cmake-3.23/Modules/CMakeLanguageInformation.cmake /home/andres/ANDRÉS/clion-2022.2.3/bin/cmake/linux/share/cmake-3.23/Modules/CMakeSystemSpecificInformation.cmake /home/andres/ANDRÉS/clion-2022.2.3/bin/cmake/linux/share/cmake-3.23/Modules/CMakeSystemSpecificInitialize.cmake /home/andres/ANDRÉS/clion-2022.2.3/bin/cmake/linux/share/cmake-3.23/Modules/Compiler/CMakeCommonCompilerMacros.cmake /home/andres/ANDRÉS/clion-2022.2.3/bin/cmake/linux/share/cmake-3.23/Modules/Compiler/GNU-C.cmake /home/andres/ANDRÉS/clion-2022.2.3/bin/cmake/linux/share/cmake-3.23/Modules/Compiler/GNU-CXX.cmake /home/andres/ANDRÉS/clion-2022.2.3/bin/cmake/linux/share/cmake-3.23/Modules/Compiler/GNU.cmake /home/andres/ANDRÉS/clion-2022.2.3/bin/cmake/linux/share/cmake-3.23/Modules/FindDoxygen.cmake /home/andres/ANDRÉS/clion-2022.2.3/bin/cmake/linux/share/cmake-3.23/Modules/FindPackageHandleStandardArgs.cmake /home/andres/ANDRÉS/clion-2022.2.3/bin/cmake/linux/share/cmake-3.23/Modules/FindPackageMessage.cmake /home/andres/ANDRÉS/clion-2022.2.3/bin/cmake/linux/share/cmake-3.23/Modules/Platform/Linux-GNU-C.cmake /home/andres/ANDRÉS/clion-2022.2.3/bin/cmake/linux/share/cmake-3.23/Modules/Platform/Linux-GNU-CXX.cmake /home/andres/ANDRÉS/clion-2022.2.3/bin/cmake/linux/share/cmake-3.23/Modules/Platform/Linux-GNU.cmake /home/andres/ANDRÉS/clion-2022.2.3/bin/cmake/linux/share/cmake-3.23/Modules/Platform/Linux.cmake /home/andres/ANDRÉS/clion-2022.2.3/bin/cmake/linux/share/cmake-3.23/Modules/Platform/UnixPaths.cmake CMakeCache.txt CMakeFiles/3.23.2/CMakeCCompiler.cmake CMakeFiles/3.23.2/CMakeCXXCompiler.cmake CMakeFiles/3.23.2/CMakeSystem.cmake: phony
 
 
 #############################################

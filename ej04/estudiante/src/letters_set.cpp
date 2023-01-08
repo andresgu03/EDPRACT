@@ -59,7 +59,7 @@ istream & operator >>(istream & is, LettersSet & cl){
         is >> letter;
         is >> aux.repetitions;
         is >> aux.score;
-        pair<char,LetterInfo> pareja(letter,aux);
+        pair<char,LetterInfo> pareja(  letter,aux);
         cl.insert(pareja);
     }
 

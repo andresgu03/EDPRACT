@@ -385,6 +385,15 @@ public:
         std::string operator*() const;
 
     private:
+        bool is_equal(const Dictionary::possible_words_iterator &other) const;
+        bool AddLetter(char c);
+        bool ExtractLetter(void);
+        void find_left_child(bool &) ;
+        void find_right_sibling(bool &) ;
+        void find_right_uncle(bool &) ;
+
+
+    private:
         multiset<char> available_letters;
         int level;
         node current_node;
