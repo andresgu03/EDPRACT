@@ -113,11 +113,11 @@ Public Member Functions</h2></td></tr>
 <a class="el" href="classDictionary.html">Dictionary</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classDictionary.html#ad3cc74c08ba9ae2c1200922a75fe3d3b">operator=</a> (const <a class="el" href="classDictionary.html">Dictionary</a> &amp;dic)</td></tr>
 <tr class="memdesc:ad3cc74c08ba9ae2c1200922a75fe3d3b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sobrecarga del operador de asignación. <br /></td></tr>
 <tr class="separator:ad3cc74c08ba9ae2c1200922a75fe3d3b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa189136a538e61de16234065add885c4"><td class="memItemLeft" align="right" valign="top"><a id="aa189136a538e61de16234065add885c4"></a>
-int&#160;</td><td class="memItemRight" valign="bottom"><b>getOccurrences</b> (const char c)</td></tr>
+<tr class="memitem:aa189136a538e61de16234065add885c4"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classDictionary.html#aa189136a538e61de16234065add885c4">getOccurrences</a> (const char c)</td></tr>
+<tr class="memdesc:aa189136a538e61de16234065add885c4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Cuenta las ocurrencias de la letra c en el diccionario.  <a href="classDictionary.html#aa189136a538e61de16234065add885c4">More...</a><br /></td></tr>
 <tr class="separator:aa189136a538e61de16234065add885c4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad410f46cda394995b6e983373982c844"><td class="memItemLeft" align="right" valign="top"><a id="ad410f46cda394995b6e983373982c844"></a>
-int&#160;</td><td class="memItemRight" valign="bottom"><b>getTotalUsages</b> (const char c)</td></tr>
+<tr class="memitem:ad410f46cda394995b6e983373982c844"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classDictionary.html#ad410f46cda394995b6e983373982c844">getTotalUsages</a> (const char c)</td></tr>
+<tr class="memdesc:ad410f46cda394995b6e983373982c844"><td class="mdescLeft">&#160;</td><td class="mdescRight">Cuenta los usos de la letra c para formar palabras en el diccionario.  <a href="classDictionary.html#ad410f46cda394995b6e983373982c844">More...</a><br /></td></tr>
 <tr class="separator:ad410f46cda394995b6e983373982c844"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abc9aba4803003d8ad254097599039f8d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classDictionary_1_1iterator.html">iterator</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classDictionary.html#abc9aba4803003d8ad254097599039f8d">begin</a> () const</td></tr>
 <tr class="memdesc:abc9aba4803003d8ad254097599039f8d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Función <a class="el" href="classDictionary.html#abc9aba4803003d8ad254097599039f8d" title="Función begin()">begin()</a>  <a href="classDictionary.html#abc9aba4803003d8ad254097599039f8d">More...</a><br /></td></tr>
@@ -361,6 +361,60 @@ Friends</h2></td></tr>
 
 </div>
 </div>
+<a id="aa189136a538e61de16234065add885c4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa189136a538e61de16234065add885c4">&#9670;&nbsp;</a></span>getOccurrences()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int Dictionary::getOccurrences </td>
+          <td>(</td>
+          <td class="paramtype">const char&#160;</td>
+          <td class="paramname"><em>c</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Cuenta las ocurrencias de la letra c en el diccionario. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">c</td><td>Letra a buscar. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>El número de ocurrencias de la letra en el diccionario. </dd></dl>
+
+</div>
+</div>
+<a id="ad410f46cda394995b6e983373982c844"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad410f46cda394995b6e983373982c844">&#9670;&nbsp;</a></span>getTotalUsages()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int Dictionary::getTotalUsages </td>
+          <td>(</td>
+          <td class="paramtype">const char&#160;</td>
+          <td class="paramname"><em>c</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Cuenta los usos de la letra c para formar palabras en el diccionario. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">c</td><td>Letra a buscar. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>El número de usos de la letra para formar palabras en el diccionario. </dd></dl>
+
+</div>
+</div>
 <a id="a7046bcc3b1c32a38ab7682d9b9774622"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a7046bcc3b1c32a38ab7682d9b9774622">&#9670;&nbsp;</a></span>insert()</h2>
 
@@ -560,7 +614,7 @@ Friends</h2></td></tr>
 </div>
 <hr/>The documentation for this class was generated from the following files:<ul>
 <li>include/<a class="el" href="dictionary_8h_source.html">dictionary.h</a></li>
-<li>src/dictionary.cpp</li>
+<li>src/<a class="el" href="dictionary_8cpp.html">dictionary.cpp</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->

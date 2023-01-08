@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['begin_50',['begin',['../classDictionary.html#abc9aba4803003d8ad254097599039f8d',1,'Dictionary']]]
+  ['add_100',['add',['../classBag.html#af5f86444fd1c4bfbfe11e602ffac697b',1,'Bag']]]
 ];

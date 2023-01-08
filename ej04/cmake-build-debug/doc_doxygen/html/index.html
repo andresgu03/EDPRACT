@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.9.1"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Práctica 5. Juego de las Letras - Árbol para Diccionario: Título de la página principal</title>
+<title>Práctica 5. Juego de las Letras - Árbol para Diccionario: Practica 4: El juego de las letras. Estructura de árbol para el diccionario y Solver.</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -62,15 +62,152 @@ $(function() {
 
 <div class="PageDoc"><div class="header">
   <div class="headertitle">
-<div class="title">Título de la página principal </div>  </div>
+<div class="title">Practica 4: El juego de las letras. Estructura de árbol para el diccionario y <a class="el" href="classSolver.html" title="TDA Solver.">Solver</a>. </div>  </div>
 </div><!--header-->
 <div class="contents">
 <div class="textblock"><h1><a class="anchor" id="autotoc_md0"></a>
 Introducción</h1>
-<p>A RELLENAR POR EL ESTUDIANTE</p>
+<p><b>El juego de las letras</b> <br  />
+ En esta práctica querremos representar el famoso juego del <em>Scrabble</em>. Este juego consiste en formar palabras de un idioma dadas ciertas letras. Cada letra lleva asociada una puntuación y el objetivo es, o bien conseguir el mayor número de puntos posibles al formar una palabra, o bien conseguir la palabra más larga posible.<br  />
+ En esta práctica modificaremos la implementación del TDA <a class="el" href="classDictionary.html">Dictionary</a> de la práctica anterior utilizando como contenedor subyacente un árbol LCRS (Left-Child Right-Sibling). De esta forma, podremos almacenar nuestro diccionario con menos espacio y crear un solver más eficiente.</p>
+<p>Concretamente:</p><ol type="1">
+<li>Necesitaremos almacenar menos información para representar el diccionario completo (lo podremos comprobar contando el número de letras almacenadas en total).</li>
+<li>Podremos recuperar más rápidamente las palabras que se pueden formar dado un vector de letras, ya que la estructura de árbol en la que almacenaremos el diccionario nos permitirá explorar las posibles soluciones de una forma bastante eficiente.</li>
+</ol>
 <h1><a class="anchor" id="autotoc_md1"></a>
 Ejecutables</h1>
-<p>A RELLENAR POR EL ESTUDIANTE </p>
+<ol type="1">
+<li><p class="startli">diccionario.cpp</p><ul>
+<li>Recibe como parámetro un archivo que contiene un diccionario. Creará el <a class="el" href="classDictionary.html">Dictionary</a>.</li>
+<li>Imprime por pantalla el contenido de todo el diccionario.</li>
+<li>Ejemplo: ./diccionario ../data/diccionario_mini.txt</li>
+</ul>
+<pre>
+           <code>
+                a
+                ama
+                amar
+                amo
+                amor
+                cal
+                col
+                coz
+           </code>
+        </pre></li>
+<li><p class="startli"><a class="el" href="cantidad__letras_8cpp.html" title="Programa de prueba de los metodos getOccurrences y getTotalUsages del TDA Dictionary.">cantidad_letras.cpp</a></p><ul>
+<li>Recibe como argumentos un fichero de diccionario y un fichero de letras. Con esa información:<ul>
+<li>Creará el <a class="el" href="classLettersSet.html" title="TDA LettersSet.">LettersSet</a> y el <a class="el" href="classDictionary.html">Dictionary</a>.</li>
+<li>Para cada letra del diccionario calculará el número de veces que se usa esa letra y el número de ocurrencias de la letra.</li>
+</ul>
+</li>
+<li>Ejemplo: ./cantidad_letras ../data/diccionario_mini.txt ../data/letras_mini.txt</li>
+</ul>
+<pre>
+       <code>
+          Letra Usos Ocurrencias
+          A     8    3
+          C     3    1
+          L     2    2
+          M     4    1
+          O     4    2
+          R     2    2
+          Z     1    1
+       </code>
+    </pre></li>
+<li><p class="startli"><a class="el" href="partida__letras_8cpp.html" title="Programa de prueba del TDA Solver.">partida_letras.cpp</a></p><ul>
+<li>Recibe cuatro argumentos:<ol type="a">
+<li>Ruta al archivo que contiene el diccionario.</li>
+<li>Ruta al archivo que contiene las letras y su puntuación.</li>
+<li>Modo de juego (L = longitud, P = puntuación).</li>
+<li>Cantidad de letras para la partida.</li>
+</ol>
+</li>
+<li>El programa se encargará de construir:<ul>
+<li>El <a class="el" href="classLettersSet.html" title="TDA LettersSet.">LettersSet</a> para la partida a partir del archivo de letras.</li>
+<li>El <a class="el" href="classDictionary.html">Dictionary</a> con las palabras que se consideran soluciones correctas.</li>
+<li>El <a class="el" href="classSolver.html" title="TDA Solver.">Solver</a> que va a jugar la partida.</li>
+<li>La <a class="el" href="classLettersBag.html" title="TDA LettersBag.">LettersBag</a> que se utilizará para extraer las letras.</li>
+</ul>
+</li>
+<li>Una vez construidos los TDAs necesarios:<ul>
+<li>Extraerá las letras con las que se jugará la partida</li>
+<li>Utilizará el <a class="el" href="classSolver.html" title="TDA Solver.">Solver</a> para buscar las soluciones</li>
+<li>Imprimirá por pantalla tanto las letras para la partida como las mejores soluciones que se pueden obtener con dichas letras y la puntuación de dichas soluciones.</li>
+</ul>
+</li>
+<li>Ejemplo: ./partida_letras ../data/diccionario.txt ../data/letras.txt L 9</li>
+</ul>
+<pre>
+       <code>
+          LETRAS DISPONIBLES:
+          A E A O U E E E T
+          SOLUCIONES:
+          aeta
+          ateo
+          auto
+          PUNTUACION:
+          4
+       </code>
+    </pre></li>
+<li><p class="startli">palabras_validas_diccionario.cpp</p><ul>
+<li>Recibe como argumentos:<ul>
+<li>Un fichero de texto que contiene a un diccionario.</li>
+<li>Letras que se usarán para ver las palabras válidas formadas con dichas letras en el diccionario.</li>
+</ul>
+</li>
+<li>El programa se encargará de construir:<ul>
+<li>El <a class="el" href="classDictionary.html">Dictionary</a> con las palabras.</li>
+<li>Un vector con las letras que se consideran.</li>
+</ul>
+</li>
+<li>El programa devolverá un listado de las palabras del diccionario que se pueden formar con las letras introducidas.</li>
+<li>Ejemplo: ./palabras_validas_diccionario ../data/diccionario_mini.txt a c l z o</li>
+</ul>
+<pre>
+           <code>
+              a
+              cal
+              col
+              coz
+           </code>
+        </pre></li>
+<li><p class="startli">partida_letras_eficiente.cpp</p><ul>
+<li>NOTA: Al ser una implementación alternativa (más eficiente) de <a class="el" href="partida__letras_8cpp.html" title="Programa de prueba del TDA Solver.">partida_letras.cpp</a>, el resultado esperado es el mismo, así como el formato de entrada y salida.</li>
+<li>Recibe cuatro argumentos:<ol type="a">
+<li>Ruta al archivo que contiene el diccionario.</li>
+<li>Ruta al archivo que contiene las letras y su puntuación.</li>
+<li>Modo de juego (L = longitud, P = puntuación).</li>
+<li>Cantidad de letras para la partida.</li>
+</ol>
+</li>
+<li>El programa se encargará de construir:<ul>
+<li>El <a class="el" href="classLettersSet.html" title="TDA LettersSet.">LettersSet</a> para la partida a partir del archivo de letras.</li>
+<li>El <a class="el" href="classDictionary.html">Dictionary</a> con las palabras que se consideran soluciones correctas.</li>
+<li>El <a class="el" href="classSolver.html" title="TDA Solver.">Solver</a> que va a jugar la partida.</li>
+<li>La <a class="el" href="classLettersBag.html" title="TDA LettersBag.">LettersBag</a> que se utilizará para extraer las letras.</li>
+</ul>
+</li>
+<li>Una vez construidos los TDAs necesarios:<ul>
+<li>Extraerá las letras con las que se jugará la partida</li>
+<li>Utilizará el <a class="el" href="classSolver.html" title="TDA Solver.">Solver</a> para buscar las soluciones</li>
+<li>Imprimirá por pantalla tanto las letras para la partida como las mejores soluciones que se pueden obtener con dichas letras y la puntuación de dichas soluciones.</li>
+</ul>
+</li>
+<li>Ejemplo: ./partida_letras_eficiente ../data/diccionario.txt ../data/letras.txt L 9</li>
+</ul>
+<pre>
+       <code>
+          LETRAS DISPONIBLES:
+          A E A O U E E E T
+          SOLUCIONES:
+          aeta
+          ateo
+          auto
+          PUNTUACION:
+          4
+       </code>
+    </pre> </li>
+</ol>
 </div></div><!-- PageDoc -->
 </div><!-- contents -->
 <!-- start footer part -->

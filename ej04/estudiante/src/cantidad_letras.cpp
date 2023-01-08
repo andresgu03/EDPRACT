@@ -49,16 +49,16 @@ int main(int argc, char *argv[])
 
   // 3) Conteo de usos y ocurrencias de las letras del LettersSet en el diccionario
 
-  char letra = 'A';
+  char letra = 'a';
 
   cout << "Letra\tUsos\tOcurrencias" << "\n";
 
-  while(letra <= 'Z'){
+  while(letra <= 'z'){
       if(letras[letra].repetitions != 0) {
           int ocurrencias = diccionario.getOccurrences(letra);
           int usos = diccionario.getTotalUsages(letra);
 
-          cout << letra << "\t" << usos << "\t" << ocurrencias << "\n";
+          cout << (char)toupper(letra) << "\t" << usos << "\t" << ocurrencias << "\n";
       }
       letra++;
   }

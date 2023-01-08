@@ -46,7 +46,6 @@ Dictionary::node Dictionary::insertCharacter(char character, Dictionary::node cu
 }
 
 int Dictionary::getOccurrences(node curr_node, char c){
-
     int num_ocurr = 0;
 
     if ((*curr_node).character == tolower(c)) // If current node letter == c --> Increment num_ocurr
@@ -333,48 +332,28 @@ std::string Dictionary::possible_words_iterator::operator*() const {
 bool Dictionary::possible_words_iterator::is_equal(const Dictionary::possible_words_iterator &other) const{
     return ( this->level == other.level && this->current_node == other.current_node && this->current_word == other.current_word) ;
 }
-bool Dictionary::possible_words_iterator::AddLetter(char c) {
-    bool no_error = true ;
-    if(true) {
-        this->available_letters.erase(this->available_letters.find(c));
-        this->current_word += c;
-    }
-    else no_error = false ;
-    return no_error ;
-}
-bool Dictionary::possible_words_iterator::ExtractLetter(void) {
-    bool no_error = true;
-    if (this->current_word.length() > 0) {
-        this->available_letters.insert(this->current_word.at(this->current_word.length() - 1));
-        this->current_word.pop_back();
-    } else no_error = false;
-    return no_error;
-}
 
 void Dictionary::possible_words_iterator::find_left_child(bool & is_valid){
     if(!current_node.left_child().is_null() && !is_valid) {
         current_node = current_node.left_child();
         level++ ;
-        if((this->available_letters.count(this->current_node.operator*().character) != 0)){
-            char c = current_node.operator*().character ;
+        char c = current_node.operator*().character ;
+        if((this->available_letters.count(c) != 0)){
             current_word += c ;
             this->available_letters.erase(this->available_letters.find(c));
 
             is_valid = current_node.operator*().valid_word ;
             if(!is_valid){
                 find_left_child(is_valid);
-                find_right_sibling(is_valid);
-                find_right_uncle(is_valid) ;
+                recursive_call(is_valid);
             }
         }
         else{
-            find_right_sibling(is_valid) ;
-            find_right_uncle(is_valid) ;
+            recursive_call(is_valid);
         }
     }
     else{
-        find_right_sibling(is_valid);
-        find_right_uncle(is_valid) ;
+        recursive_call(is_valid);
     }
 }
 void Dictionary::possible_words_iterator::find_right_sibling(bool & is_valid) {
@@ -385,9 +364,8 @@ void Dictionary::possible_words_iterator::find_right_sibling(bool & is_valid) {
             available_letters.insert(current_word.back());
             current_word.pop_back() ;
         }
-
-        if((this->available_letters.count(this->current_node.operator*().character) != 0)){
-            char c = current_node.operator*().character ;
+        char c = current_node.operator*().character ;
+        if((this->available_letters.count(c) != 0)){
             current_word += c ;
             this->available_letters.erase(this->available_letters.find(c));
 
@@ -395,13 +373,11 @@ void Dictionary::possible_words_iterator::find_right_sibling(bool & is_valid) {
 
             if(!is_valid){
                 find_left_child(is_valid);
-                find_right_sibling(is_valid);
-                find_right_uncle(is_valid) ;
+                recursive_call(is_valid);
             }
         }
         else{
-            find_right_sibling(is_valid) ;
-            find_right_uncle(is_valid) ;
+            recursive_call(is_valid);
         }
     }
 }
@@ -417,8 +393,9 @@ void Dictionary::possible_words_iterator::find_right_uncle(bool & is_valid) {
 
             current_node = current_node.parent().right_sibling();
 
-            if ((this->available_letters.count(this->current_node.operator*().character) != 0)) {
-                char c = current_node.operator*().character;
+            char c = current_node.operator*().character;
+
+            if ((this->available_letters.count(c) != 0)) {
                 current_word += c;
                 this->available_letters.erase(this->available_letters.find(c));
 
@@ -426,12 +403,10 @@ void Dictionary::possible_words_iterator::find_right_uncle(bool & is_valid) {
 
                 if (!is_valid) {
                     find_left_child(is_valid);
-                    find_right_sibling(is_valid);
-                    find_right_uncle(is_valid);
+                    recursive_call(is_valid);
                 }
             } else {
-                find_right_sibling(is_valid);
-                find_right_uncle(is_valid);
+                recursive_call(is_valid);
             }
         }
         else{
@@ -446,4 +421,9 @@ void Dictionary::possible_words_iterator::find_right_uncle(bool & is_valid) {
                 find_right_uncle(is_valid) ;
         }
     }
+}
+
+void Dictionary::possible_words_iterator::recursive_call(bool & is_valid){
+    find_right_sibling(is_valid);
+    find_right_uncle(is_valid) ;
 }

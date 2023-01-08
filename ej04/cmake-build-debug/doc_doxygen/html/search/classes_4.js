@@ -1,5 +1,6 @@
 var searchData=
 [
-  ['possible_5fwords_5fiterator_46',['possible_words_iterator',['../classDictionary_1_1possible__words__iterator.html',1,'Dictionary']]],
-  ['preorder_5fiterator_47',['preorder_iterator',['../classtree_1_1preorder__iterator.html',1,'tree']]]
+  ['letterinfo_81',['LetterInfo',['../structLetterInfo.html',1,'']]],
+  ['lettersbag_82',['LettersBag',['../classLettersBag.html',1,'']]],
+  ['lettersset_83',['LettersSet',['../classLettersSet.html',1,'']]]
 ];

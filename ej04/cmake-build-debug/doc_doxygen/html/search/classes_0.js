@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['const_5fpreorder_5fiterator_42',['const_preorder_iterator',['../classtree_1_1const__preorder__iterator.html',1,'tree']]]
+  ['bag_75',['Bag',['../classBag.html',1,'']]],
+  ['bag_3c_20char_20_3e_76',['Bag&lt; char &gt;',['../classBag.html',1,'']]]
 ];

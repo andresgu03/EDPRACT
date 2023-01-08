@@ -1,6 +1,10 @@
-//
-// Created by fluque1995 on 8/9/21.
-//
+/**
+ * @file dictionary.h
+ * @brief Especificación del TDA Dictionary
+ * @author Andrés Gutiérrez Armenteros
+ * @author Pablo García Bas
+ * @date Diciembre 2022
+ */
 
 #ifndef TREE_DICTIONARY_HPP
 #define TREE_DICTIONARY_HPP
@@ -385,12 +389,31 @@ public:
         std::string operator*() const;
 
     private:
+        /**
+         * @brief is_equal
+         *
+         * @return true si los iteradores son iguales y false si no.
+         */
         bool is_equal(const Dictionary::possible_words_iterator &other) const;
-        bool AddLetter(char c);
-        bool ExtractLetter(void);
+        /**
+         * @brief Encontrar hijo.
+         * Encuentra el siguiente hijo al que avanzar. Comienza el proceso recursivo.
+         */
         void find_left_child(bool &) ;
+        /**
+         * @brief Encontrar hermano
+         * Encuentra el siguiente hermano al que avanzar.
+         */
         void find_right_sibling(bool &) ;
+        /**
+         * @brief Encontrar tío
+         * Encuentra el siguiente hermano del padre al que avanzar.
+         */
         void find_right_uncle(bool &) ;
+        /**
+         * @brief Llama a las funciones recursivas find_right_sibling() y find_right_uncle().
+         */
+        void recursive_call( bool &) ;
 
 
     private:

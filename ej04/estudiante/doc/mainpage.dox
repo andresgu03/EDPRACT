@@ -12,6 +12,25 @@ Concretamente:
 
 # Ejecutables
 
+1. diccionario.cpp
+    - Recibe como parámetro un archivo que contiene un diccionario. Creará el Dictionary.
+    - Imprime por pantalla el contenido de todo el diccionario.
+    - Ejemplo: ./diccionario ../data/diccionario_mini.txt
+
+    <pre>
+           <code>
+                a
+                ama
+                amar
+                amo
+                amor
+                cal
+                col
+                coz
+           </code>
+        </pre>
+
+
 2. cantidad_letras.cpp
 
     - Recibe como argumentos un fichero de diccionario y un fichero de letras. Con esa información:
@@ -66,6 +85,28 @@ Concretamente:
           4
        </code>
     </pre>
+
+4. palabras_validas_diccionario.cpp
+    - Recibe como argumentos:
+        - Un fichero de texto que contiene a un diccionario.
+        - Letras que se usarán para ver las palabras válidas formadas con dichas letras en el diccionario.
+
+    - El programa se encargará de construir:
+            - El Dictionary con las palabras.
+            - Un vector con las letras que se consideran.
+
+    - El programa devolverá un listado de las palabras del diccionario que se pueden formar con las letras introducidas.
+
+    - Ejemplo: ./palabras_validas_diccionario ../data/diccionario_mini.txt a c l z o
+
+    <pre>
+           <code>
+              a
+              cal
+              col
+              coz
+           </code>
+        </pre>
 
 5. partida_letras_eficiente.cpp
 
